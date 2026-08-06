@@ -1,0 +1,60 @@
+9.3s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.3s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.3s 3 0.00s - to python to disable frozen modules.
+9.3s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.1s 7 0.00s - to python to disable frozen modules.
+10.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+16.0s 9 device: cpu
+17.1s 10 ALIGNMENT OK | (7101, 773)
+19.2s 11 fixed trainer + LogReg scorer ready
+20.0s 12 1. LogReg/768   macroF1 99.7%   (probe reference: 99.7)
+20.4s 13 2. LogReg/773   macroF1 99.6%   (delta vs step1: -0.1)
+20.4s 14 -> the five features do NOT hurt a converged linear classifier
+20.7s 15 MLP config sweep — neural 768:
+33.0s 16 neural768 do=0.0 ln=True: val_f1 99.69% (ep 24, 12.2s)
+37.1s 17 neural768 do=0.0 ln=False: val_f1 99.69% (ep 20, 4.1s)
+43.3s 18 neural768 do=0.3 ln=True: val_f1 99.69% (ep 18, 6.2s)
+46.8s 19 neural768 do=0.3 ln=False: val_f1 99.53% (ep 6, 3.5s)
+46.8s 20 -> best neural768: dropout=0.0 layernorm=True
+46.8s 21 MLP config sweep — hybrid 773:
+54.5s 22 hybrid773 do=0.0 ln=True: val_f1 99.69% (ep 37, 7.7s)
+57.1s 23 hybrid773 do=0.0 ln=False: val_f1 99.38% (ep 6, 2.6s)
+63.8s 24 hybrid773 do=0.3 ln=True: val_f1 99.69% (ep 19, 6.7s)
+68.5s 25 hybrid773 do=0.3 ln=False: val_f1 99.53% (ep 15, 4.9s)
+68.5s 26 -> best hybrid773: dropout=0.0 layernorm=True
+68.5s 27 
+68.5s 28 3. fixedMLP/768 macroF1 99.8%
+68.5s 29 4. fixedMLP/773 macroF1 99.7%   (first run was 97.5)
+68.5s 30 
+68.5s 31 step  macro_f1  auc_roc  accuracy
+68.5s 32 1. LogReg / neural 768      99.7    100.0      99.7
+68.5s 33 2. LogReg / hybrid 773      99.6    100.0      99.6
+68.5s 34 3. fixed MLP / neural 768 (do=0.0, ln=True)      99.8    100.0      99.8
+68.5s 35 4. fixed MLP / hybrid 773 (do=0.0, ln=True)      99.7    100.0      99.7
+68.5s 36 
+68.5s 37 selected hybrid head config for Track A/B: {'hidden': 256, 'dropout': 0.0, 'layernorm': True}
+72.4s 38 deepseek   probe  98.3%   LogReg-hyb  96.9%   MLP-hyb  95.6%
+79.2s 39 gemini     probe  99.3%   LogReg-hyb  99.6%   MLP-hyb 100.0%
+83.3s 40 gpt        probe  92.7%   LogReg-hyb  94.2%   MLP-hyb  91.8%
+90.5s 41 opus       probe  99.4%   LogReg-hyb  99.6%   MLP-hyb 100.0%
+94.8s 42 qwen       probe  98.3%   LogReg-hyb  98.3%   MLP-hyb  97.7%
+100.4s 43 sonnet     probe  99.6%   LogReg-hyb  99.8%   MLP-hyb  99.8%
+100.4s 44 
+100.4s 45 summary (macro-F1):
+100.4s 46 probe (reference):  mean 98.1  worst 92.7 (gpt)
+100.4s 47 LogReg-hybrid:      mean 98.0  worst 94.2 (gpt)
+100.4s 48 fixed-MLP-hybrid:   mean 97.5  worst 91.8 (gpt)
+100.4s 49 
+100.4s 50 FUSION HYPOTHESIS SUPPORTED: converged hybrid beats the probe on the worst fold
+100.4s 51 
+100.4s 52 saved ph2_nb6b_ladder.parquet, ph2_nb6b_logo.parquet, ph2_nb6b_best_head.pt
+104.7s 53 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+104.7s 54 cells[i][c] = re.sub('\\\\\|', '|', cell)
+104.9s 55 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+104.9s 56 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+105.7s 57 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+106.1s 58 [NbConvertApp] Writing 26179 bytes to __notebook__.ipynb
+109.4s 59 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+110.6s 60 [NbConvertApp] Writing 350670 bytes to __results__.html

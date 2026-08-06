@@ -1,0 +1,137 @@
+7.1s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.1s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.1s 3 0.00s - to python to disable frozen modules.
+7.1s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.7s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.7s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.7s 7 0.00s - to python to disable frozen modules.
+7.7s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.4s 9 [1/8] config loaded | device=cuda | USE_STAT=False | K=9 | SMOKE=False
+14.4s 10 [1/8] epochs=3 micro_bs=2 grad_accum=16 lr_enc=2e-05 lr_head=0.001
+15.3s 11 [2/8] dataset: 7101 articles | human 3500 | AI 3601
+15.3s 12 [2/8]   train: 5363
+15.3s 13 [2/8]   val: 645
+15.3s 14 [2/8]   test: 1093
+39.7s 15 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+39.7s 16 
+39.7s 17 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+39.9s 18 [3/8] tokenizer loaded (0.4s)
+40.5s 19 [3/8] loaded cached chunks from /kaggle/input/notebooks/bahaaqassem/nb10-trackb-joint-finetune/chunks_K9.npz
+40.5s 20 [3/8] chunk tensor (7101, 9, 512) | mean chunks/article 2.68 | max 9
+40.6s 21 [4/8] model defined | train rows 5363
+40.6s 22 [5/8] routine ready
+40.7s 23 [6/8] checkpoint helpers ready
+48.0s 24 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+48.0s 25 Key                                        | Status     |  |
+48.0s 26 -------------------------------------------+------------+--+-
+48.0s 27 cls.predictions.decoder.weight             | UNEXPECTED |  |
+48.0s 28 cls.predictions.decoder.bias               | UNEXPECTED |  |
+48.0s 29 cls.predictions.bias                       | UNEXPECTED |  |
+48.0s 30 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+48.0s 31 cls.seq_relationship.weight                | UNEXPECTED |  |
+48.0s 32 bert.embeddings.position_ids               | UNEXPECTED |  |
+48.0s 33 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+48.0s 34 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+48.0s 35 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+48.0s 36 cls.seq_relationship.bias                  | UNEXPECTED |  |
+48.0s 37 
+48.0s 38 Notes:
+48.0s 39 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+48.0s 40 
+48.0s 41 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+48.0s 42 Key                                        | Status     |  |
+48.0s 43 -------------------------------------------+------------+--+-
+48.0s 44 cls.predictions.decoder.weight             | UNEXPECTED |  |
+48.0s 45 cls.predictions.decoder.bias               | UNEXPECTED |  |
+48.0s 46 cls.predictions.bias                       | UNEXPECTED |  |
+48.0s 47 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+48.0s 48 cls.seq_relationship.weight                | UNEXPECTED |  |
+48.0s 49 bert.embeddings.position_ids               | UNEXPECTED |  |
+48.0s 50 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+48.0s 51 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+48.0s 52 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+48.0s 53 cls.seq_relationship.bias                  | UNEXPECTED |  |
+48.0s 54 
+48.0s 55 Notes:
+48.0s 56 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+48.2s 57 [7/8] model on cuda | fused dim 768 | params 109.3M
+48.3s 58 [7/8] class weights [1.0146, 0.9858]
+48.3s 59 [7/8] batches/epoch 2681 | optimizer steps total 501
+48.3s 60 [7/8] fresh start -> fitting standardizer
+143.2s 61 [5/8]   standardizer 400/5363 (95s)
+252.6s 62 [5/8]   standardizer 800/5363 (204s)
+361.1s 63 [5/8]   standardizer 1200/5363 (313s)
+469.7s 64 [5/8]   standardizer 1600/5363 (421s)
+578.1s 65 [5/8]   standardizer 2000/5363 (530s)
+686.6s 66 [5/8]   standardizer 2400/5363 (638s)
+795.4s 67 [5/8]   standardizer 2800/5363 (747s)
+904.1s 68 [5/8]   standardizer 3200/5363 (856s)
+1012.3s 69 [5/8]   standardizer 3600/5363 (964s)
+1120.8s 70 [5/8]   standardizer 4000/5363 (1072s)
+1229.4s 71 [5/8]   standardizer 4400/5363 (1181s)
+1337.7s 72 [5/8]   standardizer 4800/5363 (1289s)
+1446.3s 73 [5/8]   standardizer 5200/5363 (1398s)
+1492.5s 74 [5/8] standardizer fitted on 5363 train articles in 1444s | mu|.|=0.4760 sd_mean=0.3682
+1493.1s 75 [6/8]   checkpoint saved -> last.pt (epoch 0, step 0)
+1493.1s 76 [7/8] training starts
+1493.1s 77 ------------------------------------------------------------------------------------------
+1493.1s 78 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1493.1s 79 
+1493.1s 80 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1673.7s 81 [7/8] ep1/3 step 20/501 loss 0.3917 lr 1.33e-05 | 3.0m elapsed, ETA 72m
+1853.2s 82 [7/8] ep1/3 step 40/501 loss 0.1056 lr 1.96e-05 | 6.0m elapsed, ETA 69m
+2032.7s 83 [7/8] ep1/3 step 60/501 loss 0.0472 lr 1.87e-05 | 9.0m elapsed, ETA 66m
+2212.0s 84 [7/8] ep1/3 step 80/501 loss 0.0211 lr 1.79e-05 | 12.0m elapsed, ETA 63m
+2391.3s 85 [7/8] ep1/3 step 100/501 loss 0.0223 lr 1.70e-05 | 15.0m elapsed, ETA 60m
+2570.1s 86 [7/8] ep1/3 step 120/501 loss 0.0216 lr 1.62e-05 | 17.9m elapsed, ETA 57m
+2749.3s 87 [7/8] ep1/3 step 140/501 loss 0.0147 lr 1.53e-05 | 20.9m elapsed, ETA 54m
+2928.5s 88 [7/8] ep1/3 step 160/501 loss 0.0562 lr 1.45e-05 | 23.9m elapsed, ETA 51m
+2998.0s 89 [6/8]   checkpoint saved -> epoch1.pt (epoch 1, step 167)
+3000.6s 90 [6/8]   checkpoint saved -> last.pt (epoch 1, step 167)
+3000.6s 91 [7/8] EPOCH 1 done in 25.1 min
+3117.6s 92 [7/8] ep2/3 step 180/501 loss 0.0163 lr 1.36e-05 | 27.1m elapsed, ETA 48m
+3296.8s 93 [7/8] ep2/3 step 200/501 loss 0.0036 lr 1.28e-05 | 30.1m elapsed, ETA 45m
+3299.7s 94 [6/8]   checkpoint saved -> last.pt (epoch 1, step 200)
+3478.9s 95 [7/8] ep2/3 step 220/501 loss 0.0033 lr 1.19e-05 | 33.1m elapsed, ETA 42m
+3658.1s 96 [7/8] ep2/3 step 240/501 loss 0.0030 lr 1.11e-05 | 36.1m elapsed, ETA 39m
+3836.7s 97 [7/8] ep2/3 step 260/501 loss 0.0008 lr 1.02e-05 | 39.1m elapsed, ETA 36m
+4015.6s 98 [7/8] ep2/3 step 280/501 loss 0.0011 lr 9.38e-06 | 42.0m elapsed, ETA 33m
+4194.0s 99 [7/8] ep2/3 step 300/501 loss 0.0010 lr 8.54e-06 | 45.0m elapsed, ETA 30m
+4373.3s 100 [7/8] ep2/3 step 320/501 loss 0.0012 lr 7.69e-06 | 48.0m elapsed, ETA 27m
+4505.2s 101 [6/8]   checkpoint saved -> epoch2.pt (epoch 2, step 334)
+4508.1s 102 [6/8]   checkpoint saved -> last.pt (epoch 2, step 334)
+4508.1s 103 [7/8] EPOCH 2 done in 25.1 min
+4562.1s 104 [7/8] ep3/3 step 340/501 loss 0.0006 lr 6.84e-06 | 51.1m elapsed, ETA 24m
+4740.7s 105 [7/8] ep3/3 step 360/501 loss 0.0007 lr 5.99e-06 | 54.1m elapsed, ETA 21m
+4919.2s 106 [7/8] ep3/3 step 380/501 loss 0.0005 lr 5.14e-06 | 57.1m elapsed, ETA 18m
+5098.2s 107 [7/8] ep3/3 step 400/501 loss 0.0005 lr 4.29e-06 | 60.1m elapsed, ETA 15m
+5101.2s 108 [6/8]   checkpoint saved -> last.pt (epoch 2, step 400)
+5280.4s 109 [7/8] ep3/3 step 420/501 loss 0.0005 lr 3.44e-06 | 63.1m elapsed, ETA 12m
+5459.1s 110 [7/8] ep3/3 step 440/501 loss 0.0005 lr 2.59e-06 | 66.1m elapsed, ETA 9m
+5637.6s 111 [7/8] ep3/3 step 460/501 loss 0.0005 lr 1.74e-06 | 69.1m elapsed, ETA 6m
+5816.1s 112 [7/8] ep3/3 step 480/501 loss 0.0006 lr 8.92e-07 | 72.0m elapsed, ETA 3m
+5994.7s 113 [7/8] ep3/3 step 500/501 loss 0.0004 lr 4.25e-08 | 75.0m elapsed, ETA 0m
+6010.4s 114 [6/8]   checkpoint saved -> epoch3.pt (epoch 3, step 501)
+6013.2s 115 [6/8]   checkpoint saved -> last.pt (epoch 3, step 501)
+6013.2s 116 [7/8] EPOCH 3 done in 25.1 min
+6013.2s 117 ------------------------------------------------------------------------------------------
+6013.2s 118 [7/8] TRAINING COMPLETE in 75.3 min
+6013.3s 119 [8/8] evaluating on 1093 test articles
+6024.2s 120 [8/8]   predicted 160/1093 (11s)
+6035.5s 121 [8/8]   predicted 320/1093 (22s)
+6047.1s 122 [8/8]   predicted 480/1093 (34s)
+6058.4s 123 [8/8]   predicted 640/1093 (45s)
+6069.3s 124 [8/8]   predicted 800/1093 (56s)
+6080.3s 125 [8/8]   predicted 960/1093 (67s)
+6089.3s 126 [8/8] MacroF1 99.91 | Acc 99.91 | AUC 100.00
+6089.3s 127 [8/8] confusion: TN 538 FP 1 FN 0 TP 554 | FPR 0.19% | TPR 100.00%
+6089.3s 128 [8/8] saved test predictions -> /kaggle/working/nb14_test_preds.npz
+6089.3s 129 [8/8] NOTE: compare against NB10 hybrid (std MacroF1 99.82) — this is its matched twin.
+6095.3s 130 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+6095.3s 131 cells[i][c] = re.sub('\\\\\|', '|', cell)
+6095.4s 132 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+6095.4s 133 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+6096.1s 134 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+6096.5s 135 [NbConvertApp] Writing 112718 bytes to __notebook__.ipynb
+6099.2s 136 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+6100.3s 137 [NbConvertApp] Writing 436355 bytes to __results__.html

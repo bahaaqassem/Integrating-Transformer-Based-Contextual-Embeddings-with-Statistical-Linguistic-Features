@@ -1,0 +1,37 @@
+6.7s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.7s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.7s 3 0.00s - to python to disable frozen modules.
+6.7s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.3s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.3s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.3s 7 0.00s - to python to disable frozen modules.
+7.3s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.1s 9 config loaded
+10.7s 10 7101 articles | words: median 589, max 5524
+36.8s 11 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+36.8s 12 
+36.8s 13 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+53.7s 14 CAMeLBERT-MSA: tokens  median 793  p90 1611  p95 2138  p99 4056  max 17755
+61.8s 15 Token indices sequence length is longer than the specified maximum sequence length for this model (1235 > 512). Running this sequence through the model will result in indexing errors
+61.8s 16 
+61.8s 17 Token indices sequence length is longer than the specified maximum sequence length for this model (1235 > 512). Running this sequence through the model will result in indexing errors
+87.8s 18 XLM-R: tokens  median 1011  p90 2070  p95 2713  p99 5061  max 9984
+87.9s 19 TOKEN LENGTH (content tokens):
+87.9s 20 % of articles fully covered by first-K chunks (chunk=510, stride=460):
+87.9s 21 
+87.9s 22 Smallest K for target coverage:
+87.9s 23 CAMeLBERT-MSA:  K>=95% = 5   K>=99% = 9   (full = 39)
+87.9s 24 XLM-R:  K>=95% = 6   K>=99% = 11   (full = 22)
+87.9s 25 CAMeLBERT-MSA @ K=4 (keeps ~1890 tok): 6.9% of articles truncated; mean tokens dropped among those = 1070
+87.9s 26 XLM-R @ K=4 (keeps ~1890 tok): 12.3% of articles truncated; mean tokens dropped among those = 1086
+87.9s 27 
+87.9s 28 Rule: pick the smallest K that covers ~95-99% fully; if that K is too big for GPU memory,
+87.9s 29 that's the signal to use hierarchical pooling / partial layer-freezing instead of plain first-K.
+91.9s 30 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+91.9s 31 cells[i][c] = re.sub('\\\\\|', '|', cell)
+92.1s 32 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+92.1s 33 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+92.7s 34 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+92.9s 35 [NbConvertApp] Writing 111423 bytes to __notebook__.ipynb
+95.2s 36 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+95.9s 37 [NbConvertApp] Writing 380736 bytes to __results__.html

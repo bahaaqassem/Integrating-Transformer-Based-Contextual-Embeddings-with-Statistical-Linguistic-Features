@@ -1,0 +1,437 @@
+6.1s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.1s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.1s 3 0.00s - to python to disable frozen modules.
+6.1s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+6.7s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.7s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.7s 7 0.00s - to python to disable frozen modules.
+6.7s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+12.1s 9 [1/7] config loaded | device=cuda | budget=165 min
+13.2s 10 [2/7] corpus 7101 | train 5363 val 645 test 1093
+13.8s 11 [2/7] corpus chunks (7101, 9, 512)
+35.9s 12 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+35.9s 13 
+35.9s 14 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+36.7s 15 [2/7] model class + predictor ready
+37.9s 16 [3/7] loaded cached scores from /kaggle/input/datasets/bahaaqassem/nb17-dataset/nb17_fastdetectgpt.parquet (skips ~6 min)
+38.2s 17 [3/7] Fast-DetectGPT on OUR TEST: AUC 50.44 | MacroF1 49.38 | Acc 52.33  (threshold from VAL)
+38.2s 18 [3/7]   score means: human -5.085 | AI -3.756
+38.2s 19 [4/7] loaded cached Ar-APT predictions from /kaggle/input/datasets/bahaaqassem/nb17-dataset/nb17_arapt_preds.parquet (skips ~7 min)
+38.2s 20 
+38.2s 21 [4/7] DOMAIN-TRANSFER CONTROL (unpolished):
+38.2s 22 [4/7]   human_orig   n= 400  FPR hybrid  12.00  neural  19.25
+38.2s 23 [4/7]   ai_generated n= 400  TPR hybrid  72.00  neural  81.50
+38.2s 24 [4/7]   BALANCED-SET ACCURACY hybrid 80.00%  (zero training on this domain — the like-for-like number vs published detectors)
+38.2s 25 [4/7]   BALANCED-SET ACCURACY neural 81.12%  (zero training on this domain — the like-for-like number vs published detectors)
+38.2s 26 
+38.2s 27 [4/7] POLISHING (human articles -> this is FPR; lower is better):
+38.2s 28 level   n  FPR_hyb  FPR_neu    gap
+38.2s 29 10 496    16.33    28.02 -11.69
+38.2s 30 25 449    16.04    27.17 -11.13
+38.2s 31 50 494    15.18    28.34 -13.16
+38.2s 32 75 497    22.74    34.00 -11.26
+38.2s 33 
+38.2s 34 [4/7] by polishing model:
+38.3s 35 n  FPR_hyb  FPR_neu
+38.3s 36 polish_model
+38.3s 37 DS               397.0    20.65    30.98
+38.3s 38 GPT 4            196.0    15.31    28.57
+38.3s 39 GPT4             198.0    19.70    31.82
+38.3s 40 LLAMA            399.0    17.29    28.82
+38.3s 41 QWEN M           352.0    19.89    34.38
+38.3s 42 claude-4-sonnet  394.0    12.94    23.35
+38.3s 43 
+38.3s 44 [4/7] Ar-APT reported Originality.AI 92 -> 12 and Claude-4 Sonnet 83.5 -> 57.6 under
+38.3s 45 [4/7] polishing. Only the balanced-set accuracy above is directly comparable to those.
+38.3s 46 [budget] XLM-R 512 seed 42: 0.4 used, 164.6 left, needs ~10 -> RUN
+49.2s 47 XLMRobertaForSequenceClassification LOAD REPORT from: xlm-roberta-base
+49.2s 48 Key                         | Status     |
+49.2s 49 ----------------------------+------------+-
+49.2s 50 lm_head.layer_norm.weight   | UNEXPECTED |
+49.2s 51 roberta.pooler.dense.weight | UNEXPECTED |
+49.2s 52 roberta.pooler.dense.bias   | UNEXPECTED |
+49.2s 53 lm_head.layer_norm.bias     | UNEXPECTED |
+49.2s 54 lm_head.dense.weight        | UNEXPECTED |
+49.2s 55 lm_head.dense.bias          | UNEXPECTED |
+49.2s 56 lm_head.bias                | UNEXPECTED |
+49.2s 57 classifier.dense.bias       | MISSING    |
+49.2s 58 classifier.out_proj.bias    | MISSING    |
+49.2s 59 classifier.dense.weight     | MISSING    |
+49.2s 60 classifier.out_proj.weight  | MISSING    |
+49.2s 61 
+49.2s 62 Notes:
+49.2s 63 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+49.2s 64 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+49.2s 65 
+49.2s 66 XLMRobertaForSequenceClassification LOAD REPORT from: xlm-roberta-base
+49.2s 67 Key                         | Status     |
+49.2s 68 ----------------------------+------------+-
+49.2s 69 lm_head.layer_norm.weight   | UNEXPECTED |
+49.2s 70 roberta.pooler.dense.weight | UNEXPECTED |
+49.2s 71 roberta.pooler.dense.bias   | UNEXPECTED |
+49.2s 72 lm_head.layer_norm.bias     | UNEXPECTED |
+49.2s 73 lm_head.dense.weight        | UNEXPECTED |
+49.2s 74 lm_head.dense.bias          | UNEXPECTED |
+49.2s 75 lm_head.bias                | UNEXPECTED |
+49.2s 76 classifier.dense.bias       | MISSING    |
+49.2s 77 classifier.out_proj.bias    | MISSING    |
+49.2s 78 classifier.dense.weight     | MISSING    |
+49.2s 79 classifier.out_proj.weight  | MISSING    |
+49.2s 80 
+49.2s 81 Notes:
+49.2s 82 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+49.2s 83 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+49.9s 84 [5/7] XLM-R 512 s42: xlm-roberta-base | truncation 512 | lr 1e-05 | seed 42
+68.8s 85 [5/7] XLM-R 512 s42: tokenised (7101, 512)
+68.8s 86 [5/7] XLM-R 512 s42: 5363 rows, 670 batches/epoch, 1340 steps
+96.6s 87 [5/7] XLM-R 512 s42: ep1/2 step 100/1340 loss 0.6705 | 0.5m
+124.0s 88 [5/7] XLM-R 512 s42: ep1/2 step 200/1340 loss 0.4648 | 0.9m
+152.4s 89 [5/7] XLM-R 512 s42: ep1/2 step 300/1340 loss 0.0179 | 1.4m
+180.8s 90 [5/7] XLM-R 512 s42: ep1/2 step 400/1340 loss 0.0654 | 1.9m
+208.9s 91 [5/7] XLM-R 512 s42: ep1/2 step 500/1340 loss 0.0046 | 2.3m
+237.1s 92 [5/7] XLM-R 512 s42: ep1/2 step 600/1340 loss 0.0052 | 2.8m
+256.7s 93 [5/7] XLM-R 512 s42: epoch 1 done (3.1m)
+265.3s 94 [5/7] XLM-R 512 s42: ep2/2 step 700/1340 loss 0.0170 | 3.3m
+293.4s 95 [5/7] XLM-R 512 s42: ep2/2 step 800/1340 loss 0.0018 | 3.7m
+321.6s 96 [5/7] XLM-R 512 s42: ep2/2 step 900/1340 loss 0.0041 | 4.2m
+349.8s 97 [5/7] XLM-R 512 s42: ep2/2 step 1000/1340 loss 0.0011 | 4.7m
+377.9s 98 [5/7] XLM-R 512 s42: ep2/2 step 1100/1340 loss 0.0011 | 5.2m
+406.1s 99 [5/7] XLM-R 512 s42: ep2/2 step 1200/1340 loss 0.0013 | 5.6m
+434.2s 100 [5/7] XLM-R 512 s42: ep2/2 step 1300/1340 loss 0.0023 | 6.1m
+445.4s 101 [5/7] XLM-R 512 s42: epoch 2 done (6.3m)
+452.8s 102 [5/7] XLM-R 512 s42 TEST: MacroF1 98.17 | Acc 98.17 | AUC 100.00
+454.4s 103 [budget] XLM-R 512 seed 43: 7.4 used, 157.6 left, needs ~10 -> RUN
+457.7s 104 XLMRobertaForSequenceClassification LOAD REPORT from: xlm-roberta-base
+457.7s 105 Key                         | Status     |
+457.7s 106 ----------------------------+------------+-
+457.7s 107 lm_head.layer_norm.weight   | UNEXPECTED |
+457.7s 108 roberta.pooler.dense.weight | UNEXPECTED |
+457.7s 109 roberta.pooler.dense.bias   | UNEXPECTED |
+457.7s 110 lm_head.layer_norm.bias     | UNEXPECTED |
+457.7s 111 lm_head.dense.weight        | UNEXPECTED |
+457.7s 112 lm_head.dense.bias          | UNEXPECTED |
+457.7s 113 lm_head.bias                | UNEXPECTED |
+457.7s 114 classifier.dense.bias       | MISSING    |
+457.7s 115 classifier.out_proj.bias    | MISSING    |
+457.7s 116 classifier.dense.weight     | MISSING    |
+457.7s 117 classifier.out_proj.weight  | MISSING    |
+457.7s 118 
+457.7s 119 Notes:
+457.7s 120 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+457.7s 121 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+457.7s 122 
+457.7s 123 XLMRobertaForSequenceClassification LOAD REPORT from: xlm-roberta-base
+457.7s 124 Key                         | Status     |
+457.7s 125 ----------------------------+------------+-
+457.7s 126 lm_head.layer_norm.weight   | UNEXPECTED |
+457.7s 127 roberta.pooler.dense.weight | UNEXPECTED |
+457.7s 128 roberta.pooler.dense.bias   | UNEXPECTED |
+457.7s 129 lm_head.layer_norm.bias     | UNEXPECTED |
+457.7s 130 lm_head.dense.weight        | UNEXPECTED |
+457.7s 131 lm_head.dense.bias          | UNEXPECTED |
+457.7s 132 lm_head.bias                | UNEXPECTED |
+457.7s 133 classifier.dense.bias       | MISSING    |
+457.7s 134 classifier.out_proj.bias    | MISSING    |
+457.7s 135 classifier.dense.weight     | MISSING    |
+457.7s 136 classifier.out_proj.weight  | MISSING    |
+457.7s 137 
+457.7s 138 Notes:
+457.7s 139 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+457.7s 140 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+458.1s 141 [5/7] XLM-R 512 s43: xlm-roberta-base | truncation 512 | lr 1e-05 | seed 43
+476.1s 142 [5/7] XLM-R 512 s43: tokenised (7101, 512)
+476.1s 143 [5/7] XLM-R 512 s43: 5363 rows, 670 batches/epoch, 1340 steps
+504.3s 144 [5/7] XLM-R 512 s43: ep1/2 step 100/1340 loss 0.5869 | 0.5m
+532.7s 145 [5/7] XLM-R 512 s43: ep1/2 step 200/1340 loss 1.4134 | 0.9m
+560.8s 146 [5/7] XLM-R 512 s43: ep1/2 step 300/1340 loss 0.3858 | 1.4m
+589.1s 147 [5/7] XLM-R 512 s43: ep1/2 step 400/1340 loss 0.0104 | 1.9m
+617.5s 148 [5/7] XLM-R 512 s43: ep1/2 step 500/1340 loss 0.0078 | 2.4m
+645.7s 149 [5/7] XLM-R 512 s43: ep1/2 step 600/1340 loss 0.0053 | 2.8m
+665.4s 150 [5/7] XLM-R 512 s43: epoch 1 done (3.2m)
+674.0s 151 [5/7] XLM-R 512 s43: ep2/2 step 700/1340 loss 0.0015 | 3.3m
+702.3s 152 [5/7] XLM-R 512 s43: ep2/2 step 800/1340 loss 0.0024 | 3.8m
+730.5s 153 [5/7] XLM-R 512 s43: ep2/2 step 900/1340 loss 0.0040 | 4.2m
+758.7s 154 [5/7] XLM-R 512 s43: ep2/2 step 1000/1340 loss 0.0014 | 4.7m
+786.9s 155 [5/7] XLM-R 512 s43: ep2/2 step 1100/1340 loss 0.0013 | 5.2m
+815.1s 156 [5/7] XLM-R 512 s43: ep2/2 step 1200/1340 loss 0.0014 | 5.7m
+843.3s 157 [5/7] XLM-R 512 s43: ep2/2 step 1300/1340 loss 0.0018 | 6.1m
+854.5s 158 [5/7] XLM-R 512 s43: epoch 2 done (6.3m)
+861.9s 159 [5/7] XLM-R 512 s43 TEST: MacroF1 98.99 | Acc 98.99 | AUC 99.99
+863.6s 160 [budget] XLM-R 512 seed 44: 14.2 used, 150.8 left, needs ~10 -> RUN
+866.9s 161 XLMRobertaForSequenceClassification LOAD REPORT from: xlm-roberta-base
+866.9s 162 Key                         | Status     |
+866.9s 163 ----------------------------+------------+-
+866.9s 164 lm_head.layer_norm.weight   | UNEXPECTED |
+866.9s 165 roberta.pooler.dense.weight | UNEXPECTED |
+866.9s 166 roberta.pooler.dense.bias   | UNEXPECTED |
+866.9s 167 lm_head.layer_norm.bias     | UNEXPECTED |
+866.9s 168 lm_head.dense.weight        | UNEXPECTED |
+866.9s 169 lm_head.dense.bias          | UNEXPECTED |
+866.9s 170 lm_head.bias                | UNEXPECTED |
+866.9s 171 classifier.dense.bias       | MISSING    |
+866.9s 172 classifier.out_proj.bias    | MISSING    |
+866.9s 173 classifier.dense.weight     | MISSING    |
+866.9s 174 classifier.out_proj.weight  | MISSING    |
+866.9s 175 
+866.9s 176 Notes:
+866.9s 177 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+866.9s 178 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+866.9s 179 
+866.9s 180 XLMRobertaForSequenceClassification LOAD REPORT from: xlm-roberta-base
+866.9s 181 Key                         | Status     |
+866.9s 182 ----------------------------+------------+-
+866.9s 183 lm_head.layer_norm.weight   | UNEXPECTED |
+866.9s 184 roberta.pooler.dense.weight | UNEXPECTED |
+866.9s 185 roberta.pooler.dense.bias   | UNEXPECTED |
+866.9s 186 lm_head.layer_norm.bias     | UNEXPECTED |
+866.9s 187 lm_head.dense.weight        | UNEXPECTED |
+866.9s 188 lm_head.dense.bias          | UNEXPECTED |
+866.9s 189 lm_head.bias                | UNEXPECTED |
+866.9s 190 classifier.dense.bias       | MISSING    |
+866.9s 191 classifier.out_proj.bias    | MISSING    |
+866.9s 192 classifier.dense.weight     | MISSING    |
+866.9s 193 classifier.out_proj.weight  | MISSING    |
+866.9s 194 
+866.9s 195 Notes:
+866.9s 196 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+866.9s 197 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+867.2s 198 [5/7] XLM-R 512 s44: xlm-roberta-base | truncation 512 | lr 1e-05 | seed 44
+884.2s 199 [5/7] XLM-R 512 s44: tokenised (7101, 512)
+884.2s 200 [5/7] XLM-R 512 s44: 5363 rows, 670 batches/epoch, 1340 steps
+912.3s 201 [5/7] XLM-R 512 s44: ep1/2 step 100/1340 loss 0.5819 | 0.5m
+940.8s 202 [5/7] XLM-R 512 s44: ep1/2 step 200/1340 loss 0.4891 | 0.9m
+969.0s 203 [5/7] XLM-R 512 s44: ep1/2 step 300/1340 loss 0.0617 | 1.4m
+997.2s 204 [5/7] XLM-R 512 s44: ep1/2 step 400/1340 loss 0.4403 | 1.9m
+1025.5s 205 [5/7] XLM-R 512 s44: ep1/2 step 500/1340 loss 0.0124 | 2.4m
+1053.8s 206 [5/7] XLM-R 512 s44: ep1/2 step 600/1340 loss 0.0067 | 2.8m
+1073.5s 207 [5/7] XLM-R 512 s44: epoch 1 done (3.2m)
+1082.0s 208 [5/7] XLM-R 512 s44: ep2/2 step 700/1340 loss 0.0243 | 3.3m
+1110.3s 209 [5/7] XLM-R 512 s44: ep2/2 step 800/1340 loss 0.0392 | 3.8m
+1138.6s 210 [5/7] XLM-R 512 s44: ep2/2 step 900/1340 loss 0.0027 | 4.2m
+1166.8s 211 [5/7] XLM-R 512 s44: ep2/2 step 1000/1340 loss 0.0152 | 4.7m
+1195.0s 212 [5/7] XLM-R 512 s44: ep2/2 step 1100/1340 loss 0.0009 | 5.2m
+1223.2s 213 [5/7] XLM-R 512 s44: ep2/2 step 1200/1340 loss 0.0030 | 5.7m
+1251.4s 214 [5/7] XLM-R 512 s44: ep2/2 step 1300/1340 loss 0.0035 | 6.1m
+1262.6s 215 [5/7] XLM-R 512 s44: epoch 2 done (6.3m)
+1270.0s 216 [5/7] XLM-R 512 s44 TEST: MacroF1 97.99 | Acc 97.99 | AUC 99.99
+1270.8s 217 [5/7] XLM-R 512 ACROSS 3 SEEDS: MacroF1 mean 98.38 sd 0.54 min 97.99 max 98.99
+1270.8s 218 [5/7]     seed 42: F1 98.17  AUC 100.00
+1270.8s 219 [5/7]     seed 43: F1 98.99  AUC 99.99
+1270.8s 220 [5/7]     seed 44: F1 97.99  AUC 99.99
+1271.7s 221 [budget] CAMeLBERT 512 seed 42: 21.0 used, 144.0 left, needs ~10 -> RUN
+1279.5s 222 BertForSequenceClassification LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+1279.5s 223 Key                                        | Status     |
+1279.5s 224 -------------------------------------------+------------+-
+1279.5s 225 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |
+1279.5s 226 cls.predictions.decoder.bias               | UNEXPECTED |
+1279.5s 227 bert.embeddings.position_ids               | UNEXPECTED |
+1279.5s 228 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |
+1279.5s 229 cls.seq_relationship.weight                | UNEXPECTED |
+1279.5s 230 cls.predictions.decoder.weight             | UNEXPECTED |
+1279.5s 231 cls.predictions.bias                       | UNEXPECTED |
+1279.5s 232 cls.predictions.transform.dense.bias       | UNEXPECTED |
+1279.5s 233 cls.seq_relationship.bias                  | UNEXPECTED |
+1279.5s 234 cls.predictions.transform.dense.weight     | UNEXPECTED |
+1279.5s 235 classifier.bias                            | MISSING    |
+1279.5s 236 classifier.weight                          | MISSING    |
+1279.5s 237 
+1279.5s 238 Notes:
+1279.5s 239 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1279.5s 240 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1279.5s 241 
+1279.5s 242 BertForSequenceClassification LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+1279.5s 243 Key                                        | Status     |
+1279.5s 244 -------------------------------------------+------------+-
+1279.5s 245 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |
+1279.5s 246 cls.predictions.decoder.bias               | UNEXPECTED |
+1279.5s 247 bert.embeddings.position_ids               | UNEXPECTED |
+1279.5s 248 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |
+1279.5s 249 cls.seq_relationship.weight                | UNEXPECTED |
+1279.5s 250 cls.predictions.decoder.weight             | UNEXPECTED |
+1279.5s 251 cls.predictions.bias                       | UNEXPECTED |
+1279.5s 252 cls.predictions.transform.dense.bias       | UNEXPECTED |
+1279.5s 253 cls.seq_relationship.bias                  | UNEXPECTED |
+1279.5s 254 cls.predictions.transform.dense.weight     | UNEXPECTED |
+1279.5s 255 classifier.bias                            | MISSING    |
+1279.5s 256 classifier.weight                          | MISSING    |
+1279.5s 257 
+1279.5s 258 Notes:
+1279.5s 259 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1279.5s 260 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1279.5s 261 [5/7] CAMeLBERT 512 s42: CAMeL-Lab/bert-base-arabic-camelbert-msa | truncation 512 | lr 1e-05 | seed 42
+1293.3s 262 [5/7] CAMeLBERT 512 s42: tokenised (7101, 512)
+1293.3s 263 [5/7] CAMeLBERT 512 s42: 5363 rows, 670 batches/epoch, 1340 steps
+1315.0s 264 [5/7] CAMeLBERT 512 s42: ep1/2 step 100/1340 loss 0.0738 | 0.4m
+1336.9s 265 [5/7] CAMeLBERT 512 s42: ep1/2 step 200/1340 loss 0.0267 | 0.7m
+1358.5s 266 [5/7] CAMeLBERT 512 s42: ep1/2 step 300/1340 loss 0.1011 | 1.1m
+1379.9s 267 [5/7] CAMeLBERT 512 s42: ep1/2 step 400/1340 loss 0.0049 | 1.4m
+1401.4s 268 [5/7] CAMeLBERT 512 s42: ep1/2 step 500/1340 loss 0.0039 | 1.8m
+1423.1s 269 [5/7] CAMeLBERT 512 s42: ep1/2 step 600/1340 loss 0.0090 | 2.2m
+1438.1s 270 [5/7] CAMeLBERT 512 s42: epoch 1 done (2.4m)
+1444.6s 271 [5/7] CAMeLBERT 512 s42: ep2/2 step 700/1340 loss 0.0028 | 2.5m
+1466.0s 272 [5/7] CAMeLBERT 512 s42: ep2/2 step 800/1340 loss 0.0065 | 2.9m
+1487.5s 273 [5/7] CAMeLBERT 512 s42: ep2/2 step 900/1340 loss 0.0080 | 3.2m
+1509.0s 274 [5/7] CAMeLBERT 512 s42: ep2/2 step 1000/1340 loss 0.0031 | 3.6m
+1530.4s 275 [5/7] CAMeLBERT 512 s42: ep2/2 step 1100/1340 loss 0.0016 | 4.0m
+1551.9s 276 [5/7] CAMeLBERT 512 s42: ep2/2 step 1200/1340 loss 0.0030 | 4.3m
+1573.3s 277 [5/7] CAMeLBERT 512 s42: ep2/2 step 1300/1340 loss 0.0013 | 4.7m
+1581.9s 278 [5/7] CAMeLBERT 512 s42: epoch 2 done (4.8m)
+1589.1s 279 [5/7] CAMeLBERT 512 s42 TEST: MacroF1 99.18 | Acc 99.18 | AUC 100.00
+1590.6s 280 [budget] CAMeLBERT 512 seed 43: 26.3 used, 138.7 left, needs ~10 -> RUN
+1592.1s 281 BertForSequenceClassification LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+1592.1s 282 Key                                        | Status     |
+1592.1s 283 -------------------------------------------+------------+-
+1592.1s 284 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |
+1592.1s 285 cls.predictions.decoder.bias               | UNEXPECTED |
+1592.1s 286 bert.embeddings.position_ids               | UNEXPECTED |
+1592.1s 287 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |
+1592.1s 288 cls.seq_relationship.weight                | UNEXPECTED |
+1592.1s 289 cls.predictions.decoder.weight             | UNEXPECTED |
+1592.1s 290 cls.predictions.bias                       | UNEXPECTED |
+1592.1s 291 cls.predictions.transform.dense.bias       | UNEXPECTED |
+1592.1s 292 cls.seq_relationship.bias                  | UNEXPECTED |
+1592.1s 293 cls.predictions.transform.dense.weight     | UNEXPECTED |
+1592.1s 294 classifier.bias                            | MISSING    |
+1592.1s 295 classifier.weight                          | MISSING    |
+1592.1s 296 
+1592.1s 297 Notes:
+1592.1s 298 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1592.1s 299 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1592.1s 300 
+1592.1s 301 BertForSequenceClassification LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+1592.1s 302 Key                                        | Status     |
+1592.1s 303 -------------------------------------------+------------+-
+1592.1s 304 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |
+1592.1s 305 cls.predictions.decoder.bias               | UNEXPECTED |
+1592.1s 306 bert.embeddings.position_ids               | UNEXPECTED |
+1592.1s 307 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |
+1592.1s 308 cls.seq_relationship.weight                | UNEXPECTED |
+1592.1s 309 cls.predictions.decoder.weight             | UNEXPECTED |
+1592.1s 310 cls.predictions.bias                       | UNEXPECTED |
+1592.1s 311 cls.predictions.transform.dense.bias       | UNEXPECTED |
+1592.1s 312 cls.seq_relationship.bias                  | UNEXPECTED |
+1592.1s 313 cls.predictions.transform.dense.weight     | UNEXPECTED |
+1592.1s 314 classifier.bias                            | MISSING    |
+1592.1s 315 classifier.weight                          | MISSING    |
+1592.1s 316 
+1592.1s 317 Notes:
+1592.1s 318 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1592.1s 319 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1592.1s 320 [5/7] CAMeLBERT 512 s43: CAMeL-Lab/bert-base-arabic-camelbert-msa | truncation 512 | lr 1e-05 | seed 43
+1604.8s 321 [5/7] CAMeLBERT 512 s43: tokenised (7101, 512)
+1604.8s 322 [5/7] CAMeLBERT 512 s43: 5363 rows, 670 batches/epoch, 1340 steps
+1626.4s 323 [5/7] CAMeLBERT 512 s43: ep1/2 step 100/1340 loss 0.1665 | 0.4m
+1648.3s 324 [5/7] CAMeLBERT 512 s43: ep1/2 step 200/1340 loss 0.0192 | 0.7m
+1669.9s 325 [5/7] CAMeLBERT 512 s43: ep1/2 step 300/1340 loss 0.0065 | 1.1m
+1691.3s 326 [5/7] CAMeLBERT 512 s43: ep1/2 step 400/1340 loss 0.0086 | 1.4m
+1712.8s 327 [5/7] CAMeLBERT 512 s43: ep1/2 step 500/1340 loss 0.1465 | 1.8m
+1734.3s 328 [5/7] CAMeLBERT 512 s43: ep1/2 step 600/1340 loss 0.0057 | 2.2m
+1749.3s 329 [5/7] CAMeLBERT 512 s43: epoch 1 done (2.4m)
+1755.8s 330 [5/7] CAMeLBERT 512 s43: ep2/2 step 700/1340 loss 0.0038 | 2.5m
+1777.2s 331 [5/7] CAMeLBERT 512 s43: ep2/2 step 800/1340 loss 0.0020 | 2.9m
+1798.6s 332 [5/7] CAMeLBERT 512 s43: ep2/2 step 900/1340 loss 0.0019 | 3.2m
+1820.1s 333 [5/7] CAMeLBERT 512 s43: ep2/2 step 1000/1340 loss 0.0020 | 3.6m
+1841.6s 334 [5/7] CAMeLBERT 512 s43: ep2/2 step 1100/1340 loss 0.0017 | 3.9m
+1863.1s 335 [5/7] CAMeLBERT 512 s43: ep2/2 step 1200/1340 loss 0.0014 | 4.3m
+1884.6s 336 [5/7] CAMeLBERT 512 s43: ep2/2 step 1300/1340 loss 0.0025 | 4.7m
+1893.1s 337 [5/7] CAMeLBERT 512 s43: epoch 2 done (4.8m)
+1900.3s 338 [5/7] CAMeLBERT 512 s43 TEST: MacroF1 97.98 | Acc 97.99 | AUC 100.00
+1901.5s 339 [budget] CAMeLBERT 512 seed 44: 31.5 used, 133.5 left, needs ~10 -> RUN
+1902.9s 340 BertForSequenceClassification LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+1902.9s 341 Key                                        | Status     |
+1902.9s 342 -------------------------------------------+------------+-
+1902.9s 343 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |
+1902.9s 344 cls.predictions.decoder.bias               | UNEXPECTED |
+1902.9s 345 bert.embeddings.position_ids               | UNEXPECTED |
+1902.9s 346 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |
+1902.9s 347 cls.seq_relationship.weight                | UNEXPECTED |
+1902.9s 348 cls.predictions.decoder.weight             | UNEXPECTED |
+1902.9s 349 cls.predictions.bias                       | UNEXPECTED |
+1902.9s 350 cls.predictions.transform.dense.bias       | UNEXPECTED |
+1902.9s 351 cls.seq_relationship.bias                  | UNEXPECTED |
+1902.9s 352 cls.predictions.transform.dense.weight     | UNEXPECTED |
+1902.9s 353 classifier.bias                            | MISSING    |
+1902.9s 354 classifier.weight                          | MISSING    |
+1902.9s 355 
+1902.9s 356 Notes:
+1902.9s 357 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1902.9s 358 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1902.9s 359 
+1902.9s 360 BertForSequenceClassification LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+1902.9s 361 Key                                        | Status     |
+1902.9s 362 -------------------------------------------+------------+-
+1902.9s 363 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |
+1902.9s 364 cls.predictions.decoder.bias               | UNEXPECTED |
+1902.9s 365 bert.embeddings.position_ids               | UNEXPECTED |
+1902.9s 366 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |
+1902.9s 367 cls.seq_relationship.weight                | UNEXPECTED |
+1902.9s 368 cls.predictions.decoder.weight             | UNEXPECTED |
+1902.9s 369 cls.predictions.bias                       | UNEXPECTED |
+1902.9s 370 cls.predictions.transform.dense.bias       | UNEXPECTED |
+1902.9s 371 cls.seq_relationship.bias                  | UNEXPECTED |
+1902.9s 372 cls.predictions.transform.dense.weight     | UNEXPECTED |
+1902.9s 373 classifier.bias                            | MISSING    |
+1902.9s 374 classifier.weight                          | MISSING    |
+1902.9s 375 
+1902.9s 376 Notes:
+1902.9s 377 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1902.9s 378 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1902.9s 379 [5/7] CAMeLBERT 512 s44: CAMeL-Lab/bert-base-arabic-camelbert-msa | truncation 512 | lr 1e-05 | seed 44
+1916.2s 380 [5/7] CAMeLBERT 512 s44: tokenised (7101, 512)
+1916.2s 381 [5/7] CAMeLBERT 512 s44: 5363 rows, 670 batches/epoch, 1340 steps
+1916.6s 382 /tmp/ipykernel_22/577782319.py:42: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+1916.6s 383 opt.zero_grad(); scaler.scale(loss).backward(); scaler.step(opt); scaler.update(); sch.step()
+1916.6s 384 
+1916.6s 385 /tmp/ipykernel_22/577782319.py:42: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+1916.6s 386 opt.zero_grad(); scaler.scale(loss).backward(); scaler.step(opt); scaler.update(); sch.step()
+1937.7s 387 [5/7] CAMeLBERT 512 s44: ep1/2 step 100/1340 loss 0.0702 | 0.4m
+1959.8s 388 [5/7] CAMeLBERT 512 s44: ep1/2 step 200/1340 loss 0.0345 | 0.7m
+1981.4s 389 [5/7] CAMeLBERT 512 s44: ep1/2 step 300/1340 loss 0.0095 | 1.1m
+2002.8s 390 [5/7] CAMeLBERT 512 s44: ep1/2 step 400/1340 loss 0.0274 | 1.4m
+2024.2s 391 [5/7] CAMeLBERT 512 s44: ep1/2 step 500/1340 loss 0.0039 | 1.8m
+2045.9s 392 [5/7] CAMeLBERT 512 s44: ep1/2 step 600/1340 loss 0.0024 | 2.2m
+2060.9s 393 [5/7] CAMeLBERT 512 s44: epoch 1 done (2.4m)
+2067.4s 394 [5/7] CAMeLBERT 512 s44: ep2/2 step 700/1340 loss 0.0086 | 2.5m
+2088.8s 395 [5/7] CAMeLBERT 512 s44: ep2/2 step 800/1340 loss 0.0107 | 2.9m
+2110.4s 396 [5/7] CAMeLBERT 512 s44: ep2/2 step 900/1340 loss 0.0023 | 3.2m
+2131.9s 397 [5/7] CAMeLBERT 512 s44: ep2/2 step 1000/1340 loss 0.0040 | 3.6m
+2153.4s 398 [5/7] CAMeLBERT 512 s44: ep2/2 step 1100/1340 loss 0.0097 | 4.0m
+2174.9s 399 [5/7] CAMeLBERT 512 s44: ep2/2 step 1200/1340 loss 0.0017 | 4.3m
+2196.4s 400 [5/7] CAMeLBERT 512 s44: ep2/2 step 1300/1340 loss 0.0016 | 4.7m
+2205.0s 401 [5/7] CAMeLBERT 512 s44: epoch 2 done (4.8m)
+2212.1s 402 [5/7] CAMeLBERT 512 s44 TEST: MacroF1 99.08 | Acc 99.09 | AUC 100.00
+2212.6s 403 [5/7] CAMeLBERT 512 ACROSS 3 SEEDS: MacroF1 mean 98.75 sd 0.66 min 97.98 max 99.18
+2212.6s 404 [5/7]     seed 42: F1 99.18  AUC 100.00
+2212.6s 405 [5/7]     seed 43: F1 97.98  AUC 100.00
+2212.6s 406 [5/7]     seed 44: F1 99.08  AUC 100.00
+2212.7s 407 [6/7] POSITIONING TABLE (our test split)
+2213.4s 408 [6/7]   Fast-DetectGPT (zero-shot)         F1  49.38 [ 46.22, 52.29]  AUC  50.44
+2213.4s 409 [6/7]   XLM-R 512 (competition-style)      F1  98.38 [ 97.99, 98.99] AUC  99.99  (3 seeds)
+2213.4s 410 [6/7]   CAMeLBERT 512 (truncation)         F1  98.75 [ 97.98, 99.18] AUC 100.00  (3 seeds)
+2213.4s 411 [6/7] NB15 stress results found at: ['/kaggle/input/notebooks/bahaaqassem/nb15-stress-evaluation/nb15_stress_results.parquet']
+2214.0s 412 [6/7]   CAMeLBERT neural K=9 (ours)        F1  99.88 [ 99.63,100.00]  AUC 100.00
+2214.6s 413 [6/7]   Hybrid 773 K=9 (ours)              F1  99.76 [ 99.27,100.00]  AUC 100.00
+2214.7s 414 
+2214.7s 415 [6/7] final table:
+2214.7s 416 system       type  MacroF1  F1_lo  F1_hi    AUC    n
+2214.7s 417 Fast-DetectGPT (zero-shot)  zero-shot    49.38  46.22  52.29  50.44 1093
+2214.7s 418 XLM-R 512 (competition-style) supervised    98.38  97.99  98.99  99.99 1093
+2214.7s 419 CAMeLBERT 512 (truncation) supervised    98.75  97.98  99.18 100.00 1093
+2214.7s 420 CAMeLBERT neural K=9 (ours) supervised    99.88  99.63 100.00 100.00  820
+2214.7s 421 Hybrid 773 K=9 (ours) supervised    99.76  99.27 100.00 100.00  820
+2214.7s 422 
+2214.7s 423 [7/7] DISENTANGLING encoder vs chunking:
+2214.7s 424 [7/7]   encoder  (CAMeLBERT512 - XLMR512)   = +0.37 pp
+2214.7s 425 [7/7]   chunking (K=9 - CAMeLBERT512)       = +1.13 pp
+2214.7s 426 
+2214.7s 427 [7/7] TOTAL SESSION 36.7 min
+2214.7s 428 [7/7] NOTE: the zero-shot row is not a like-for-like defeat — untrained on this corpus and
+2214.7s 429 [7/7]       using a surrogate scorer. It measures the value of supervision.
+2220.3s 430 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+2220.3s 431 cells[i][c] = re.sub('\\\\\|', '|', cell)
+2220.4s 432 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+2220.4s 433 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+2221.1s 434 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+2221.5s 435 [NbConvertApp] Writing 255056 bytes to __notebook__.ipynb
+2223.8s 436 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+2224.8s 437 [NbConvertApp] Writing 601566 bytes to __results__.html

@@ -1,0 +1,77 @@
+9.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.5s 3 0.00s - to python to disable frozen modules.
+9.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.4s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.4s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.4s 7 0.00s - to python to disable frozen modules.
+10.4s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+12.9s 9 [1/6] config ready
+47.4s 10 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+47.4s 11 
+47.4s 12 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+52.3s 13 [2/6] tokenizer aubmindlab/aragpt2-base loaded
+59.6s 14 [2/6]   ours 1000/7101
+64.7s 15 [2/6]   ours 2000/7101
+69.7s 16 [2/6]   ours 3000/7101
+74.6s 17 [2/6]   ours 4000/7101
+79.6s 18 [2/6]   ours 5000/7101
+84.5s 19 [2/6]   ours 6000/7101
+89.6s 20 [2/6]   ours 7000/7101
+90.1s 21 
+90.1s 22 [2/6] OUR corpus: 7101 scored | median 589 words, 790 tokens | hit the 1024-token cap: 29.4%
+90.1s 23 [2/6]   words  human 592 | AI 587
+90.1s 24 [2/6]   tokens human 801 | AI 779
+90.1s 25 [2/6]   capped human 30.3% | AI 28.7%
+90.2s 26 
+90.2s 27 [3/6] === OUR corpus (all splits) (n=7101) ===
+90.2s 28 [3/6]   corr(d, sqrt(len))     pearson -0.185 (p=1.7e-55) | spearman -0.188
+90.2s 29 [3/6]   variance of d explained by length: 3.4%
+90.2s 30 [3/6]   AUC  d (raw)                =  51.64
+90.2s 31 [3/6]   AUC  length alone           =  47.97
+90.2s 32 [3/6]   AUC  d after removing length=  51.38   (change -0.27)
+90.2s 33 [3/6]   class means of d: human -5.085 | AI -3.756
+90.2s 34 [3/6]   class median tokens: human 801 | AI 779
+90.2s 35 
+90.2s 36 [3/6] === OUR corpus (test split) (n=1093) ===
+90.2s 37 [3/6]   corr(d, sqrt(len))     pearson -0.195 (p=8.1e-11) | spearman -0.169
+90.2s 38 [3/6]   variance of d explained by length: 3.8%
+90.2s 39 [3/6]   AUC  d (raw)                =  50.44
+90.2s 40 [3/6]   AUC  length alone           =  48.84
+90.2s 41 [3/6]   AUC  d after removing length=  50.15   (change -0.28)
+90.2s 42 [3/6]   class means of d: human -4.875 | AI -3.372
+90.2s 43 [3/6]   class median tokens: human 759 | AI 756
+91.7s 44 
+91.7s 45 [4/6] Ar-APT: 800 scored | median 214 words, 315 tokens | hit cap: 0.0%
+91.7s 46 
+91.7s 47 [3/6] === Ar-APT balanced 400/400 (n=800) ===
+91.7s 48 [3/6]   corr(d, sqrt(len))     pearson -0.401 (p=2.6e-32) | spearman -0.394
+91.7s 49 [3/6]   variance of d explained by length: 16.1%
+91.7s 50 [3/6]   AUC  d (raw)                =  35.34
+91.7s 51 [3/6]   AUC  length alone           =  66.22
+91.8s 52 [3/6]   AUC  d after removing length=  47.44   (change +12.10)
+91.8s 53 [3/6]   class means of d: human -4.710 | AI -7.351
+91.8s 54 [3/6]   class median tokens: human 274 | AI 336
+91.8s 55 
+91.8s 56 [5/6] SUMMARY
+91.8s 57 corpus    n  corr_sqrt  var_expl_pct  auc_d  auc_len  auc_resid  mean_d_human  mean_d_ai  med_tok_human  med_tok_ai
+91.8s 58 OUR corpus (all splits) 7101     -0.185           3.4  51.64    47.97      51.38        -5.085     -3.756          801.0       779.0
+91.8s 59 OUR corpus (test split) 1093     -0.195           3.8  50.44    48.84      50.15        -4.875     -3.372          759.0       756.5
+91.8s 60 Ar-APT balanced 400/400  800     -0.401          16.1  35.34    66.22      47.44        -4.710     -7.351          273.5       336.5
+91.8s 61 
+91.8s 62 [5/6] READING:
+91.8s 63 [5/6]   H2 CONFIRMED — length is not the driver. AraGPT2 as a black-box surrogate simply
+91.8s 64 [5/6]   fails to separate these generators, which is the reportable negative result.
+91.8s 65 
+91.8s 66 [5/6]   cross-corpus: our median tokens 759/756 (h/AI) vs Ar-APT 274/336
+91.8s 67 [5/6]   d means ours -4.88/-3.37 vs Ar-APT -4.71/-7.35  -> the sign flip lives here
+91.9s 68 [6/6] saved nb18_*.parquet
+91.9s 69 [6/6] done — this turns 'Fast-DetectGPT failed' into a mechanism you can defend.
+97.7s 70 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+97.7s 71 cells[i][c] = re.sub('\\\\\|', '|', cell)
+97.9s 72 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+97.9s 73 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+98.6s 74 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+99.1s 75 [NbConvertApp] Writing 69323 bytes to __notebook__.ipynb
+102.3s 76 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+103.5s 77 [NbConvertApp] Writing 369030 bytes to __results__.html

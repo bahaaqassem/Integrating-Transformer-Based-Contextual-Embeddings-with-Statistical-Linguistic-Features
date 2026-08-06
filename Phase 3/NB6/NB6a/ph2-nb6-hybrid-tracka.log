@@ -1,0 +1,69 @@
+8.3s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.3s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.3s 3 0.00s - to python to disable frozen modules.
+8.3s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.0s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.0s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.0s 7 0.00s - to python to disable frozen modules.
+9.0s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.7s 9 device: cpu
+15.8s 10 ALIGNMENT OK | hybrid matrix: (7101, 773) | dims: 768 neural + 5 stat = 773
+15.8s 11 splits: {'train': 5363, 'val': 645, 'test': 1093}
+17.9s 12 fusion head + trainer ready
+25.1s 13 H=128  val macro-F1 97.05%  (best epoch 19, 7.0s)
+27.7s 14 H=256  val macro-F1 97.52%  (best epoch 21, 2.6s)
+32.8s 15 H=512  val macro-F1 97.52%  (best epoch 24, 5.3s)
+32.8s 16 
+32.8s 17 selected hidden width: 256 (ties break toward smaller)
+33.0s 18 ep   0 loss 0.7085 val_f1 0.3399
+34.0s 19 ep  10 loss 0.2015 val_f1 0.9550
+34.9s 20 ep  20 loss 0.0995 val_f1 0.9721
+35.5s 21 
+35.5s 22 TRACK A — frozen hybrid (test split):
+35.5s 23 accuracy   97.5
+35.5s 24 precision  98.5
+35.5s 25 recall     96.6
+35.5s 26 macro_f1   97.5
+35.5s 27 auc_roc    99.7
+35.5s 28 
+35.5s 29 reference ladder:
+35.5s 30 statistical-only (GB):        84.7
+35.5s 31 CAMeLBERT-MSA frozen probe:   99.7
+35.5s 32 TRACK-A HYBRID:               97.5
+35.5s 33 
+35.5s 34 confusion (rows=true 0/1): [[531 8] [19 535]]
+35.5s 35 
+35.5s 36 AI recall by generator (standard split):
+35.5s 37 deepseek    91.9%  (n=135)
+35.5s 38 gemini      98.4%  (n=63)
+35.5s 39 gpt         94.1%  (n=68)
+35.5s 40 opus       100.0%  (n=63)
+35.5s 41 qwen        97.7%  (n=88)
+35.5s 42 sonnet      99.3%  (n=137)
+35.5s 43 human retained: 98.5%
+39.4s 44 deepseek   ai_recall  86.7%  macroF1  94.9%  (probe ref 98.3%)
+40.8s 45 gemini     ai_recall  98.4%  macroF1  96.2%  (probe ref 99.3%)
+43.1s 46 gpt        ai_recall  73.5%  macroF1  88.9%  (probe ref 92.7%)
+45.2s 47 opus       ai_recall  98.4%  macroF1  96.2%  (probe ref 99.4%)
+48.8s 48 qwen       ai_recall  95.5%  macroF1  96.1%  (probe ref 98.3%)
+49.9s 49 sonnet     ai_recall  96.4%  macroF1  97.0%  (probe ref 99.6%)
+49.9s 50 
+49.9s 51 HYBRID LOGO:  mean 94.9%  std 3.0%  worst 88.9% (gpt held out)
+49.9s 52 PROBE  LOGO:  mean 98.1%  std 2.8%  worst 92.7% (gpt held out)
+49.9s 53 
+49.9s 54 Worst fold BELOW the probe — investigate before concluding (see plan risk register)
+50.0s 55 saved:
+50.0s 56 ph2_nb6_trackA_results.parquet  (headline + LOGO summary)
+50.0s 57 ph2_nb6_trackA_logo.parquet     (per-fold table)
+50.0s 58 ph2_nb6_trackA_sweep.parquet    (width sweep)
+50.0s 59 ph2_nb6_trackA_head.pt          (trained fusion head)
+50.0s 60 
+50.0s 61 width for Track B: 256
+54.0s 62 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+54.0s 63 cells[i][c] = re.sub('\\\\\|', '|', cell)
+54.2s 64 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+54.2s 65 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+54.8s 66 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+55.1s 67 [NbConvertApp] Writing 26231 bytes to __notebook__.ipynb
+57.6s 68 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+58.5s 69 [NbConvertApp] Writing 346349 bytes to __results__.html

@@ -1,0 +1,62 @@
+7.6s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.6s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.6s 3 0.00s - to python to disable frozen modules.
+7.6s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.2s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.2s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.2s 7 0.00s - to python to disable frozen modules.
+8.2s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.3s 9 config loaded
+11.5s 10 7101 articles | label {np.int64(0): np.int64(3500), np.int64(1): np.int64(3601)} | train 5363 val 645 test 1093
+12.2s 11 CAMeLBERT Vneural: (7101, 768)
+40.0s 12 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+40.0s 13 
+40.0s 14 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+51.5s 15 XLMRobertaModel LOAD REPORT from: xlm-roberta-base
+51.5s 16 Key                       | Status     |  |
+51.5s 17 --------------------------+------------+--+-
+51.5s 18 lm_head.dense.bias        | UNEXPECTED |  |
+51.5s 19 lm_head.bias              | UNEXPECTED |  |
+51.5s 20 lm_head.dense.weight      | UNEXPECTED |  |
+51.5s 21 lm_head.layer_norm.weight | UNEXPECTED |  |
+51.5s 22 lm_head.layer_norm.bias   | UNEXPECTED |  |
+51.5s 23 
+51.5s 24 Notes:
+51.5s 25 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+51.5s 26 
+51.5s 27 XLMRobertaModel LOAD REPORT from: xlm-roberta-base
+51.5s 28 Key                       | Status     |  |
+51.5s 29 --------------------------+------------+--+-
+51.5s 30 lm_head.dense.bias        | UNEXPECTED |  |
+51.5s 31 lm_head.bias              | UNEXPECTED |  |
+51.5s 32 lm_head.dense.weight      | UNEXPECTED |  |
+51.5s 33 lm_head.layer_norm.weight | UNEXPECTED |  |
+51.5s 34 lm_head.layer_norm.bias   | UNEXPECTED |  |
+51.5s 35 
+51.5s 36 Notes:
+51.5s 37 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+52.0s 38 Token indices sequence length is longer than the specified maximum sequence length for this model (1235 > 512). Running this sequence through the model will result in indexing errors
+52.0s 39 
+52.0s 40 Token indices sequence length is longer than the specified maximum sequence length for this model (1235 > 512). Running this sequence through the model will result in indexing errors
+690.8s 41 built + saved -> /kaggle/working/xlmr_embeddings.parquet
+690.8s 42 XLM-R Vneural: (7101, 768)
+690.9s 43 harness ready
+700.1s 44 Per-generator LOGO (this harness):
+700.1s 45 CAMeLBERT-MSA  deepseek:99.1  sonnet:99.5  qwen:98.3  gemini:100.0  gpt:91.7  opus:100.0
+700.1s 46 XLM-R          deepseek:92.1  sonnet:95.4  qwen:90.3  gemini:91.4  gpt:90.3  opus:90.9
+700.1s 47 ==============================================================
+700.1s 48 FAIR comparison (same harness):  XLM-R vs CAMeLBERT-MSA
+700.1s 49 std        XLM-R 96.98  |  CAMeLBERT 99.73
+700.1s 50 LOGO-mean  XLM-R 91.75  |  CAMeLBERT  98.1
+700.1s 51 LOGO-worst XLM-R 90.33  |  CAMeLBERT 91.68   (delta -1.35pp, 1 gpt art ~0.42)
+700.1s 52 ==============================================================
+700.1s 53 => CAMeLBERT-MSA still wins the floor -> core choice JUSTIFIED with evidence; XLM-R added as probe.
+700.1s 54 Sanity: this-harness CAMeLBERT-MSA should sit within ~0.5pp of its NB5c row (99.7/98.1/92.7).
+705.2s 55 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+705.2s 56 cells[i][c] = re.sub('\\\\\|', '|', cell)
+705.3s 57 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+705.3s 58 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+705.9s 59 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+706.3s 60 [NbConvertApp] Writing 104450 bytes to __notebook__.ipynb
+708.6s 61 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+709.4s 62 [NbConvertApp] Writing 387297 bytes to __results__.html

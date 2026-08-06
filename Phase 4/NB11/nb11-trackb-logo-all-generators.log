@@ -1,0 +1,214 @@
+7.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.0s 3 0.00s - to python to disable frozen modules.
+7.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.6s 7 0.00s - to python to disable frozen modules.
+7.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.2s 9 config loaded | device cuda
+39.3s 10 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+39.3s 11 
+39.3s 12 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+61.7s 13 built chunks
+61.7s 14 chunks: (7101, 9, 512)
+61.7s 15 models ready
+61.8s 16 train_fold ready
+61.9s 17 skip deepseek:hybrid = 98.83
+61.9s 18 skip deepseek:neural = 99.53
+61.9s 19 skip sonnet:hybrid = 99.77
+61.9s 20 skip sonnet:neural = 99.54
+61.9s 21 skip qwen:hybrid = 99.34
+61.9s 22 skip qwen:neural = 99.34
+61.9s 23 skip gemini:hybrid = 99.56
+61.9s 24 === training gemini:neural (train 5630, test 602) ===
+72.2s 25 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+72.2s 26 Key                                        | Status     |  |
+72.2s 27 -------------------------------------------+------------+--+-
+72.2s 28 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+72.2s 29 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+72.2s 30 cls.seq_relationship.bias                  | UNEXPECTED |  |
+72.2s 31 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+72.2s 32 cls.seq_relationship.weight                | UNEXPECTED |  |
+72.2s 33 cls.predictions.decoder.weight             | UNEXPECTED |  |
+72.2s 34 cls.predictions.decoder.bias               | UNEXPECTED |  |
+72.2s 35 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+72.2s 36 cls.predictions.bias                       | UNEXPECTED |  |
+72.2s 37 bert.embeddings.position_ids               | UNEXPECTED |  |
+72.2s 38 
+72.2s 39 Notes:
+72.2s 40 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+72.2s 41 
+72.2s 42 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+72.2s 43 Key                                        | Status     |  |
+72.2s 44 -------------------------------------------+------------+--+-
+72.2s 45 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+72.2s 46 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+72.2s 47 cls.seq_relationship.bias                  | UNEXPECTED |  |
+72.2s 48 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+72.2s 49 cls.seq_relationship.weight                | UNEXPECTED |  |
+72.2s 50 cls.predictions.decoder.weight             | UNEXPECTED |  |
+72.2s 51 cls.predictions.decoder.bias               | UNEXPECTED |  |
+72.2s 52 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+72.2s 53 cls.predictions.bias                       | UNEXPECTED |  |
+72.2s 54 bert.embeddings.position_ids               | UNEXPECTED |  |
+72.2s 55 
+72.2s 56 Notes:
+72.2s 57 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1705.5s 58 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1705.5s 59 
+1705.5s 60 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+6841.3s 61 gemini:neural test-fold MacroF1 = 99.56
+6841.3s 62 === training gpt:hybrid (train 5636, test 607) ===
+6842.3s 63 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+6842.3s 64 Key                                        | Status     |  |
+6842.3s 65 -------------------------------------------+------------+--+-
+6842.3s 66 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+6842.3s 67 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+6842.3s 68 cls.seq_relationship.bias                  | UNEXPECTED |  |
+6842.3s 69 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+6842.3s 70 cls.seq_relationship.weight                | UNEXPECTED |  |
+6842.3s 71 cls.predictions.decoder.weight             | UNEXPECTED |  |
+6842.3s 72 cls.predictions.decoder.bias               | UNEXPECTED |  |
+6842.3s 73 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+6842.3s 74 cls.predictions.bias                       | UNEXPECTED |  |
+6842.3s 75 bert.embeddings.position_ids               | UNEXPECTED |  |
+6842.3s 76 
+6842.3s 77 Notes:
+6842.3s 78 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+6842.3s 79 
+6842.3s 80 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+6842.3s 81 Key                                        | Status     |  |
+6842.3s 82 -------------------------------------------+------------+--+-
+6842.3s 83 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+6842.3s 84 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+6842.3s 85 cls.seq_relationship.bias                  | UNEXPECTED |  |
+6842.3s 86 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+6842.3s 87 cls.seq_relationship.weight                | UNEXPECTED |  |
+6842.3s 88 cls.predictions.decoder.weight             | UNEXPECTED |  |
+6842.3s 89 cls.predictions.decoder.bias               | UNEXPECTED |  |
+6842.3s 90 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+6842.3s 91 cls.predictions.bias                       | UNEXPECTED |  |
+6842.3s 92 bert.embeddings.position_ids               | UNEXPECTED |  |
+6842.3s 93 
+6842.3s 94 Notes:
+6842.3s 95 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+13629.0s 96 gpt:hybrid test-fold MacroF1 = 99.18
+13629.0s 97 === training gpt:neural (train 5636, test 607) ===
+13630.2s 98 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+13630.2s 99 Key                                        | Status     |  |
+13630.2s 100 -------------------------------------------+------------+--+-
+13630.2s 101 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+13630.2s 102 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+13630.2s 103 cls.seq_relationship.bias                  | UNEXPECTED |  |
+13630.2s 104 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+13630.2s 105 cls.seq_relationship.weight                | UNEXPECTED |  |
+13630.2s 106 cls.predictions.decoder.weight             | UNEXPECTED |  |
+13630.2s 107 cls.predictions.decoder.bias               | UNEXPECTED |  |
+13630.2s 108 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+13630.2s 109 cls.predictions.bias                       | UNEXPECTED |  |
+13630.2s 110 bert.embeddings.position_ids               | UNEXPECTED |  |
+13630.2s 111 
+13630.2s 112 Notes:
+13630.2s 113 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+13630.2s 114 
+13630.2s 115 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+13630.2s 116 Key                                        | Status     |  |
+13630.2s 117 -------------------------------------------+------------+--+-
+13630.2s 118 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+13630.2s 119 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+13630.2s 120 cls.seq_relationship.bias                  | UNEXPECTED |  |
+13630.2s 121 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+13630.2s 122 cls.seq_relationship.weight                | UNEXPECTED |  |
+13630.2s 123 cls.predictions.decoder.weight             | UNEXPECTED |  |
+13630.2s 124 cls.predictions.decoder.bias               | UNEXPECTED |  |
+13630.2s 125 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+13630.2s 126 cls.predictions.bias                       | UNEXPECTED |  |
+13630.2s 127 bert.embeddings.position_ids               | UNEXPECTED |  |
+13630.2s 128 
+13630.2s 129 Notes:
+13630.2s 130 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+20410.2s 131 gpt:neural test-fold MacroF1 = 98.36
+20410.2s 132 === training opus:hybrid (train 5691, test 602) ===
+20411.1s 133 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+20411.1s 134 Key                                        | Status     |  |
+20411.1s 135 -------------------------------------------+------------+--+-
+20411.1s 136 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+20411.1s 137 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+20411.1s 138 cls.seq_relationship.bias                  | UNEXPECTED |  |
+20411.1s 139 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+20411.1s 140 cls.seq_relationship.weight                | UNEXPECTED |  |
+20411.1s 141 cls.predictions.decoder.weight             | UNEXPECTED |  |
+20411.1s 142 cls.predictions.decoder.bias               | UNEXPECTED |  |
+20411.1s 143 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+20411.1s 144 cls.predictions.bias                       | UNEXPECTED |  |
+20411.1s 145 bert.embeddings.position_ids               | UNEXPECTED |  |
+20411.1s 146 
+20411.1s 147 Notes:
+20411.1s 148 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+20411.1s 149 
+20411.1s 150 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+20411.1s 151 Key                                        | Status     |  |
+20411.1s 152 -------------------------------------------+------------+--+-
+20411.1s 153 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+20411.1s 154 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+20411.1s 155 cls.seq_relationship.bias                  | UNEXPECTED |  |
+20411.1s 156 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+20411.1s 157 cls.seq_relationship.weight                | UNEXPECTED |  |
+20411.1s 158 cls.predictions.decoder.weight             | UNEXPECTED |  |
+20411.1s 159 cls.predictions.decoder.bias               | UNEXPECTED |  |
+20411.1s 160 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+20411.1s 161 cls.predictions.bias                       | UNEXPECTED |  |
+20411.1s 162 bert.embeddings.position_ids               | UNEXPECTED |  |
+20411.1s 163 
+20411.1s 164 Notes:
+20411.1s 165 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+27239.8s 166 opus:hybrid test-fold MacroF1 = 99.56
+27239.8s 167 === training opus:neural (train 5691, test 602) ===
+27240.8s 168 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+27240.8s 169 Key                                        | Status     |  |
+27240.8s 170 -------------------------------------------+------------+--+-
+27240.8s 171 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+27240.8s 172 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+27240.8s 173 cls.seq_relationship.bias                  | UNEXPECTED |  |
+27240.8s 174 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+27240.8s 175 cls.seq_relationship.weight                | UNEXPECTED |  |
+27240.8s 176 cls.predictions.decoder.weight             | UNEXPECTED |  |
+27240.8s 177 cls.predictions.decoder.bias               | UNEXPECTED |  |
+27240.8s 178 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+27240.8s 179 cls.predictions.bias                       | UNEXPECTED |  |
+27240.8s 180 bert.embeddings.position_ids               | UNEXPECTED |  |
+27240.8s 181 
+27240.8s 182 Notes:
+27240.8s 183 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+27240.8s 184 
+27240.8s 185 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+27240.8s 186 Key                                        | Status     |  |
+27240.8s 187 -------------------------------------------+------------+--+-
+27240.8s 188 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+27240.8s 189 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+27240.8s 190 cls.seq_relationship.bias                  | UNEXPECTED |  |
+27240.8s 191 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+27240.8s 192 cls.seq_relationship.weight                | UNEXPECTED |  |
+27240.8s 193 cls.predictions.decoder.weight             | UNEXPECTED |  |
+27240.8s 194 cls.predictions.decoder.bias               | UNEXPECTED |  |
+27240.8s 195 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+27240.8s 196 cls.predictions.bias                       | UNEXPECTED |  |
+27240.8s 197 bert.embeddings.position_ids               | UNEXPECTED |  |
+27240.8s 198 
+27240.8s 199 Notes:
+27240.8s 200 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+34091.5s 201 opus:neural test-fold MacroF1 = 99.56
+34091.5s 202 all folds done
+34091.5s 203 HYBRID   LOGO  mean 99.37  worst 98.83
+34091.5s 204 NEURAL   LOGO  mean 99.31  worst 98.36   (matched standardizer)
+34091.5s 205 FUSION LIFT (matched): mean +0.06  worst +0.47pp
+34091.5s 206 This is the honest, apples-to-apples fusion-lift number for the thesis (no raw-vs-scaled inflation).
+34097.5s 207 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+34097.5s 208 cells[i][c] = re.sub('\\\\\|', '|', cell)
+34097.7s 209 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+34097.7s 210 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+34098.3s 211 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+34098.6s 212 [NbConvertApp] Writing 170902 bytes to __notebook__.ipynb
+34101.0s 213 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+34101.9s 214 [NbConvertApp] Writing 473292 bytes to __results__.html

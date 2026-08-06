@@ -1,0 +1,71 @@
+10.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.5s 3 0.00s - to python to disable frozen modules.
+10.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.3s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.3s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.3s 7 0.00s - to python to disable frozen modules.
+11.3s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+21.9s 9 config loaded | device cuda
+23.1s 10 7101 articles | stat dim 5 | SMOKE=False
+61.0s 11 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+61.0s 12 
+61.0s 13 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+83.8s 14 built + cached chunk ids -> /kaggle/working/chunks_K9.npz
+83.8s 15 chunk tensor: (7101, 9, 512)
+83.9s 16 model defined
+83.9s 17 standardizer routine ready
+83.9s 18 checkpoint helpers ready
+95.2s 19 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+95.2s 20 Key                                        | Status     |  |
+95.2s 21 -------------------------------------------+------------+--+-
+95.2s 22 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+95.2s 23 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+95.2s 24 cls.predictions.bias                       | UNEXPECTED |  |
+95.2s 25 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+95.2s 26 bert.embeddings.position_ids               | UNEXPECTED |  |
+95.2s 27 cls.predictions.decoder.bias               | UNEXPECTED |  |
+95.2s 28 cls.seq_relationship.weight                | UNEXPECTED |  |
+95.2s 29 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+95.2s 30 cls.seq_relationship.bias                  | UNEXPECTED |  |
+95.2s 31 cls.predictions.decoder.weight             | UNEXPECTED |  |
+95.2s 32 
+95.2s 33 Notes:
+95.2s 34 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+95.2s 35 
+95.2s 36 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+95.2s 37 Key                                        | Status     |  |
+95.2s 38 -------------------------------------------+------------+--+-
+95.2s 39 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+95.2s 40 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+95.2s 41 cls.predictions.bias                       | UNEXPECTED |  |
+95.2s 42 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+95.2s 43 bert.embeddings.position_ids               | UNEXPECTED |  |
+95.2s 44 cls.predictions.decoder.bias               | UNEXPECTED |  |
+95.2s 45 cls.seq_relationship.weight                | UNEXPECTED |  |
+95.2s 46 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+95.2s 47 cls.seq_relationship.bias                  | UNEXPECTED |  |
+95.2s 48 cls.predictions.decoder.weight             | UNEXPECTED |  |
+95.2s 49 
+95.2s 50 Notes:
+95.2s 51 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1411.8s 52 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1411.8s 53 
+1411.8s 54 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+2824.8s 55 epoch 1 done, saved.
+3104.2s 56 ep1 step200 loss 0.0025
+4236.6s 57 epoch 2 done, saved.
+4792.2s 58 ep2 step400 loss 0.0003
+5647.6s 59 epoch 3 done, saved.
+5647.6s 60 training complete
+5715.4s 61 STD  MacroF1 99.82  Acc 99.82  AUC 100.00
+5715.4s 62 For LOGO(GPT,DeepSeek): run train() once per held-out generator (exclude its train+val AI),
+5715.4s 63 evaluate its test-split AI + all test human. Keep the SAME K=9 + standardizer policy.
+5721.1s 64 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+5721.1s 65 cells[i][c] = re.sub('\\\\\|', '|', cell)
+5721.4s 66 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+5721.4s 67 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+5722.0s 68 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+5722.4s 69 [NbConvertApp] Writing 131595 bytes to __notebook__.ipynb
+5724.7s 70 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+5725.6s 71 [NbConvertApp] Writing 440447 bytes to __results__.html

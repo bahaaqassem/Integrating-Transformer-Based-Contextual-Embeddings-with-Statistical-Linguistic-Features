@@ -1,0 +1,33 @@
+8.6s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.6s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.6s 3 0.00s - to python to disable frozen modules.
+8.6s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.4s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.4s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.4s 7 0.00s - to python to disable frozen modules.
+9.4s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.8s 9 config loaded
+13.1s 10 aligned 7101 | label {np.int64(0): np.int64(3500), np.int64(1): np.int64(3601)} | train 5363 val 645 test 1093
+15.5s 11 models ready
+40.3s 12 STANDARD SPLIT:
+187.7s 13 LOGO (leave-one-generator-out):
+187.8s 14 ============================================================
+187.8s 15 STANDARD SPLIT (best model per set, by Macro-F1):
+187.8s 16 OLD_5   MacroF1=84.72  AUC=90.92  (via GradientBoosting)
+187.8s 17 NEW_5   MacroF1=88.75  AUC=95.05  (via RandomForest)
+187.8s 18 
+187.8s 19 LOGO (best model per set, by worst fold):
+187.8s 20 OLD_5   worst=68.27  mean=72.11  (via RandomForest)
+187.8s 21 NEW_5   worst=74.37  mean=80.16  (via RandomForest)
+187.8s 22 ============================================================
+187.8s 23 LOGO-worst delta (NEW_5 - OLD_5) = +6.10pp   (1 gpt article ~ 0.42pp)
+187.8s 24 Decision is yours: NEW_5 tends higher on LOGO-worst, but if within ~1 article, OLD_5 is the
+187.8s 25 documented/proposal-lineage choice. Also weigh quote_ratio's corpus-construction caveat.
+191.4s 26 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+191.4s 27 cells[i][c] = re.sub('\\\\\|', '|', cell)
+191.6s 28 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+191.6s 29 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+192.4s 30 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+192.8s 31 [NbConvertApp] Writing 27733 bytes to __notebook__.ipynb
+195.9s 32 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+196.9s 33 [NbConvertApp] Writing 317939 bytes to __results__.html

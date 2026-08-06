@@ -1,0 +1,64 @@
+8.7s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.7s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.7s 3 0.00s - to python to disable frozen modules.
+8.7s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.5s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.5s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.5s 7 0.00s - to python to disable frozen modules.
+9.5s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.9s 9 config loaded
+16.0s 10 Preparing metadata (setup.py) ... [?25l[?25hdone
+17.0s 11 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/125.7 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m125.7/125.7 kB[0m [31m3.9 MB/s[0m eta [36m0:00:00[0m
+17.1s 12 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━[0m [32m1.9/3.3 MB[0m [31m55.9 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m3.3/3.3 MB[0m [31m76.4 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.3/3.3 MB[0m [31m45.7 MB/s[0m eta [36m0:00:00[0m
+17.2s 13 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/9.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━[0m [32m7.4/9.1 MB[0m [31m221.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m9.1/9.1 MB[0m [31m213.3 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m9.1/9.1 MB[0m [31m91.0 MB/s[0m eta [36m0:00:00[0m
+17.3s 14 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/122.3 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m122.3/122.3 kB[0m [31m5.8 MB/s[0m eta [36m0:00:00[0m
+18.8s 15 [?25h  Building wheel for docopt (setup.py) ... [?25l[?25hdone
+26.6s 16 [31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+26.6s 17 sklearn-compat 0.1.5 requires scikit-learn<1.9,>=1.2, but you have scikit-learn 1.9.0 which is incompatible.[0m[31m
+27.4s 18 [0mThe following packages will be installed: 'morphology-db-msa-r13', 'disambig-mle-calima-msa-r13'
+27.8s 19 Downloading package 'morphology-db-msa-r13':   0%|[32m  [0m| 0.00/40.5M [00:00<?, ?B/s][0mDownloading package 'morphology-db-msa-r13':  25%|[32m▎[0m| 10.2M/40.5M [00:00<00:00, 1[0mDownloading package 'morphology-db-msa-r13':  88%|[32m▉[0m| 35.6M/40.5M [00:00<00:00, 1[0mDownloading package 'morphology-db-msa-r13': 100%|[32m█[0m| 40.5M/40.5M [00:00<00:00, 1[0m
+27.9s 20 Extracting package 'morphology-db-msa-r13':   0%|[32m   [0m| 0.00/40.5M [00:00<?, ?B/s][0mExtracting package 'morphology-db-msa-r13': 100%|[32m█[0m| 40.5M/40.5M [00:00<00:00, 47[0m
+28.6s 21 Downloading package 'disambig-mle-calima-msa-r13':   0%|[32m [0m| 0.00/88.7M [00:00<?, [0mDownloading package 'disambig-mle-calima-msa-r13':  12%|[32m [0m| 10.5M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  36%|[32m▎[0m| 31.7M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  63%|[32m▋[0m| 56.2M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  92%|[32m▉[0m| 81.9M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13': 100%|[32m█[0m| 88.7M/88.7M [00:00<00[0m
+28.7s 22 Extracting package 'disambig-mle-calima-msa-r13':   0%|[32m [0m| 0.00/88.7M [00:00<?, ?[0mExtracting package 'disambig-mle-calima-msa-r13': 100%|[32m█[0m| 88.7M/88.7M [00:00<00:[0mExtracting package 'disambig-mle-calima-msa-r13': 100%|[32m█[0m| 88.7M/88.7M [00:00<00:[0m
+29.3s 23 No new packages will be installed.
+29.4s 24 MLE model present: True
+29.4s 25 camel-tools ready
+30.7s 26 aligned articles: 7101 | label balance {1: 3601, 0: 3500}
+30.7s 27 splits: {'train': 5363, 'test': 1093, 'val': 645}
+31.1s 28 loaded cached passive_ratio_camel
+31.1s 29 NaN (no verb): 0 | non-zero docs: 6313
+33.2s 30 raw passive_ratio  human=0.0436  ai=0.0333
+33.2s 31 winner6_fallback (7101, 6)
+33.2s 32 winner6_correct (7101, 6)
+33.2s 33 five_drop (7101, 5)
+33.2s 34 official5 (7101, 5)
+33.7s 35 loaded cached embeddings
+33.7s 36 Vneural: (7101, 768)
+33.9s 37 test AI held-out deepseek: 135
+33.9s 38 test AI held-out sonnet: 137
+33.9s 39 test AI held-out qwen: 88
+33.9s 40 test AI held-out gemini: 63
+33.9s 41 test AI held-out gpt: 68
+33.9s 42 test AI held-out opus: 63
+33.9s 43 harness ready
+61.0s 44 ==================================================================
+61.0s 45 REPRODUCTION CHECK per mode (targets: neural 92.7 | official5 94.2 | winner6 95.2):
+61.0s 46 [raw   ] neural=92.20(d-0.5)  official5=93.12(d-1.1)  winner6fb=93.21(d-2.0)
+61.0s 47 [scaled] neural=95.09(d+2.4)  official5=95.09(d+0.9)  winner6fb=95.57(d+0.4)
+61.0s 48 ==================================================================
+61.0s 49 MODE THAT BEST REPRODUCES NB6f: 'scaled'  -> reading the passive decision from it
+61.0s 50 winner-6 (correct passive) worst = 95.57
+61.0s 51 five   (drop passive)      worst = 95.57
+61.0s 52 delta (keep - drop)              = +0.00pp   (1-article noise ~ 0.42pp)
+61.0s 53 => WITHIN NOISE: doesn't move the floor -> prefer the simpler analyzer-free 5.
+61.0s 54 
+61.0s 55 NOTE: trust this only if 'best' mode actually reproduced winner6fb~95.2 above; if neither mode
+61.0s 56 reproduces, the fusion operating point still differs from NB6f (check LogReg C / train composition).
+64.8s 57 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+64.8s 58 cells[i][c] = re.sub('\\\\\|', '|', cell)
+65.0s 59 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+65.0s 60 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+66.2s 61 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+66.6s 62 [NbConvertApp] Writing 39301 bytes to __notebook__.ipynb
+70.1s 63 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+71.5s 64 [NbConvertApp] Writing 368126 bytes to __results__.html

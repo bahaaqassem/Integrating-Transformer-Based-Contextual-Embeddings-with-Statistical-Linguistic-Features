@@ -1,0 +1,110 @@
+7.8s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.8s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.8s 3 0.00s - to python to disable frozen modules.
+7.8s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.5s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.5s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.5s 7 0.00s - to python to disable frozen modules.
+8.5s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+23.7s 9 ALIGNMENT OK | dataset (7101, 7) | existing vstat (7101, 9)
+23.7s 10 splits: {'train': 5363, 'test': 1093, 'val': 645}
+23.8s 11 text utilities ready
+23.8s 12 quote features ready
+23.8s 13 linkage + function-word features ready
+24.8s 14 POS tagger: falling back to word-shape tags (FileNotFoundError)
+24.8s 15 POS entropy ready | source = fallback
+24.8s 16 voice + clause features ready
+24.9s 17 compression / repetition / zipf features ready
+24.9s 18 all 11 extractors registered
+25.0s 19 to compute: 7101
+27.9s 20 [  500/7101] 0.006s/doc | ETA 1m
+30.8s 21 [ 1000/7101] 0.006s/doc | ETA 1m
+33.8s 22 [ 1500/7101] 0.006s/doc | ETA 1m
+36.7s 23 [ 2000/7101] 0.006s/doc | ETA 1m
+39.6s 24 [ 2500/7101] 0.006s/doc | ETA 0m
+42.5s 25 [ 3000/7101] 0.006s/doc | ETA 0m
+45.4s 26 [ 3500/7101] 0.006s/doc | ETA 0m
+48.3s 27 [ 4000/7101] 0.006s/doc | ETA 0m
+51.3s 28 [ 4500/7101] 0.006s/doc | ETA 0m
+54.4s 29 [ 5000/7101] 0.006s/doc | ETA 0m
+57.2s 30 [ 5500/7101] 0.006s/doc | ETA 0m
+60.3s 31 [ 6000/7101] 0.006s/doc | ETA 0m
+63.4s 32 [ 6500/7101] 0.006s/doc | ETA 0m
+66.5s 33 [ 7000/7101] 0.006s/doc | ETA 0m
+67.1s 34 [ 7101/7101] 0.006s/doc | ETA 0m
+67.1s 35 
+67.1s 36 done: (7101, 15)
+67.1s 37 NaN per feature:
+67.1s 38 quote_ratio              0
+67.1s 39 quote_variety            0
+67.1s 40 coord_sub_ratio          0
+67.1s 41 function_word_ratio      0
+67.1s 42 pos_entropy              0
+67.1s 43 passive_ratio            0
+67.1s 44 clause_depth             0
+67.1s 45 compressibility          0
+67.1s 46 char_ngram_repetition    0
+67.1s 47 zipf_deviation           0
+67.1s 48 sent_opener_diversity    3
+67.2s 49 raw class means (0 = human, 1 = ai) and the gap:
+67.2s 50 
+67.2s 51 human      ai     gap  rel_gap_%
+67.2s 52 quote_ratio            0.1732  0.0780 -0.0952   -54.9598
+67.2s 53 passive_ratio          0.1224  0.0849 -0.0375   -30.6097
+67.2s 54 quote_variety          0.9317  0.7431 -0.1886   -20.2409
+67.2s 55 clause_depth           5.0919  5.6105  0.5185     9.2424
+67.2s 56 function_word_ratio    0.1764  0.1940  0.0176     9.0554
+67.2s 57 sent_opener_diversity  0.8608  0.8061 -0.0547    -6.3561
+67.2s 58 coord_sub_ratio        0.6284  0.6056 -0.0228    -3.6229
+67.2s 59 zipf_deviation         0.5621  0.5764  0.0143     2.4821
+67.2s 60 pos_entropy            1.2778  1.3007  0.0228     1.7562
+67.2s 61 compressibility        0.3331  0.3370  0.0040     1.1735
+67.2s 62 char_ngram_repetition  0.4055  0.4037 -0.0018    -0.4382
+67.2s 63 
+67.2s 64 
+67.2s 65 correlation with the existing five (|r| > 0.9 means duplicate):
+67.2s 66 
+67.2s 67 targeted_ppl  burstiness   ttr  entity_density  discourse_coherence
+67.2s 68 quote_ratio                   -0.00        0.12 -0.08            0.01                -0.07
+67.2s 69 quote_variety                  0.02        0.13 -0.14            0.02                -0.08
+67.2s 70 coord_sub_ratio                0.05        0.19  0.11           -0.08                -0.08
+67.2s 71 function_word_ratio            0.02       -0.26 -0.26           -0.20                 0.15
+67.2s 72 pos_entropy                    0.00       -0.23 -0.14           -0.19                 0.06
+67.2s 73 passive_ratio                 -0.03        0.03 -0.04           -0.05                 0.02
+67.2s 74 clause_depth                   0.02       -0.08  0.03           -0.14                 0.15
+67.2s 75 compressibility                0.01       -0.14  0.41            0.41                -0.04
+67.2s 76 char_ngram_repetition          0.01        0.18 -0.32           -0.50                 0.06
+67.2s 77 zipf_deviation                 0.01       -0.13  0.59            0.30                -0.05
+67.2s 78 sent_opener_diversity         -0.01       -0.06  0.06            0.33                -0.07
+67.2s 79 
+67.2s 80 redundancy flags: none
+68.9s 81 scaled class means (0 = human, 1 = ai):
+68.9s 82 label                      0      1
+68.9s 83 targeted_ppl           0.031 -0.033
+68.9s 84 burstiness             0.494 -0.479
+68.9s 85 ttr                   -0.347  0.319
+68.9s 86 entity_density         0.040 -0.023
+68.9s 87 discourse_coherence   -0.187  0.185
+68.9s 88 quote_ratio            0.299 -0.284
+68.9s 89 quote_variety          0.227 -0.240
+68.9s 90 coord_sub_ratio        0.145 -0.128
+68.9s 91 function_word_ratio   -0.356  0.344
+68.9s 92 pos_entropy           -0.257  0.256
+68.9s 93 passive_ratio          0.086 -0.093
+68.9s 94 clause_depth          -0.102  0.089
+68.9s 95 compressibility       -0.086  0.082
+68.9s 96 char_ngram_repetition  0.016 -0.010
+68.9s 97 zipf_deviation        -0.121  0.105
+68.9s 98 sent_opener_diversity  0.200 -0.214
+68.9s 99 
+68.9s 100 wrote vstat16_scaled.parquet (7101, 20) | scaler fit on 5363 train rows only
+68.9s 101 feature order (contract): ['targeted_ppl', 'burstiness', 'ttr', 'entity_density', 'discourse_coherence', 'quote_ratio', 'quote_variety', 'coord_sub_ratio', 'function_word_ratio', 'pos_entropy', 'passive_ratio', 'clause_depth', 'compressibility', 'char_ngram_repetition', 'zipf_deviation', 'sent_opener_diversity']
+68.9s 102 upload vstat16_scaled.parquet as the Kaggle dataset `aigt-vstat16` for PH2_NB6f
+71.7s 103 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+71.7s 104 cells[i][c] = re.sub('\\\\\|', '|', cell)
+71.9s 105 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+71.9s 106 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+72.5s 107 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+72.8s 108 [NbConvertApp] Writing 43637 bytes to __notebook__.ipynb
+75.2s 109 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+76.1s 110 [NbConvertApp] Writing 380682 bytes to __results__.html

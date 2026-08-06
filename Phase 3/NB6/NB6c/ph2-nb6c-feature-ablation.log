@@ -1,0 +1,109 @@
+11.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.5s 3 0.00s - to python to disable frozen modules.
+11.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+12.3s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+12.3s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+12.3s 7 0.00s - to python to disable frozen modules.
+12.3s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+17.0s 9 ALIGNMENT OK | (7101, 768) (7101, 5) | generators: ['deepseek', 'gemini', 'gpt', 'opus', 'qwen', 'sonnet']
+19.8s 10 runner ready | one config = 7 converged LR fits
+23.9s 11 [ 1/27] ALL 5                                                   std  99.6  worst  94.2 (gpt)
+27.7s 12 [ 2/27] without: targeted_ppl                                   std  99.6  worst  94.3 (gpt)
+31.0s 13 [ 3/27] without: burstiness                                     std  99.7  worst  94.2 (gpt)
+33.9s 14 [ 4/27] without: ttr                                            std  99.8  worst  93.2 (gpt)
+36.9s 15 [ 5/27] without: entity_density                                 std  99.7  worst  94.2 (gpt)
+40.2s 16 [ 6/27] without: discourse_coherence                            std  99.7  worst  93.7 (gpt)
+43.3s 17 [ 7/27] without: targeted_ppl + burstiness                      std  99.7  worst  93.7 (gpt)
+45.9s 18 [ 8/27] without: targeted_ppl + ttr                             std  99.6  worst  92.7 (gpt)
+48.6s 19 [ 9/27] without: targeted_ppl + entity_density                  std  99.6  worst  94.2 (gpt)
+52.5s 20 [10/27] without: targeted_ppl + discourse_coherence             std  99.6  worst  94.7 (gpt)
+56.5s 21 [11/27] without: burstiness + ttr                               std  99.7  worst  93.2 (gpt)
+61.0s 22 [12/27] without: burstiness + entity_density                    std  99.7  worst  93.7 (gpt)
+65.3s 23 [13/27] without: burstiness + discourse_coherence               std  99.7  worst  93.2 (gpt)
+69.5s 24 [14/27] without: ttr + entity_density                           std  99.7  worst  93.2 (gpt)
+73.0s 25 [15/27] without: ttr + discourse_coherence                      std  99.7  worst  93.2 (gpt)
+76.0s 26 [16/27] without: entity_density + discourse_coherence           std  99.7  worst  94.2 (gpt)
+78.8s 27 [17/27] without: targeted_ppl + burstiness + ttr                std  99.8  worst  93.2 (gpt)
+81.3s 28 [18/27] without: targeted_ppl + burstiness + entity_density     std  99.6  worst  95.2 (gpt)
+83.9s 29 [19/27] without: targeted_ppl + burstiness + discourse_coherence std  99.7  worst  94.7 (gpt)
+87.0s 30 [20/27] without: targeted_ppl + ttr + entity_density            std  99.6  worst  92.7 (gpt)
+90.3s 31 [21/27] without: targeted_ppl + ttr + discourse_coherence       std  99.7  worst  93.2 (gpt)
+93.2s 32 [22/27] without: targeted_ppl + entity_density + discourse_coherence std  99.7  worst  95.2 (gpt)
+95.8s 33 [23/27] without: burstiness + ttr + entity_density              std  99.8  worst  93.2 (gpt)
+98.5s 34 [24/27] without: burstiness + ttr + discourse_coherence         std  99.7  worst  93.2 (gpt)
+101.6s 35 [25/27] without: burstiness + entity_density + discourse_coherence std  99.8  worst  93.7 (gpt)
+104.9s 36 [26/27] without: ttr + entity_density + discourse_coherence     std  99.8  worst  93.7 (gpt)
+108.1s 37 [27/27] NONE (probe)                                            std  99.7  worst  92.7 (gpt)
+108.1s 38 
+108.1s 39 total 88s
+108.2s 40 baseline (ALL 5): std 99.6 | logo mean 98.0 | worst 94.2 (gpt)
+108.2s 41 
+108.2s 42 leave-one-out deltas (percentage points; + means removal HELPED):
+108.2s 43 removed  d_standard_f1  d_logo_mean  d_logo_worst  d_fold_gpt  d_fold_deepseek
+108.2s 44 targeted_ppl           0.00         0.01          0.08        0.08             0.00
+108.2s 45 burstiness           0.09         0.44          0.00        0.00             0.74
+108.2s 46 entity_density           0.09         0.00          0.00        0.00             0.00
+108.2s 47 discourse_coherence           0.09         0.06         -0.49       -0.49             0.00
+108.2s 48 ttr           0.18        -0.06         -0.99       -0.99             0.50
+108.3s 49 aggregated marginal contribution (pp; + = feature helps on average, - = hurts):
+108.3s 50 feature  n_with  n_without  m_standard  m_logo_mean  m_logo_worst  m_fold_gpt  m_fold_deepseek
+108.3s 51 targeted_ppl      15         11        0.06        -0.01         -0.37       -0.37             0.04
+108.3s 52 entity_density      15         11       -0.01        -0.00         -0.28       -0.28             0.12
+108.3s 53 discourse_coherence      15         11       -0.03        -0.06         -0.21       -0.21            -0.03
+108.3s 54 burstiness      15         11       -0.04        -0.26          0.03        0.03            -0.38
+108.3s 55 ttr      15         11       -0.04         0.27          1.04        1.04            -0.31
+108.3s 56 top configurations by LOGO worst fold:
+108.3s 57 label  n_active  standard_f1  logo_mean  logo_worst worst_gen
+108.3s 58 without: targeted_ppl + entity_density + discourse_coherence         2         99.7       98.2        95.2       gpt
+108.3s 59 without: targeted_ppl + burstiness + entity_density         2         99.6       98.6        95.2       gpt
+108.3s 60 without: targeted_ppl + burstiness + discourse_coherence         2         99.7       98.5        94.7       gpt
+108.3s 61 without: targeted_ppl + discourse_coherence         3         99.6       98.2        94.7       gpt
+108.3s 62 without: targeted_ppl         4         99.6       98.1        94.3       gpt
+108.3s 63 without: burstiness         4         99.7       98.5        94.2       gpt
+108.3s 64 without: entity_density         4         99.7       98.0        94.2       gpt
+108.3s 65 without: entity_density + discourse_coherence         3         99.7       98.2        94.2       gpt
+108.3s 66 
+108.3s 67 VERDICT — no feature satisfies both harm criteria; keep all five.
+108.3s 68 (differences within ~0.15 pp are treated as noise even for a deterministic fit,
+108.3s 69 because a single test article is worth ~0.09 pp on this split)
+108.3s 70 
+108.3s 71 best overall subset: without: targeted_ppl + entity_density + discourse_coherence  (std 99.7, worst 95.2)
+108.3s 72 all-5 baseline:      std 99.6, worst 94.2
+116.9s 73 MLP arm on cuda
+132.8s 74 [MLP  1/27] ALL 5                                                   std  99.7  worst  91.8
+140.6s 75 [MLP  2/27] without: targeted_ppl                                   std  99.6  worst  92.8
+149.6s 76 [MLP  3/27] without: burstiness                                     std  99.6  worst  92.3
+156.9s 77 [MLP  4/27] without: ttr                                            std  99.7  worst  89.1
+164.6s 78 [MLP  5/27] without: entity_density                                 std  99.6  worst  93.3
+171.7s 79 [MLP  6/27] without: discourse_coherence                            std  99.7  worst  91.7
+180.3s 80 [MLP  7/27] without: targeted_ppl + burstiness                      std  99.7  worst  92.3
+188.9s 81 [MLP  8/27] without: targeted_ppl + ttr                             std  99.8  worst  92.3
+196.6s 82 [MLP  9/27] without: targeted_ppl + entity_density                  std  99.6  worst  93.3
+204.5s 83 [MLP 10/27] without: targeted_ppl + discourse_coherence             std  99.7  worst  93.2
+211.5s 84 [MLP 11/27] without: burstiness + ttr                               std  99.6  worst  87.6
+219.8s 85 [MLP 12/27] without: burstiness + entity_density                    std  99.7  worst  92.8
+227.7s 86 [MLP 13/27] without: burstiness + discourse_coherence               std  99.7  worst  91.3
+234.7s 87 [MLP 14/27] without: ttr + entity_density                           std  99.6  worst  90.9
+241.4s 88 [MLP 15/27] without: ttr + discourse_coherence                      std  99.7  worst  87.4
+248.6s 89 [MLP 16/27] without: entity_density + discourse_coherence           std  99.7  worst  92.2
+256.4s 90 [MLP 17/27] without: targeted_ppl + burstiness + ttr                std  99.6  worst  87.4
+264.0s 91 [MLP 18/27] without: targeted_ppl + burstiness + entity_density     std  99.6  worst  92.8
+272.2s 92 [MLP 19/27] without: targeted_ppl + burstiness + discourse_coherence std  99.7  worst  93.2
+278.7s 93 [MLP 20/27] without: targeted_ppl + ttr + entity_density            std  99.4  worst  90.8
+285.6s 94 [MLP 21/27] without: targeted_ppl + ttr + discourse_coherence       std  99.6  worst  87.8
+294.3s 95 [MLP 22/27] without: targeted_ppl + entity_density + discourse_coherence std  99.7  worst  93.3
+301.0s 96 [MLP 23/27] without: burstiness + ttr + entity_density              std  99.7  worst  90.6
+309.0s 97 [MLP 24/27] without: burstiness + ttr + discourse_coherence         std  99.7  worst  89.5
+317.4s 98 [MLP 25/27] without: burstiness + entity_density + discourse_coherence std  99.7  worst  93.7
+324.8s 99 [MLP 26/27] without: ttr + entity_density + discourse_coherence     std  99.8  worst  90.1
+332.8s 100 [MLP 27/27] NONE (probe)                                            std  99.8  worst  91.7
+332.8s 101 MLP arm total 216s | saved ph2_nb6c_ablation_mlp.parquet
+338.4s 102 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+338.4s 103 cells[i][c] = re.sub('\\\\\|', '|', cell)
+338.6s 104 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+338.6s 105 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+339.3s 106 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+339.6s 107 [NbConvertApp] Writing 36819 bytes to __notebook__.ipynb
+342.2s 108 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+343.1s 109 [NbConvertApp] Writing 366700 bytes to __results__.html

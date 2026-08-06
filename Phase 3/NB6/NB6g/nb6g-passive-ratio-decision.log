@@ -1,0 +1,302 @@
+15.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+15.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+15.0s 3 0.00s - to python to disable frozen modules.
+15.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+16.0s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+16.0s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+16.0s 7 0.00s - to python to disable frozen modules.
+16.0s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+19.6s 9 config loaded
+25.4s 10 Preparing metadata (setup.py) ... [?25l[?25hdone
+26.6s 11 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/125.7 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m125.7/125.7 kB[0m [31m4.3 MB/s[0m eta [36m0:00:00[0m
+27.0s 12 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/3.3 MB[0m [31m248.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/3.3 MB[0m [31m248.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━[0m [32m2.1/3.3 MB[0m [31m21.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━[0m [32m2.1/3.3 MB[0m [31m21.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━[0m [32m2.1/3.3 MB[0m [31m21.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━[0m [32m3.1/3.3 MB[0m [31m17.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━[0m [32m3.1/3.3 MB[0m [31m17.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m3.3/3.3 MB[0m [31m12.4 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.3/3.3 MB[0m [31m10.9 MB/s[0m eta [36m0:00:00[0m
+27.2s 13 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/9.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━[0m [32m5.4/9.1 MB[0m [31m164.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m9.1/9.1 MB[0m [31m172.9 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m9.1/9.1 MB[0m [31m172.9 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m9.1/9.1 MB[0m [31m78.1 MB/s[0m eta [36m0:00:00[0m
+27.3s 14 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/122.3 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m122.3/122.3 kB[0m [31m4.0 MB/s[0m eta [36m0:00:00[0m
+28.9s 15 [?25h  Building wheel for docopt (setup.py) ... [?25l[?25hdone
+37.7s 16 [31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+37.7s 17 sklearn-compat 0.1.5 requires scikit-learn<1.9,>=1.2, but you have scikit-learn 1.9.0 which is incompatible.[0m[31m
+38.6s 18 [0mThe following packages will be installed: 'disambig-mle-calima-msa-r13', 'morphology-db-msa-r13'
+42.4s 19 Downloading package 'disambig-mle-calima-msa-r13':   0%|[32m [0m| 0.00/88.7M [00:00<?, [0mDownloading package 'disambig-mle-calima-msa-r13':   7%|[32m [0m| 6.39M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  12%|[32m [0m| 10.6M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  20%|[32m▏[0m| 18.2M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  25%|[32m▏[0m| 22.1M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  31%|[32m▎[0m| 27.5M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  35%|[32m▎[0m| 31.5M/88.7M [00:00<00[0mDownloading package 'disambig-mle-calima-msa-r13':  39%|[32m▍[0m| 34.7M/88.7M [00:01<00[0mDownloading package 'disambig-mle-calima-msa-r13':  44%|[32m▍[0m| 38.9M/88.7M [00:01<00[0mDownloading package 'disambig-mle-calima-msa-r13':  47%|[32m▍[0m| 42.0M/88.7M [00:01<00[0mDownloading package 'disambig-mle-calima-msa-r13':  59%|[32m▌[0m| 52.5M/88.7M [00:01<00[0mDownloading package 'disambig-mle-calima-msa-r13':  62%|[32m▌[0m| 55.2M/88.7M [00:02<00[0mDownloading package 'disambig-mle-calima-msa-r13':  67%|[32m▋[0m| 59.4M/88.7M [00:02<00[0mDownloading package 'disambig-mle-calima-msa-r13':  71%|[32m▋[0m| 62.9M/88.7M [00:02<00[0mDownloading package 'disambig-mle-calima-msa-r13':  78%|[32m▊[0m| 69.2M/88.7M [00:02<00[0mDownloading package 'disambig-mle-calima-msa-r13':  83%|[32m▊[0m| 73.4M/88.7M [00:02<00[0mDownloading package 'disambig-mle-calima-msa-r13':  90%|[32m▉[0m| 79.5M/88.7M [00:03<00[0mDownloading package 'disambig-mle-calima-msa-r13':  94%|[32m▉[0m| 83.4M/88.7M [00:03<00[0mDownloading package 'disambig-mle-calima-msa-r13':  98%|[32m▉[0m| 86.8M/88.7M [00:03<00[0mDownloading package 'disambig-mle-calima-msa-r13': 100%|[32m█[0m| 88.7M/88.7M [00:03<00[0m
+42.6s 20 Extracting package 'disambig-mle-calima-msa-r13':   0%|[32m [0m| 0.00/88.7M [00:00<?, ?[0mExtracting package 'disambig-mle-calima-msa-r13': 100%|[32m█[0m| 88.7M/88.7M [00:00<00:[0mExtracting package 'disambig-mle-calima-msa-r13': 100%|[32m█[0m| 88.7M/88.7M [00:00<00:[0m
+44.0s 21 Downloading package 'morphology-db-msa-r13':   0%|[32m  [0m| 0.00/40.5M [00:00<?, ?B/s][0mDownloading package 'morphology-db-msa-r13':  15%|[32m▏[0m| 6.13M/40.5M [00:00<00:00, 6[0mDownloading package 'morphology-db-msa-r13':  30%|[32m▎[0m| 12.3M/40.5M [00:00<00:00, 3[0mDownloading package 'morphology-db-msa-r13':  48%|[32m▍[0m| 19.2M/40.5M [00:00<00:00, 3[0mDownloading package 'morphology-db-msa-r13':  58%|[32m▌[0m| 23.5M/40.5M [00:00<00:00, 3[0mDownloading package 'morphology-db-msa-r13':  68%|[32m▋[0m| 27.5M/40.5M [00:00<00:00, 3[0mDownloading package 'morphology-db-msa-r13':  78%|[32m▊[0m| 31.5M/40.5M [00:00<00:00, 2[0mDownloading package 'morphology-db-msa-r13':  94%|[32m▉[0m| 38.0M/40.5M [00:01<00:00, 3[0mDownloading package 'morphology-db-msa-r13': 100%|[32m█[0m| 40.5M/40.5M [00:01<00:00, 3[0m
+44.1s 22 Extracting package 'morphology-db-msa-r13':   0%|[32m   [0m| 0.00/40.5M [00:00<?, ?B/s][0mExtracting package 'morphology-db-msa-r13': 100%|[32m█[0m| 40.5M/40.5M [00:00<00:00, 50[0m
+44.6s 23 No new packages will be installed.
+44.7s 24 MLE model present: True
+44.7s 25 camel-tools ready
+45.9s 26 aligned articles: 7101 | label balance {1: 3601, 0: 3500}
+45.9s 27 splits: {'train': 5363, 'test': 1093, 'val': 645}
+2045.5s 28 DIAGNOSTIC: verbs=587595  passive=21949  passive share=3.74%
+2045.5s 29 saved -> /kaggle/working/passive_ratio_camel_v2.parquet
+2045.5s 30 NaN (no verb): 0 | non-zero docs: 6313
+2048.5s 31 raw passive_ratio  human=0.0436  ai=0.0333
+2048.5s 32 winner6_fallback (7101, 6)
+2048.5s 33 winner6_correct (7101, 6)
+2048.5s 34 five_drop (7101, 5)
+2082.1s 35 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2082.1s 36 
+2082.1s 37 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2094.7s 38 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+2094.7s 39 Key                                        | Status     |  |
+2094.7s 40 -------------------------------------------+------------+--+-
+2094.7s 41 cls.predictions.decoder.bias               | UNEXPECTED |  |
+2094.7s 42 cls.seq_relationship.bias                  | UNEXPECTED |  |
+2094.7s 43 cls.predictions.decoder.weight             | UNEXPECTED |  |
+2094.7s 44 bert.embeddings.position_ids               | UNEXPECTED |  |
+2094.7s 45 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+2094.7s 46 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+2094.7s 47 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+2094.7s 48 cls.seq_relationship.weight                | UNEXPECTED |  |
+2094.7s 49 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+2094.7s 50 cls.predictions.bias                       | UNEXPECTED |  |
+2094.7s 51 
+2094.7s 52 Notes:
+2094.7s 53 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2094.7s 54 
+2094.7s 55 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+2094.7s 56 Key                                        | Status     |  |
+2094.7s 57 -------------------------------------------+------------+--+-
+2094.7s 58 cls.predictions.decoder.bias               | UNEXPECTED |  |
+2094.7s 59 cls.seq_relationship.bias                  | UNEXPECTED |  |
+2094.7s 60 cls.predictions.decoder.weight             | UNEXPECTED |  |
+2094.7s 61 bert.embeddings.position_ids               | UNEXPECTED |  |
+2094.7s 62 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+2094.7s 63 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+2094.7s 64 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+2094.7s 65 cls.seq_relationship.weight                | UNEXPECTED |  |
+2094.7s 66 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+2094.7s 67 cls.predictions.bias                       | UNEXPECTED |  |
+2094.7s 68 
+2094.7s 69 Notes:
+2094.7s 70 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+14762.6s 71 built + saved -> /kaggle/working/embeddings.parquet
+14762.6s 72 Vneural: (7101, 768)
+14762.7s 73 test AI held-out deepseek: 135
+14762.7s 74 test AI held-out sonnet: 137
+14762.7s 75 test AI held-out qwen: 88
+14762.7s 76 test AI held-out gemini: 63
+14762.7s 77 test AI held-out gpt: 68
+14762.7s 78 test AI held-out opus: 63
+14762.7s 79 harness ready
+14763.0s 80 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 81 warnings.warn(msg, category=FutureWarning)
+14763.0s 82 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 83 warnings.warn(msg, category=FutureWarning)
+14763.0s 84 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 85 warnings.warn(msg, category=FutureWarning)
+14763.0s 86 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 87 warnings.warn(msg, category=FutureWarning)
+14763.0s 88 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 89 warnings.warn(msg, category=FutureWarning)
+14763.0s 90 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 91 warnings.warn(msg, category=FutureWarning)
+14763.0s 92 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 93 warnings.warn(msg, category=FutureWarning)
+14763.0s 94 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 95 warnings.warn(msg, category=FutureWarning)
+14763.0s 96 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 97 warnings.warn(msg, category=FutureWarning)
+14763.0s 98 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 99 warnings.warn(msg, category=FutureWarning)
+14763.0s 100 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 101 warnings.warn(msg, category=FutureWarning)
+14763.0s 102 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 103 warnings.warn(msg, category=FutureWarning)
+14763.0s 104 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 105 warnings.warn(msg, category=FutureWarning)
+14763.0s 106 
+14763.0s 107 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 108 warnings.warn(msg, category=FutureWarning)
+14763.0s 109 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 110 warnings.warn(msg, category=FutureWarning)
+14763.0s 111 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 112 warnings.warn(msg, category=FutureWarning)
+14763.0s 113 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 114 warnings.warn(msg, category=FutureWarning)
+14763.0s 115 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 116 warnings.warn(msg, category=FutureWarning)
+14763.0s 117 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 118 warnings.warn(msg, category=FutureWarning)
+14763.0s 119 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 120 warnings.warn(msg, category=FutureWarning)
+14763.0s 121 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 122 warnings.warn(msg, category=FutureWarning)
+14763.0s 123 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 124 warnings.warn(msg, category=FutureWarning)
+14763.0s 125 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 126 warnings.warn(msg, category=FutureWarning)
+14763.0s 127 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 128 warnings.warn(msg, category=FutureWarning)
+14763.0s 129 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 130 warnings.warn(msg, category=FutureWarning)
+14763.0s 131 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.0s 132 warnings.warn(msg, category=FutureWarning)
+14763.2s 133 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 134 warnings.warn(msg, category=FutureWarning)
+14763.2s 135 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 136 warnings.warn(msg, category=FutureWarning)
+14763.2s 137 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 138 warnings.warn(msg, category=FutureWarning)
+14763.2s 139 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 140 warnings.warn(msg, category=FutureWarning)
+14763.2s 141 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 142 warnings.warn(msg, category=FutureWarning)
+14763.2s 143 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 144 warnings.warn(msg, category=FutureWarning)
+14763.2s 145 
+14763.2s 146 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 147 warnings.warn(msg, category=FutureWarning)
+14763.2s 148 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 149 warnings.warn(msg, category=FutureWarning)
+14763.2s 150 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 151 warnings.warn(msg, category=FutureWarning)
+14763.2s 152 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 153 warnings.warn(msg, category=FutureWarning)
+14763.2s 154 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 155 warnings.warn(msg, category=FutureWarning)
+14763.2s 156 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.2s 157 warnings.warn(msg, category=FutureWarning)
+14763.9s 158 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.9s 159 warnings.warn(msg, category=FutureWarning)
+14763.9s 160 
+14763.9s 161 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14763.9s 162 warnings.warn(msg, category=FutureWarning)
+14764.5s 163 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14764.5s 164 warnings.warn(msg, category=FutureWarning)
+14764.5s 165 
+14764.5s 166 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14764.5s 167 warnings.warn(msg, category=FutureWarning)
+14765.1s 168 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14765.1s 169 warnings.warn(msg, category=FutureWarning)
+14765.1s 170 
+14765.1s 171 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14765.1s 172 warnings.warn(msg, category=FutureWarning)
+14765.8s 173 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14765.8s 174 warnings.warn(msg, category=FutureWarning)
+14765.8s 175 
+14765.8s 176 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14765.8s 177 warnings.warn(msg, category=FutureWarning)
+14766.3s 178 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14766.3s 179 warnings.warn(msg, category=FutureWarning)
+14766.3s 180 
+14766.3s 181 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14766.3s 182 warnings.warn(msg, category=FutureWarning)
+14766.9s 183 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14766.9s 184 warnings.warn(msg, category=FutureWarning)
+14766.9s 185 
+14766.9s 186 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14766.9s 187 warnings.warn(msg, category=FutureWarning)
+14767.5s 188 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14767.5s 189 warnings.warn(msg, category=FutureWarning)
+14767.5s 190 
+14767.5s 191 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14767.5s 192 warnings.warn(msg, category=FutureWarning)
+14768.2s 193 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14768.2s 194 warnings.warn(msg, category=FutureWarning)
+14768.2s 195 
+14768.2s 196 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14768.2s 197 warnings.warn(msg, category=FutureWarning)
+14768.6s 198 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14768.6s 199 warnings.warn(msg, category=FutureWarning)
+14768.6s 200 
+14768.6s 201 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14768.6s 202 warnings.warn(msg, category=FutureWarning)
+14769.2s 203 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14769.2s 204 warnings.warn(msg, category=FutureWarning)
+14769.2s 205 
+14769.2s 206 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14769.2s 207 warnings.warn(msg, category=FutureWarning)
+14769.7s 208 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14769.7s 209 warnings.warn(msg, category=FutureWarning)
+14769.7s 210 
+14769.7s 211 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14769.7s 212 warnings.warn(msg, category=FutureWarning)
+14770.5s 213 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14770.5s 214 warnings.warn(msg, category=FutureWarning)
+14770.5s 215 
+14770.5s 216 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14770.5s 217 warnings.warn(msg, category=FutureWarning)
+14771.2s 218 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14771.2s 219 warnings.warn(msg, category=FutureWarning)
+14771.2s 220 
+14771.2s 221 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14771.2s 222 warnings.warn(msg, category=FutureWarning)
+14771.7s 223 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14771.7s 224 warnings.warn(msg, category=FutureWarning)
+14771.7s 225 
+14771.7s 226 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14771.7s 227 warnings.warn(msg, category=FutureWarning)
+14772.2s 228 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14772.2s 229 warnings.warn(msg, category=FutureWarning)
+14772.2s 230 
+14772.2s 231 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14772.2s 232 warnings.warn(msg, category=FutureWarning)
+14772.6s 233 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14772.6s 234 warnings.warn(msg, category=FutureWarning)
+14772.6s 235 
+14772.6s 236 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14772.6s 237 warnings.warn(msg, category=FutureWarning)
+14773.0s 238 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14773.0s 239 warnings.warn(msg, category=FutureWarning)
+14773.0s 240 
+14773.0s 241 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14773.0s 242 warnings.warn(msg, category=FutureWarning)
+14773.6s 243 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14773.6s 244 warnings.warn(msg, category=FutureWarning)
+14773.6s 245 
+14773.6s 246 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14773.6s 247 warnings.warn(msg, category=FutureWarning)
+14774.0s 248 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14774.0s 249 warnings.warn(msg, category=FutureWarning)
+14774.0s 250 
+14774.0s 251 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14774.0s 252 warnings.warn(msg, category=FutureWarning)
+14774.6s 253 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14774.6s 254 warnings.warn(msg, category=FutureWarning)
+14774.6s 255 
+14774.6s 256 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14774.6s 257 warnings.warn(msg, category=FutureWarning)
+14775.1s 258 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14775.1s 259 warnings.warn(msg, category=FutureWarning)
+14775.1s 260 
+14775.1s 261 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14775.1s 262 warnings.warn(msg, category=FutureWarning)
+14775.5s 263 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14775.5s 264 warnings.warn(msg, category=FutureWarning)
+14775.5s 265 
+14775.5s 266 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14775.5s 267 warnings.warn(msg, category=FutureWarning)
+14775.9s 268 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14775.9s 269 warnings.warn(msg, category=FutureWarning)
+14775.9s 270 
+14775.9s 271 /usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1457: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+14775.9s 272 warnings.warn(msg, category=FutureWarning)
+14776.4s 273 
+14776.4s 274 neural_only_768 (dim 768)  mean=98.19 worst=92.20
+14776.4s 275 deepseek:99.1  sonnet:99.5  qwen:98.3  gemini:100.0  gpt:92.2  opus:100.0
+14776.4s 276 
+14776.4s 277 winner6_fallback (dim 774)  mean=97.99 worst=93.21
+14776.4s 278 deepseek:97.9  sonnet:99.8  qwen:98.0  gemini:99.6  gpt:93.2  opus:99.6
+14776.4s 279 
+14776.4s 280 winner6_correct (dim 774)  mean=97.87 worst=92.71
+14776.4s 281 deepseek:97.6  sonnet:99.8  qwen:98.0  gemini:99.6  gpt:92.7  opus:99.6
+14776.4s 282 
+14776.4s 283 five_drop (dim 773)  mean=97.95 worst=93.21
+14776.4s 284 deepseek:97.6  sonnet:99.8  qwen:98.0  gemini:99.6  gpt:93.2  opus:99.6
+14776.5s 285 ================================================================
+14776.5s 286 HARNESS REPRODUCTION CHECK (else re-align LogReg C / embedding pooling):
+14776.5s 287 neural-only worst = 92.20  (target ~92.7, d=-0.50)
+14776.5s 288 winner6-fallback  = 93.21  (target ~95.2, d=-1.99)
+14776.5s 289 ================================================================
+14776.5s 290 DECISION:
+14776.5s 291 winner-6 (correct passive) worst = 92.71
+14776.5s 292 five   (drop passive)      worst = 93.21
+14776.5s 293 delta (keep - drop)              = -0.50pp   (1-article noise ~ 0.42pp)
+14776.5s 294 => DROP passive_ratio: correct version HURTS. Use the 5 analyzer-free features.
+14782.7s 295 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+14782.7s 296 cells[i][c] = re.sub('\\\\\|', '|', cell)
+14783.0s 297 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+14783.0s 298 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+14783.8s 299 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+14784.3s 300 [NbConvertApp] Writing 154105 bytes to __notebook__.ipynb
+14787.6s 301 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+14788.8s 302 [NbConvertApp] Writing 456544 bytes to __results__.html

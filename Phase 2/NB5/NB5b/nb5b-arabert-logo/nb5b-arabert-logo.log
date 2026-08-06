@@ -1,0 +1,40 @@
+7.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.5s 3 0.00s - to python to disable frozen modules.
+7.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.1s 7 0.00s - to python to disable frozen modules.
+8.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+13.3s 9 dataset (7101, 7) | embeddings (7101, 768)
+13.3s 10 generators: ['deepseek', 'gemini', 'gpt', 'opus', 'qwen', 'sonnet']
+17.8s 11 held_out  n_test_ai  ai_recall  human_recall  macro_f1  auc_roc
+17.8s 12 deepseek        135       94.1          99.6      97.6     99.8
+17.8s 13 gemini         63      100.0          99.4      98.7    100.0
+17.8s 14 gpt         68       79.4          99.6      92.8     99.5
+17.8s 15 opus         63      100.0          99.6      99.1    100.0
+17.8s 16 qwen         88       95.5          99.6      98.0     99.8
+17.8s 17 sonnet        137       99.3          99.6      99.3    100.0
+17.8s 18 
+17.8s 19 mean macro-F1 across folds: 97.6%
+17.8s 20 std  macro-F1 across folds: 2.4%
+17.8s 21 min  macro-F1 (worst fold): 92.8% (gpt held out)
+17.8s 22 
+17.8s 23 reference points:
+17.8s 24 NB5b frozen probe (all generators seen in train): 99.5% macro-F1
+17.8s 25 NB5a statistical-only (best):                     84.7% macro-F1
+17.8s 26 NB3 cheap-signal control:                         68.8% macro-F1
+17.8s 27 TF-IDF LOGO proxy (earlier diagnostic):           99.0% mean macro-F1
+17.8s 28 
+17.8s 29 gap vs the seen-all probe: 1.9 points
+17.8s 30 verdict: AraBERT frozen [CLS] generalizes cleanly across held-out generators.
+17.8s 31 
+17.8s 32 saved /kaggle/working/nb5b_arabert_logo.parquet
+21.0s 33 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+21.0s 34 cells[i][c] = re.sub('\\\\\|', '|', cell)
+21.2s 35 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+21.2s 36 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+21.9s 37 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+22.3s 38 [NbConvertApp] Writing 14367 bytes to __notebook__.ipynb
+25.1s 39 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+26.1s 40 [NbConvertApp] Writing 303575 bytes to __results__.html

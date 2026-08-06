@@ -1,0 +1,650 @@
+8.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.2s 3 0.00s - to python to disable frozen modules.
+8.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.9s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.9s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.9s 7 0.00s - to python to disable frozen modules.
+8.9s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.1s 9 [1/7] config loaded
+11.1s 10 N_BOOT=2000 | ARAPT_MAX=3000 | K=9
+11.5s 11 [2/7] loaded parquet | columns: ['article_id', 'model', 'provider', 'task', 'level', 'src_words', 'out_words', 'tok_in', 'tok_out', 'cost', 'secs', 'text', 'gen_id']
+11.5s 12 [2/7] generations 820 | tasks {'humanize': 410, 'polish': 410}
+15.6s 13 [2/7]   scored 200/820
+16.4s 14 [2/7]   scored 400/820
+17.2s 15 [2/7]   scored 600/820
+18.0s 16 [2/7]   scored 800/820
+18.1s 17 
+18.1s 18 [2/7] valid_old 652/820 (79.5%)
+18.1s 19 [2/7] valid_new 748/820 (91.2%) | garbled 9 | no-op 63
+18.1s 20 
+18.1s 21 [2/7] polish levels under the NEW rule (monotone jaccard = protocol worked):
+18.1s 22 n  cosine  jaccard  valid_old  valid_new
+18.1s 23 level
+18.1s 24 10.0   105   0.957    0.849      0.381      0.771
+18.1s 25 25.0   105   0.921    0.749      0.552      0.790
+18.1s 26 50.0   100   0.885    0.654      0.760      0.860
+18.1s 27 75.0   100   0.838    0.557      0.820      0.940
+18.1s 28 
+18.1s 29 [2/7] no-op rate by task x model (exposes models that ignored the instruction):
+18.1s 30 task      model
+18.1s 31 humanize  claude      0.000
+18.1s 32 deepseek    0.000
+18.1s 33 gemini      0.000
+18.1s 34 gpt         0.000
+18.1s 35 qwen        0.000
+18.1s 36 polish    claude      0.000
+18.1s 37 deepseek    0.024
+18.1s 38 gemini      0.098
+18.1s 39 gpt         0.634
+18.1s 40 qwen        0.012
+18.2s 41 
+18.2s 42 [2/7] saved stress_generations.parquet (+ meta)
+18.3s 43 [3/7] loaded stress results: 820 rows | cols ['p_hybrid_base', 'p_hybrid_gen', 'p_neural_base', 'p_neural_gen']
+18.3s 44 
+18.3s 45 [3/7] A · POLISHING — rate = FPR (lower better). gap = hybrid − neural
+18.3s 46 level   n   hyb  hyb_lo  hyb_hi   neu  neu_lo  neu_hi   gap  gap_lo  gap_hi sig
+18.3s 47 10 105  2.86    0.00    6.67  3.81    0.95    7.62 -0.95   -2.86    0.00  no
+18.3s 48 25 105  1.90    0.00    4.76  6.67    1.90   11.43 -4.76   -9.52   -0.95 YES
+18.3s 49 50 100 10.00    4.00   16.00 12.00    6.00   18.00 -2.00   -6.00    2.00  no
+18.3s 50 75 100 21.00   13.98   29.00 25.00   17.00   34.00 -4.00  -10.00    1.00  no
+18.3s 51 ALL 410  8.78    6.10   11.46 11.71    8.78   15.12 -2.93   -5.12   -0.98 YES
+18.3s 52 
+18.3s 53 [3/7] B · HUMANIZING — rate = TPR (higher better). gap = hybrid − neural
+18.4s 54 scope   n    hyb  hyb_lo  hyb_hi    neu  neu_lo  neu_hi    gap  gap_lo  gap_hi sig
+18.4s 55 ALL 410  94.15   91.71   96.34  97.07   95.37   98.54  -2.93   -4.63   -1.46 YES
+18.4s 56 claude  82  76.83   68.29   85.37  89.02   81.71   95.12 -12.20  -19.51   -6.10 YES
+18.4s 57 deepseek  82  93.90   89.02   98.78  96.34   91.46  100.00  -2.44   -6.10    0.00  no
+18.4s 58 gemini  82 100.00  100.00  100.00 100.00  100.00  100.00   0.00    0.00    0.00  no
+18.4s 59 gpt  82 100.00  100.00  100.00 100.00  100.00  100.00   0.00    0.00    0.00  no
+18.4s 60 qwen  82 100.00  100.00  100.00 100.00  100.00  100.00   0.00    0.00    0.00  no
+18.4s 61 
+18.4s 62 [3/7] C · UNTRANSFORMED baseline on the same articles (sanity: gap should be ~0)
+18.4s 63 task   n    hyb  hyb_lo  hyb_hi    neu  neu_lo  neu_hi  gap  gap_lo  gap_hi sig
+18.4s 64 polish 410   0.49     0.0    1.22   0.24     0.0    0.73 0.24     0.0    0.73  no
+18.4s 65 humanize 410 100.00   100.0  100.00 100.00   100.0  100.00 0.00     0.0    0.00  no
+18.4s 66 
+18.4s 67 [3/7] sig=YES means the 95% CI of the gap excludes zero -> the difference is real, not noise
+18.4s 68 [3/7] saved boot_*.parquet
+23.6s 69 [4/7] probing AraGenEval sources
+23.8s 70 [4/7]   repo root: HTTP 200 (5167 bytes)
+23.8s 71 [4/7]     - file LICENSE (1061 b)
+23.8s 72 [4/7]     - file PAPER.md (3182 b)
+23.8s 73 [4/7]     - file _config.yml (309 b)
+23.8s 74 [4/7]     - dir  _layouts (0 b)
+23.8s 75 [4/7]     - file googlec4184caf97087de3.html (53 b)
+23.8s 76 [4/7]     - file guidelines.md (5170 b)
+23.8s 77 [4/7]     - file index.md (8756 b)
+23.9s 78 [4/7]   data/ dir: HTTP 404 (127 bytes)
+23.9s 79 [4/7] NOTE: the shared task distributed data through Codabench, which usually requires
+23.9s 80 [4/7]       registration. If nothing above lists usable files, we drop the external
+23.9s 81 [4/7]       AraGenEval test and instead REIMPLEMENT their architecture on our corpus.
+24.0s 82 [5/7] cloning Ar-APT ...
+25.7s 83 [5/7]   git rc=0 Cloning into '/kaggle/working/Ar-APT'...
+25.7s 84 
+25.7s 85 [5/7] repository tree:
+25.7s 86 [5/7]   .DS_Store  (6 KB)
+25.7s 87 [5/7]   AI 10 LLMs generated Articles.json  (1032 KB)
+25.7s 88 [5/7]   README.md  (0 KB)
+25.7s 89 [5/7]   Ar-APT/.DS_Store  (14 KB)
+25.7s 90 [5/7]   Ar-APT/AI Polished Texts/.DS_Store  (6 KB)
+25.7s 91 [5/7]   Ar-APT/AI Polished Texts/DS 10%.json  (1809 KB)
+25.7s 92 [5/7]   Ar-APT/AI Polished Texts/DS 25%.json  (1798 KB)
+25.7s 93 [5/7]   Ar-APT/AI Polished Texts/DS 50%.json  (1788 KB)
+25.7s 94 [5/7]   Ar-APT/AI Polished Texts/DS 75%.json  (1803 KB)
+25.7s 95 [5/7]   Ar-APT/AI Polished Texts/GEMMA 10%.json  (1753 KB)
+25.7s 96 [5/7]   Ar-APT/AI Polished Texts/GEMMA 25%.json  (1709 KB)
+25.7s 97 [5/7]   Ar-APT/AI Polished Texts/GEMMA 50%.json  (1733 KB)
+25.7s 98 [5/7]   Ar-APT/AI Polished Texts/GEMMA 75%.json  (1798 KB)
+25.7s 99 [5/7]   Ar-APT/AI Polished Texts/GPT 3.5 10%.json  (1778 KB)
+25.7s 100 [5/7]   Ar-APT/AI Polished Texts/GPT 3.5 25%.json  (1785 KB)
+25.7s 101 [5/7]   Ar-APT/AI Polished Texts/GPT 3.5 50%.json  (1773 KB)
+25.7s 102 [5/7]   Ar-APT/AI Polished Texts/GPT 3.5 75%.json  (1772 KB)
+25.7s 103 [5/7]   Ar-APT/AI Polished Texts/GPT 4 10%.json  (1722 KB)
+25.7s 104 [5/7]   Ar-APT/AI Polished Texts/GPT 4 25%.json  (1715 KB)
+25.7s 105 [5/7]   Ar-APT/AI Polished Texts/GPT4 50%.json  (1704 KB)
+25.7s 106 [5/7]   Ar-APT/AI Polished Texts/GPT4 75%.json  (1717 KB)
+25.7s 107 [5/7]   Ar-APT/AI Polished Texts/KIMI 10%.json  (1654 KB)
+25.7s 108 [5/7]   Ar-APT/AI Polished Texts/KIMI 25%.json  (1691 KB)
+25.7s 109 [5/7]   Ar-APT/AI Polished Texts/KIMI 50%.json  (1673 KB)
+25.7s 110 [5/7]   Ar-APT/AI Polished Texts/KIMI 75%.json  (1699 KB)
+25.7s 111 [5/7]   Ar-APT/AI Polished Texts/LLAMA 10%.json  (1770 KB)
+25.7s 112 [5/7]   Ar-APT/AI Polished Texts/LLAMA 17b 10% .json  (1688 KB)
+25.7s 113 [5/7]   Ar-APT/AI Polished Texts/LLAMA 17b 25% .json  (1739 KB)
+25.7s 114 [5/7]   Ar-APT/AI Polished Texts/LLAMA 17b 50% .json  (1752 KB)
+25.7s 115 [5/7]   Ar-APT/AI Polished Texts/LLAMA 17b 75% .json  (1818 KB)
+25.8s 116 [5/7]   Ar-APT/AI Polished Texts/LLAMA 25%.json  (1862 KB)
+25.8s 117 [5/7]   Ar-APT/AI Polished Texts/LLAMA 50%.json  (1904 KB)
+25.8s 118 [5/7]   Ar-APT/AI Polished Texts/LLAMA 75%.json  (2094 KB)
+25.8s 119 [5/7]   Ar-APT/AI Polished Texts/MIST 10%.json  (1778 KB)
+25.8s 120 [5/7]   Ar-APT/AI Polished Texts/MIST 25%.json  (1785 KB)
+25.8s 121 [5/7]   Ar-APT/AI Polished Texts/MIST 50%.json  (1786 KB)
+25.8s 122 [5/7]   Ar-APT/AI Polished Texts/MIST 75%.json  (1803 KB)
+25.8s 123 [5/7]   Ar-APT/AI Polished Texts/QWEN M 10%.json  (1596 KB)
+25.8s 124 [5/7]   Ar-APT/AI Polished Texts/QWEN M 25%.json  (1593 KB)
+25.8s 125 [5/7]   Ar-APT/AI Polished Texts/QWEN M 50%.json  (1637 KB)
+25.8s 126 [5/7]   Ar-APT/AI Polished Texts/QWEN M 75%.json  (1663 KB)
+25.8s 127 [5/7]   Ar-APT/AI Polished Texts/claude-4-sonnet 10%.json  (1810 KB)
+25.8s 128 [5/7]   Ar-APT/AI Polished Texts/claude-4-sonnet 25%.json  (1811 KB)
+25.8s 129 [5/7]   Ar-APT/AI Polished Texts/claude-4-sonnet 50%.json  (1818 KB)
+25.8s 130 [5/7]   Ar-APT/AI Polished Texts/claude-4-sonnet 75%.json  (1822 KB)
+25.8s 131 [5/7]   Ar-APT/Human-Written-Text/.DS_Store  (6 KB)
+25.8s 132 [5/7]   Ar-APT/Human-Written-Text/Bus-1.txt  (2 KB)
+25.8s 133 [5/7]   Ar-APT/Human-Written-Text/Bus-10.txt  (2 KB)
+25.8s 134 [5/7]   Ar-APT/Human-Written-Text/Bus-11.txt  (2 KB)
+25.8s 135 [5/7]   Ar-APT/Human-Written-Text/Bus-12.txt  (2 KB)
+25.8s 136 [5/7]   Ar-APT/Human-Written-Text/Bus-13.txt  (2 KB)
+25.8s 137 [5/7]   Ar-APT/Human-Written-Text/Bus-14.txt  (2 KB)
+25.8s 138 [5/7]   Ar-APT/Human-Written-Text/Bus-15.txt  (3 KB)
+25.8s 139 [5/7]   Ar-APT/Human-Written-Text/Bus-16.txt  (2 KB)
+25.8s 140 [5/7]   Ar-APT/Human-Written-Text/Bus-17.txt  (1 KB)
+25.8s 141 [5/7]   Ar-APT/Human-Written-Text/Bus-18.txt  (3 KB)
+25.8s 142 [5/7]   Ar-APT/Human-Written-Text/Bus-19.txt  (2 KB)
+25.8s 143 [5/7]   Ar-APT/Human-Written-Text/Bus-2.txt  (3 KB)
+25.8s 144 [5/7]   Ar-APT/Human-Written-Text/Bus-20.txt  (2 KB)
+25.8s 145 [5/7]   Ar-APT/Human-Written-Text/Bus-21.txt  (2 KB)
+25.8s 146 [5/7]   Ar-APT/Human-Written-Text/Bus-22.txt  (2 KB)
+25.8s 147 [5/7]   Ar-APT/Human-Written-Text/Bus-23.txt  (2 KB)
+25.8s 148 [5/7]   Ar-APT/Human-Written-Text/Bus-24.txt  (3 KB)
+25.8s 149 [5/7]   Ar-APT/Human-Written-Text/Bus-25.txt  (3 KB)
+25.8s 150 [5/7]   Ar-APT/Human-Written-Text/Bus-26.txt  (1 KB)
+25.8s 151 [5/7]   Ar-APT/Human-Written-Text/Bus-27.txt  (2 KB)
+25.8s 152 [5/7]   Ar-APT/Human-Written-Text/Bus-28.txt  (2 KB)
+25.8s 153 [5/7]   Ar-APT/Human-Written-Text/Bus-29.txt  (2 KB)
+25.8s 154 [5/7]   Ar-APT/Human-Written-Text/Bus-3.txt  (2 KB)
+25.8s 155 [5/7]   Ar-APT/Human-Written-Text/Bus-30.txt  (2 KB)
+25.8s 156 [5/7]   Ar-APT/Human-Written-Text/Bus-31.txt  (2 KB)
+25.8s 157 [5/7]   Ar-APT/Human-Written-Text/Bus-32.txt  (2 KB)
+25.8s 158 [5/7]   Ar-APT/Human-Written-Text/Bus-33.txt  (3 KB)
+25.8s 159 [5/7]   Ar-APT/Human-Written-Text/Bus-34.txt  (3 KB)
+25.8s 160 [5/7]   Ar-APT/Human-Written-Text/Bus-35.txt  (2 KB)
+25.8s 161 [5/7]   Ar-APT/Human-Written-Text/Bus-36.txt  (1 KB)
+25.8s 162 [5/7]   Ar-APT/Human-Written-Text/Bus-37.txt  (3 KB)
+25.9s 163 [5/7]   Ar-APT/Human-Written-Text/Bus-38.txt  (1 KB)
+25.9s 164 [5/7]   Ar-APT/Human-Written-Text/Bus-39.txt  (2 KB)
+25.9s 165 [5/7]   Ar-APT/Human-Written-Text/Bus-4.txt  (3 KB)
+25.9s 166 [5/7]   Ar-APT/Human-Written-Text/Bus-40.txt  (3 KB)
+25.9s 167 [5/7]   Ar-APT/Human-Written-Text/Bus-41.txt  (2 KB)
+25.9s 168 [5/7]   Ar-APT/Human-Written-Text/Bus-42.txt  (2 KB)
+25.9s 169 [5/7]   Ar-APT/Human-Written-Text/Bus-43.txt  (1 KB)
+25.9s 170 [5/7]   Ar-APT/Human-Written-Text/Bus-44.txt  (3 KB)
+25.9s 171 [5/7]   Ar-APT/Human-Written-Text/Bus-45.txt  (2 KB)
+25.9s 172 [5/7]   Ar-APT/Human-Written-Text/Bus-46.txt  (4 KB)
+25.9s 173 [5/7]   Ar-APT/Human-Written-Text/Bus-47.txt  (2 KB)
+25.9s 174 [5/7]   Ar-APT/Human-Written-Text/Bus-48.txt  (3 KB)
+25.9s 175 [5/7]   Ar-APT/Human-Written-Text/Bus-49.txt  (2 KB)
+25.9s 176 [5/7]   Ar-APT/Human-Written-Text/Bus-5.txt  (2 KB)
+25.9s 177 [5/7]   Ar-APT/Human-Written-Text/Bus-50.txt  (3 KB)
+25.9s 178 [5/7]   Ar-APT/Human-Written-Text/Bus-6.txt  (2 KB)
+25.9s 179 [5/7]   Ar-APT/Human-Written-Text/Bus-7.txt  (2 KB)
+25.9s 180 [5/7]   Ar-APT/Human-Written-Text/Bus-8.txt  (2 KB)
+25.9s 181 [5/7]   Ar-APT/Human-Written-Text/Bus-9.txt  (2 KB)
+25.9s 182 [5/7]   Ar-APT/Human-Written-Text/Fin-1.txt  (1 KB)
+25.9s 183 [5/7]   Ar-APT/Human-Written-Text/Fin-10.txt  (1 KB)
+25.9s 184 [5/7]   Ar-APT/Human-Written-Text/Fin-11.txt  (1 KB)
+25.9s 185 [5/7]   Ar-APT/Human-Written-Text/Fin-12.txt  (1 KB)
+25.9s 186 [5/7]   Ar-APT/Human-Written-Text/Fin-13.txt  (1 KB)
+25.9s 187 [5/7]   Ar-APT/Human-Written-Text/Fin-14.txt  (1 KB)
+25.9s 188 [5/7]   Ar-APT/Human-Written-Text/Fin-15.txt  (1 KB)
+25.9s 189 [5/7]   Ar-APT/Human-Written-Text/Fin-16.txt  (1 KB)
+25.9s 190 [5/7]   Ar-APT/Human-Written-Text/Fin-17.txt  (1 KB)
+25.9s 191 [5/7]   Ar-APT/Human-Written-Text/Fin-18.txt  (1 KB)
+25.9s 192 [5/7]   Ar-APT/Human-Written-Text/Fin-19.txt  (1 KB)
+25.9s 193 [5/7]   Ar-APT/Human-Written-Text/Fin-2.txt  (3 KB)
+25.9s 194 [5/7]   Ar-APT/Human-Written-Text/Fin-20.txt  (1 KB)
+25.9s 195 [5/7]   Ar-APT/Human-Written-Text/Fin-21.txt  (1 KB)
+25.9s 196 [5/7]   Ar-APT/Human-Written-Text/Fin-22.txt  (1 KB)
+25.9s 197 [5/7]   Ar-APT/Human-Written-Text/Fin-23.txt  (2 KB)
+25.9s 198 [5/7]   Ar-APT/Human-Written-Text/Fin-24.txt  (2 KB)
+25.9s 199 [5/7]   Ar-APT/Human-Written-Text/Fin-25.txt  (2 KB)
+25.9s 200 [5/7]   Ar-APT/Human-Written-Text/Fin-26.txt  (2 KB)
+25.9s 201 [5/7]   Ar-APT/Human-Written-Text/Fin-27.txt  (3 KB)
+25.9s 202 [5/7]   Ar-APT/Human-Written-Text/Fin-28.txt  (1 KB)
+25.9s 203 [5/7]   Ar-APT/Human-Written-Text/Fin-29.txt  (2 KB)
+25.9s 204 [5/7]   Ar-APT/Human-Written-Text/Fin-3.txt  (2 KB)
+25.9s 205 [5/7]   Ar-APT/Human-Written-Text/Fin-30.txt  (4 KB)
+25.9s 206 [5/7]   Ar-APT/Human-Written-Text/Fin-31.txt  (3 KB)
+25.9s 207 [5/7]   Ar-APT/Human-Written-Text/Fin-32.txt  (1 KB)
+25.9s 208 [5/7]   Ar-APT/Human-Written-Text/Fin-33.txt  (3 KB)
+25.9s 209 [5/7]   Ar-APT/Human-Written-Text/Fin-34.txt  (3 KB)
+25.9s 210 [5/7]   Ar-APT/Human-Written-Text/Fin-35.txt  (2 KB)
+25.9s 211 [5/7]   Ar-APT/Human-Written-Text/Fin-36.txt  (2 KB)
+25.9s 212 [5/7]   Ar-APT/Human-Written-Text/Fin-37.txt  (3 KB)
+25.9s 213 [5/7]   Ar-APT/Human-Written-Text/Fin-38.txt  (5 KB)
+25.9s 214 [5/7]   Ar-APT/Human-Written-Text/Fin-39.txt  (3 KB)
+25.9s 215 [5/7]   Ar-APT/Human-Written-Text/Fin-4.txt  (1 KB)
+25.9s 216 [5/7]   Ar-APT/Human-Written-Text/Fin-40.txt  (4 KB)
+25.9s 217 [5/7]   Ar-APT/Human-Written-Text/Fin-41.txt  (3 KB)
+25.9s 218 [5/7]   Ar-APT/Human-Written-Text/Fin-42.txt  (3 KB)
+25.9s 219 [5/7]   Ar-APT/Human-Written-Text/Fin-43.txt  (3 KB)
+25.9s 220 [5/7]   Ar-APT/Human-Written-Text/Fin-44.txt  (1 KB)
+25.9s 221 [5/7]   Ar-APT/Human-Written-Text/Fin-45.txt  (2 KB)
+25.9s 222 [5/7]   Ar-APT/Human-Written-Text/Fin-46.txt  (1 KB)
+25.9s 223 [5/7]   Ar-APT/Human-Written-Text/Fin-47.txt  (2 KB)
+25.9s 224 [5/7]   Ar-APT/Human-Written-Text/Fin-48.txt  (2 KB)
+25.9s 225 [5/7]   Ar-APT/Human-Written-Text/Fin-49.txt  (2 KB)
+25.9s 226 [5/7]   Ar-APT/Human-Written-Text/Fin-5.txt  (1 KB)
+25.9s 227 [5/7]   Ar-APT/Human-Written-Text/Fin-50.txt  (2 KB)
+25.9s 228 [5/7]   Ar-APT/Human-Written-Text/Fin-6.txt  (1 KB)
+25.9s 229 [5/7]   Ar-APT/Human-Written-Text/Fin-7.txt  (1 KB)
+25.9s 230 [5/7]   Ar-APT/Human-Written-Text/Fin-8.txt  (1 KB)
+25.9s 231 [5/7]   Ar-APT/Human-Written-Text/Fin-9.txt  (1 KB)
+25.9s 232 [5/7]   Ar-APT/Human-Written-Text/Med-1.txt  (2 KB)
+25.9s 233 [5/7]   Ar-APT/Human-Written-Text/Med-10.txt  (2 KB)
+25.9s 234 [5/7]   Ar-APT/Human-Written-Text/Med-11.txt  (1 KB)
+25.9s 235 [5/7]   Ar-APT/Human-Written-Text/Med-12.txt  (1 KB)
+25.9s 236 [5/7]   Ar-APT/Human-Written-Text/Med-13.txt  (2 KB)
+25.9s 237 [5/7]   Ar-APT/Human-Written-Text/Med-14.txt  (2 KB)
+25.9s 238 [5/7]   Ar-APT/Human-Written-Text/Med-15.txt  (2 KB)
+25.9s 239 [5/7]   Ar-APT/Human-Written-Text/Med-16.txt  (2 KB)
+25.9s 240 [5/7]   Ar-APT/Human-Written-Text/Med-17.txt  (2 KB)
+25.9s 241 [5/7]   Ar-APT/Human-Written-Text/Med-18.txt  (2 KB)
+26.0s 242 [5/7]   Ar-APT/Human-Written-Text/Med-19.txt  (2 KB)
+26.0s 243 [5/7]   Ar-APT/Human-Written-Text/Med-2.txt  (2 KB)
+26.0s 244 [5/7]   Ar-APT/Human-Written-Text/Med-20.txt  (2 KB)
+26.0s 245 [5/7]   Ar-APT/Human-Written-Text/Med-21.txt  (2 KB)
+26.0s 246 [5/7]   Ar-APT/Human-Written-Text/Med-22.txt  (2 KB)
+26.0s 247 [5/7]   Ar-APT/Human-Written-Text/Med-23.txt  (3 KB)
+26.0s 248 [5/7]   Ar-APT/Human-Written-Text/Med-24.txt  (2 KB)
+26.0s 249 [5/7]   Ar-APT/Human-Written-Text/Med-25.txt  (4 KB)
+26.0s 250 [5/7]   Ar-APT/Human-Written-Text/Med-26.txt  (2 KB)
+26.0s 251 [5/7]   Ar-APT/Human-Written-Text/Med-27.txt  (2 KB)
+26.0s 252 [5/7]   Ar-APT/Human-Written-Text/Med-28.txt  (3 KB)
+26.0s 253 [5/7]   Ar-APT/Human-Written-Text/Med-29.txt  (2 KB)
+26.0s 254 [5/7]   Ar-APT/Human-Written-Text/Med-3.txt  (2 KB)
+26.0s 255 [5/7]   Ar-APT/Human-Written-Text/Med-30.txt  (3 KB)
+26.0s 256 [5/7]   Ar-APT/Human-Written-Text/Med-31.txt  (3 KB)
+26.0s 257 [5/7]   Ar-APT/Human-Written-Text/Med-32.txt  (1 KB)
+26.0s 258 [5/7]   Ar-APT/Human-Written-Text/Med-33.txt  (3 KB)
+26.0s 259 [5/7]   Ar-APT/Human-Written-Text/Med-34.txt  (4 KB)
+26.0s 260 [5/7]   Ar-APT/Human-Written-Text/Med-35.txt  (2 KB)
+26.0s 261 [5/7]   Ar-APT/Human-Written-Text/Med-36.txt  (1 KB)
+26.0s 262 [5/7]   Ar-APT/Human-Written-Text/Med-37.txt  (2 KB)
+26.0s 263 [5/7]   Ar-APT/Human-Written-Text/Med-38.txt  (1 KB)
+26.0s 264 [5/7]   Ar-APT/Human-Written-Text/Med-39.txt  (3 KB)
+26.0s 265 [5/7]   Ar-APT/Human-Written-Text/Med-4.txt  (2 KB)
+26.0s 266 [5/7]   Ar-APT/Human-Written-Text/Med-40.txt  (2 KB)
+26.0s 267 [5/7]   Ar-APT/Human-Written-Text/Med-41.txt  (3 KB)
+26.0s 268 [5/7]   Ar-APT/Human-Written-Text/Med-42.txt  (4 KB)
+26.0s 269 [5/7]   Ar-APT/Human-Written-Text/Med-43.txt  (3 KB)
+26.0s 270 [5/7]   Ar-APT/Human-Written-Text/Med-44.txt  (4 KB)
+26.0s 271 [5/7]   Ar-APT/Human-Written-Text/Med-45.txt  (4 KB)
+26.0s 272 [5/7]   Ar-APT/Human-Written-Text/Med-46.txt  (1 KB)
+26.0s 273 [5/7]   Ar-APT/Human-Written-Text/Med-47.txt  (4 KB)
+26.0s 274 [5/7]   Ar-APT/Human-Written-Text/Med-48.txt  (4 KB)
+26.0s 275 [5/7]   Ar-APT/Human-Written-Text/Med-49.txt  (3 KB)
+26.0s 276 [5/7]   Ar-APT/Human-Written-Text/Med-5.txt  (2 KB)
+26.0s 277 [5/7]   Ar-APT/Human-Written-Text/Med-50.txt  (3 KB)
+26.0s 278 [5/7]   Ar-APT/Human-Written-Text/Med-6.txt  (2 KB)
+26.0s 279 [5/7]   Ar-APT/Human-Written-Text/Med-7.txt  (2 KB)
+26.0s 280 [5/7]   Ar-APT/Human-Written-Text/Med-8.txt  (2 KB)
+26.0s 281 [5/7]   Ar-APT/Human-Written-Text/Med-9.txt  (2 KB)
+26.0s 282 [5/7]   Ar-APT/Human-Written-Text/Pol-1.txt  (1 KB)
+26.0s 283 [5/7]   Ar-APT/Human-Written-Text/Pol-10.txt  (1 KB)
+26.0s 284 [5/7]   Ar-APT/Human-Written-Text/Pol-11.txt  (1 KB)
+26.0s 285 [5/7]   Ar-APT/Human-Written-Text/Pol-12.txt  (1 KB)
+26.0s 286 [5/7]   Ar-APT/Human-Written-Text/Pol-13.txt  (1 KB)
+26.0s 287 [5/7]   Ar-APT/Human-Written-Text/Pol-14.txt  (2 KB)
+26.0s 288 [5/7]   Ar-APT/Human-Written-Text/Pol-15.txt  (2 KB)
+26.0s 289 [5/7]   Ar-APT/Human-Written-Text/Pol-16.txt  (1 KB)
+26.0s 290 [5/7]   Ar-APT/Human-Written-Text/Pol-17.txt  (1 KB)
+26.0s 291 [5/7]   Ar-APT/Human-Written-Text/Pol-18.txt  (1 KB)
+26.0s 292 [5/7]   Ar-APT/Human-Written-Text/Pol-19.txt  (1 KB)
+26.0s 293 [5/7]   Ar-APT/Human-Written-Text/Pol-2.txt  (1 KB)
+26.0s 294 [5/7]   Ar-APT/Human-Written-Text/Pol-20.txt  (1 KB)
+26.0s 295 [5/7]   Ar-APT/Human-Written-Text/Pol-21.txt  (1 KB)
+26.0s 296 [5/7]   Ar-APT/Human-Written-Text/Pol-22.txt  (1 KB)
+26.0s 297 [5/7]   Ar-APT/Human-Written-Text/Pol-23.txt  (1 KB)
+26.0s 298 [5/7]   Ar-APT/Human-Written-Text/Pol-24.txt  (1 KB)
+26.0s 299 [5/7]   Ar-APT/Human-Written-Text/Pol-25.txt  (2 KB)
+26.0s 300 [5/7]   Ar-APT/Human-Written-Text/Pol-26.txt  (2 KB)
+26.0s 301 [5/7]   Ar-APT/Human-Written-Text/Pol-27.txt  (5 KB)
+26.0s 302 [5/7]   Ar-APT/Human-Written-Text/Pol-28.txt  (3 KB)
+26.0s 303 [5/7]   Ar-APT/Human-Written-Text/Pol-29.txt  (3 KB)
+26.0s 304 [5/7]   Ar-APT/Human-Written-Text/Pol-3.txt  (1 KB)
+26.0s 305 [5/7]   Ar-APT/Human-Written-Text/Pol-30.txt  (2 KB)
+26.0s 306 [5/7]   Ar-APT/Human-Written-Text/Pol-31.txt  (2 KB)
+26.0s 307 [5/7]   Ar-APT/Human-Written-Text/Pol-32.txt  (2 KB)
+26.0s 308 [5/7]   Ar-APT/Human-Written-Text/Pol-33.txt  (2 KB)
+26.0s 309 [5/7]   Ar-APT/Human-Written-Text/Pol-34.txt  (3 KB)
+26.0s 310 [5/7]   Ar-APT/Human-Written-Text/Pol-35.txt  (2 KB)
+26.0s 311 [5/7]   Ar-APT/Human-Written-Text/Pol-36.txt  (3 KB)
+26.0s 312 [5/7]   Ar-APT/Human-Written-Text/Pol-37.txt  (4 KB)
+26.0s 313 [5/7]   Ar-APT/Human-Written-Text/Pol-38.txt  (2 KB)
+26.0s 314 [5/7]   Ar-APT/Human-Written-Text/Pol-39.txt  (3 KB)
+26.0s 315 [5/7]   Ar-APT/Human-Written-Text/Pol-4.txt  (1 KB)
+26.0s 316 [5/7]   Ar-APT/Human-Written-Text/Pol-40.txt  (3 KB)
+26.0s 317 [5/7]   Ar-APT/Human-Written-Text/Pol-41.txt  (1 KB)
+26.0s 318 [5/7]   Ar-APT/Human-Written-Text/Pol-42.txt  (3 KB)
+26.0s 319 [5/7]   Ar-APT/Human-Written-Text/Pol-43.txt  (2 KB)
+26.0s 320 [5/7]   Ar-APT/Human-Written-Text/Pol-44.txt  (2 KB)
+26.0s 321 [5/7]   Ar-APT/Human-Written-Text/Pol-45.txt  (3 KB)
+26.0s 322 [5/7]   Ar-APT/Human-Written-Text/Pol-46.txt  (2 KB)
+26.0s 323 [5/7]   Ar-APT/Human-Written-Text/Pol-47.txt  (3 KB)
+26.0s 324 [5/7]   Ar-APT/Human-Written-Text/Pol-48.txt  (2 KB)
+26.0s 325 [5/7]   Ar-APT/Human-Written-Text/Pol-49.txt  (3 KB)
+26.0s 326 [5/7]   Ar-APT/Human-Written-Text/Pol-5.txt  (1 KB)
+26.0s 327 [5/7]   Ar-APT/Human-Written-Text/Pol-50.txt  (2 KB)
+26.0s 328 [5/7]   Ar-APT/Human-Written-Text/Pol-6.txt  (1 KB)
+26.0s 329 [5/7]   Ar-APT/Human-Written-Text/Pol-7.txt  (1 KB)
+26.0s 330 [5/7]   Ar-APT/Human-Written-Text/Pol-8.txt  (1 KB)
+26.0s 331 [5/7]   Ar-APT/Human-Written-Text/Pol-9.txt  (1 KB)
+26.0s 332 [5/7]   Ar-APT/Human-Written-Text/Sci-1.txt  (2 KB)
+26.1s 333 [5/7]   Ar-APT/Human-Written-Text/Sci-10.txt  (1 KB)
+26.1s 334 [5/7]   Ar-APT/Human-Written-Text/Sci-11.txt  (1 KB)
+26.1s 335 [5/7]   Ar-APT/Human-Written-Text/Sci-12.txt  (2 KB)
+26.1s 336 [5/7]   Ar-APT/Human-Written-Text/Sci-13.txt  (3 KB)
+26.1s 337 [5/7]   Ar-APT/Human-Written-Text/Sci-14.txt  (1 KB)
+26.1s 338 [5/7]   Ar-APT/Human-Written-Text/Sci-15.txt  (2 KB)
+26.1s 339 [5/7]   Ar-APT/Human-Written-Text/Sci-16.txt  (2 KB)
+26.1s 340 [5/7]   Ar-APT/Human-Written-Text/Sci-17.txt  (1 KB)
+26.1s 341 [5/7]   Ar-APT/Human-Written-Text/Sci-18.txt  (1 KB)
+26.1s 342 [5/7]   Ar-APT/Human-Written-Text/Sci-19.txt  (2 KB)
+26.1s 343 [5/7]   Ar-APT/Human-Written-Text/Sci-2.txt  (2 KB)
+26.1s 344 [5/7]   Ar-APT/Human-Written-Text/Sci-20.txt  (1 KB)
+26.1s 345 [5/7]   Ar-APT/Human-Written-Text/Sci-21.txt  (2 KB)
+26.1s 346 [5/7]   Ar-APT/Human-Written-Text/Sci-22.txt  (1 KB)
+26.1s 347 [5/7]   Ar-APT/Human-Written-Text/Sci-23.txt  (1 KB)
+26.1s 348 [5/7]   Ar-APT/Human-Written-Text/Sci-24.txt  (1 KB)
+26.1s 349 [5/7]   Ar-APT/Human-Written-Text/Sci-25.txt  (1 KB)
+26.1s 350 [5/7]   Ar-APT/Human-Written-Text/Sci-26.txt  (1 KB)
+26.1s 351 [5/7]   Ar-APT/Human-Written-Text/Sci-27.txt  (1 KB)
+26.1s 352 [5/7]   Ar-APT/Human-Written-Text/Sci-28.txt  (1 KB)
+26.1s 353 [5/7]   Ar-APT/Human-Written-Text/Sci-29.txt  (2 KB)
+26.1s 354 [5/7]   Ar-APT/Human-Written-Text/Sci-3.txt  (2 KB)
+26.1s 355 [5/7]   Ar-APT/Human-Written-Text/Sci-30.txt  (1 KB)
+26.1s 356 [5/7]   Ar-APT/Human-Written-Text/Sci-31.txt  (4 KB)
+26.1s 357 [5/7]   Ar-APT/Human-Written-Text/Sci-32.txt  (1 KB)
+26.1s 358 [5/7]   Ar-APT/Human-Written-Text/Sci-33.txt  (3 KB)
+26.1s 359 [5/7]   Ar-APT/Human-Written-Text/Sci-34.txt  (2 KB)
+26.1s 360 [5/7]   Ar-APT/Human-Written-Text/Sci-35.txt  (4 KB)
+26.1s 361 [5/7]   Ar-APT/Human-Written-Text/Sci-36.txt  (2 KB)
+26.1s 362 [5/7]   Ar-APT/Human-Written-Text/Sci-37.txt  (3 KB)
+26.1s 363 [5/7]   Ar-APT/Human-Written-Text/Sci-38.txt  (1 KB)
+26.1s 364 [5/7]   Ar-APT/Human-Written-Text/Sci-39.txt  (2 KB)
+26.1s 365 [5/7]   Ar-APT/Human-Written-Text/Sci-4.txt  (1 KB)
+26.1s 366 [5/7]   Ar-APT/Human-Written-Text/Sci-40.txt  (1 KB)
+26.1s 367 [5/7]   Ar-APT/Human-Written-Text/Sci-41.txt  (1 KB)
+26.1s 368 [5/7]   Ar-APT/Human-Written-Text/Sci-42.txt  (2 KB)
+26.1s 369 [5/7]   Ar-APT/Human-Written-Text/Sci-43.txt  (2 KB)
+26.1s 370 [5/7]   Ar-APT/Human-Written-Text/Sci-44.txt  (2 KB)
+26.1s 371 [5/7]   Ar-APT/Human-Written-Text/Sci-45.txt  (2 KB)
+26.1s 372 [5/7]   Ar-APT/Human-Written-Text/Sci-46.txt  (1 KB)
+26.1s 373 [5/7]   Ar-APT/Human-Written-Text/Sci-47.txt  (2 KB)
+26.1s 374 [5/7]   Ar-APT/Human-Written-Text/Sci-48.txt  (2 KB)
+26.1s 375 [5/7]   Ar-APT/Human-Written-Text/Sci-49.txt  (2 KB)
+26.1s 376 [5/7]   Ar-APT/Human-Written-Text/Sci-5.txt  (3 KB)
+26.1s 377 [5/7]   Ar-APT/Human-Written-Text/Sci-50.txt  (4 KB)
+26.1s 378 [5/7]   Ar-APT/Human-Written-Text/Sci-6.txt  (3 KB)
+26.1s 379 [5/7]   Ar-APT/Human-Written-Text/Sci-7.txt  (2 KB)
+26.1s 380 [5/7]   Ar-APT/Human-Written-Text/Sci-8.txt  (1 KB)
+26.1s 381 [5/7]   Ar-APT/Human-Written-Text/Sci-9.txt  (3 KB)
+26.1s 382 [5/7]   Ar-APT/Human-Written-Text/Spo-1.txt  (1 KB)
+26.1s 383 [5/7]   Ar-APT/Human-Written-Text/Spo-10.txt  (1 KB)
+26.1s 384 [5/7]   Ar-APT/Human-Written-Text/Spo-11.txt  (1 KB)
+26.1s 385 [5/7]   Ar-APT/Human-Written-Text/Spo-12.txt  (1 KB)
+26.1s 386 [5/7]   Ar-APT/Human-Written-Text/Spo-13.txt  (1 KB)
+26.1s 387 [5/7]   Ar-APT/Human-Written-Text/Spo-14.txt  (1 KB)
+26.1s 388 [5/7]   Ar-APT/Human-Written-Text/Spo-15.txt  (1 KB)
+26.1s 389 [5/7]   Ar-APT/Human-Written-Text/Spo-16.txt  (1 KB)
+26.1s 390 [5/7]   Ar-APT/Human-Written-Text/Spo-17.txt  (1 KB)
+26.1s 391 [5/7]   Ar-APT/Human-Written-Text/Spo-18.txt  (1 KB)
+26.1s 392 [5/7]   Ar-APT/Human-Written-Text/Spo-19.txt  (3 KB)
+26.1s 393 [5/7]   Ar-APT/Human-Written-Text/Spo-2.txt  (1 KB)
+26.1s 394 [5/7]   Ar-APT/Human-Written-Text/Spo-20.txt  (3 KB)
+26.1s 395 [5/7]   Ar-APT/Human-Written-Text/Spo-21.txt  (3 KB)
+26.1s 396 [5/7]   Ar-APT/Human-Written-Text/Spo-22.txt  (2 KB)
+26.1s 397 [5/7]   Ar-APT/Human-Written-Text/Spo-23.txt  (3 KB)
+26.1s 398 [5/7]   Ar-APT/Human-Written-Text/Spo-24.txt  (2 KB)
+26.1s 399 [5/7]   Ar-APT/Human-Written-Text/Spo-25.txt  (3 KB)
+26.1s 400 [5/7]   Ar-APT/Human-Written-Text/Spo-26.txt  (3 KB)
+26.1s 401 [5/7]   Ar-APT/Human-Written-Text/Spo-27.txt  (3 KB)
+26.1s 402 [5/7]   Ar-APT/Human-Written-Text/Spo-28.txt  (1 KB)
+26.1s 403 [5/7]   Ar-APT/Human-Written-Text/Spo-29.txt  (4 KB)
+26.1s 404 [5/7]   Ar-APT/Human-Written-Text/Spo-3.txt  (1 KB)
+26.1s 405 [5/7]   Ar-APT/Human-Written-Text/Spo-30.txt  (1 KB)
+26.1s 406 [5/7]   Ar-APT/Human-Written-Text/Spo-31.txt  (3 KB)
+26.1s 407 [5/7]   Ar-APT/Human-Written-Text/Spo-32.txt  (2 KB)
+26.1s 408 [5/7]   Ar-APT/Human-Written-Text/Spo-33.txt  (2 KB)
+26.1s 409 [5/7]   Ar-APT/Human-Written-Text/Spo-34.txt  (3 KB)
+26.1s 410 [5/7]   Ar-APT/Human-Written-Text/Spo-35.txt  (2 KB)
+26.1s 411 [5/7]   Ar-APT/Human-Written-Text/Spo-36.txt  (4 KB)
+26.1s 412 [5/7]   Ar-APT/Human-Written-Text/Spo-37.txt  (2 KB)
+26.1s 413 [5/7]   Ar-APT/Human-Written-Text/Spo-38.txt  (2 KB)
+26.1s 414 [5/7]   Ar-APT/Human-Written-Text/Spo-39.txt  (4 KB)
+26.1s 415 [5/7]   Ar-APT/Human-Written-Text/Spo-4.txt  (1 KB)
+26.1s 416 [5/7]   Ar-APT/Human-Written-Text/Spo-40.txt  (2 KB)
+26.1s 417 [5/7]   Ar-APT/Human-Written-Text/Spo-41.txt  (2 KB)
+26.1s 418 [5/7]   Ar-APT/Human-Written-Text/Spo-42.txt  (3 KB)
+26.1s 419 [5/7]   Ar-APT/Human-Written-Text/Spo-43.txt  (2 KB)
+26.1s 420 [5/7]   Ar-APT/Human-Written-Text/Spo-44.txt  (2 KB)
+26.1s 421 [5/7]   Ar-APT/Human-Written-Text/Spo-45.txt  (2 KB)
+26.1s 422 [5/7]   Ar-APT/Human-Written-Text/Spo-46.txt  (3 KB)
+26.1s 423 [5/7]   Ar-APT/Human-Written-Text/Spo-47.txt  (3 KB)
+26.1s 424 [5/7]   Ar-APT/Human-Written-Text/Spo-48.txt  (2 KB)
+26.1s 425 [5/7]   Ar-APT/Human-Written-Text/Spo-49.txt  (2 KB)
+26.1s 426 [5/7]   Ar-APT/Human-Written-Text/Spo-5.txt  (1 KB)
+26.1s 427 [5/7]   Ar-APT/Human-Written-Text/Spo-50.txt  (3 KB)
+26.2s 428 [5/7]   Ar-APT/Human-Written-Text/Spo-6.txt  (1 KB)
+26.2s 429 [5/7]   Ar-APT/Human-Written-Text/Spo-7.txt  (1 KB)
+26.2s 430 [5/7]   Ar-APT/Human-Written-Text/Spo-8.txt  (1 KB)
+26.2s 431 [5/7]   Ar-APT/Human-Written-Text/Spo-9.txt  (1 KB)
+26.2s 432 [5/7]   Ar-APT/Human-Written-Text/Tech-1.txt  (3 KB)
+26.2s 433 [5/7]   Ar-APT/Human-Written-Text/Tech-10.txt  (2 KB)
+26.2s 434 [5/7]   Ar-APT/Human-Written-Text/Tech-11.txt  (4 KB)
+26.2s 435 [5/7]   Ar-APT/Human-Written-Text/Tech-12.txt  (1 KB)
+26.2s 436 [5/7]   Ar-APT/Human-Written-Text/Tech-13.txt  (3 KB)
+26.2s 437 [5/7]   Ar-APT/Human-Written-Text/Tech-14.txt  (3 KB)
+26.2s 438 [5/7]   Ar-APT/Human-Written-Text/Tech-15.txt  (2 KB)
+26.2s 439 [5/7]   Ar-APT/Human-Written-Text/Tech-16.txt  (2 KB)
+26.2s 440 [5/7]   Ar-APT/Human-Written-Text/Tech-17.txt  (2 KB)
+26.2s 441 [5/7]   Ar-APT/Human-Written-Text/Tech-18.txt  (2 KB)
+26.2s 442 [5/7]   Ar-APT/Human-Written-Text/Tech-19.txt  (3 KB)
+26.2s 443 [5/7]   Ar-APT/Human-Written-Text/Tech-2.txt  (4 KB)
+26.2s 444 [5/7]   Ar-APT/Human-Written-Text/Tech-20.txt  (3 KB)
+26.2s 445 [5/7]   Ar-APT/Human-Written-Text/Tech-21.txt  (2 KB)
+26.2s 446 [5/7]   Ar-APT/Human-Written-Text/Tech-22.txt  (3 KB)
+26.2s 447 [5/7]   Ar-APT/Human-Written-Text/Tech-23.txt  (2 KB)
+26.2s 448 [5/7]   Ar-APT/Human-Written-Text/Tech-24.txt  (2 KB)
+26.2s 449 [5/7]   Ar-APT/Human-Written-Text/Tech-25.txt  (4 KB)
+26.2s 450 [5/7]   Ar-APT/Human-Written-Text/Tech-26.txt  (2 KB)
+26.2s 451 [5/7]   Ar-APT/Human-Written-Text/Tech-27.txt  (3 KB)
+26.2s 452 [5/7]   Ar-APT/Human-Written-Text/Tech-28.txt  (2 KB)
+26.2s 453 [5/7]   Ar-APT/Human-Written-Text/Tech-29.txt  (3 KB)
+26.2s 454 [5/7]   Ar-APT/Human-Written-Text/Tech-3.txt  (3 KB)
+26.2s 455 [5/7]   Ar-APT/Human-Written-Text/Tech-30.txt  (2 KB)
+26.2s 456 [5/7]   Ar-APT/Human-Written-Text/Tech-31.txt  (2 KB)
+26.2s 457 [5/7]   Ar-APT/Human-Written-Text/Tech-32.txt  (3 KB)
+26.2s 458 [5/7]   Ar-APT/Human-Written-Text/Tech-33.txt  (3 KB)
+26.2s 459 [5/7]   Ar-APT/Human-Written-Text/Tech-34.txt  (4 KB)
+26.2s 460 [5/7]   Ar-APT/Human-Written-Text/Tech-35.txt  (3 KB)
+26.2s 461 [5/7]   Ar-APT/Human-Written-Text/Tech-36.txt  (2 KB)
+26.2s 462 [5/7]   Ar-APT/Human-Written-Text/Tech-37.txt  (2 KB)
+26.2s 463 [5/7]   Ar-APT/Human-Written-Text/Tech-38.txt  (3 KB)
+26.2s 464 [5/7]   Ar-APT/Human-Written-Text/Tech-39.txt  (1 KB)
+26.2s 465 [5/7]   Ar-APT/Human-Written-Text/Tech-4.txt  (2 KB)
+26.2s 466 [5/7]   Ar-APT/Human-Written-Text/Tech-40.txt  (2 KB)
+26.2s 467 [5/7]   Ar-APT/Human-Written-Text/Tech-41.txt  (1 KB)
+26.2s 468 [5/7]   Ar-APT/Human-Written-Text/Tech-42.txt  (2 KB)
+26.2s 469 [5/7]   Ar-APT/Human-Written-Text/Tech-43.txt  (3 KB)
+26.2s 470 [5/7]   Ar-APT/Human-Written-Text/Tech-44.txt  (3 KB)
+26.2s 471 [5/7]   Ar-APT/Human-Written-Text/Tech-45.txt  (2 KB)
+26.2s 472 [5/7]   Ar-APT/Human-Written-Text/Tech-46.txt  (3 KB)
+26.2s 473 [5/7]   Ar-APT/Human-Written-Text/Tech-47.txt  (3 KB)
+26.2s 474 [5/7]   Ar-APT/Human-Written-Text/Tech-48.txt  (3 KB)
+26.2s 475 [5/7]   Ar-APT/Human-Written-Text/Tech-49.txt  (4 KB)
+26.2s 476 [5/7]   Ar-APT/Human-Written-Text/Tech-5.txt  (2 KB)
+26.2s 477 [5/7]   Ar-APT/Human-Written-Text/Tech-50.txt  (3 KB)
+26.2s 478 [5/7]   Ar-APT/Human-Written-Text/Tech-6.txt  (2 KB)
+26.2s 479 [5/7]   Ar-APT/Human-Written-Text/Tech-7.txt  (2 KB)
+26.2s 480 [5/7]   Ar-APT/Human-Written-Text/Tech-8.txt  (2 KB)
+26.2s 481 [5/7]   Ar-APT/Human-Written-Text/Tech-9.txt  (2 KB)
+26.2s 482 [5/7]   Ar-APT/Human-Written-Text/Tour-1.txt  (3 KB)
+26.2s 483 [5/7]   Ar-APT/Human-Written-Text/Tour-10.txt  (2 KB)
+26.2s 484 [5/7]   Ar-APT/Human-Written-Text/Tour-11.txt  (4 KB)
+26.2s 485 [5/7]   Ar-APT/Human-Written-Text/Tour-12.txt  (1 KB)
+26.2s 486 [5/7]   Ar-APT/Human-Written-Text/Tour-13.txt  (2 KB)
+26.2s 487 [5/7]   Ar-APT/Human-Written-Text/Tour-14.txt  (2 KB)
+26.2s 488 [5/7]   Ar-APT/Human-Written-Text/Tour-15.txt  (2 KB)
+26.2s 489 [5/7]   Ar-APT/Human-Written-Text/Tour-16.txt  (2 KB)
+26.2s 490 [5/7]   Ar-APT/Human-Written-Text/Tour-17.txt  (3 KB)
+26.2s 491 [5/7]   Ar-APT/Human-Written-Text/Tour-18.txt  (4 KB)
+26.2s 492 [5/7]   Ar-APT/Human-Written-Text/Tour-19.txt  (3 KB)
+26.2s 493 [5/7]   Ar-APT/Human-Written-Text/Tour-2.txt  (2 KB)
+26.2s 494 [5/7]   Ar-APT/Human-Written-Text/Tour-20.txt  (2 KB)
+26.2s 495 [5/7]   Ar-APT/Human-Written-Text/Tour-21.txt  (1 KB)
+26.2s 496 [5/7]   Ar-APT/Human-Written-Text/Tour-22.txt  (2 KB)
+26.2s 497 [5/7]   Ar-APT/Human-Written-Text/Tour-23.txt  (2 KB)
+26.2s 498 [5/7]   Ar-APT/Human-Written-Text/Tour-24.txt  (2 KB)
+26.2s 499 [5/7]   Ar-APT/Human-Written-Text/Tour-25.txt  (2 KB)
+26.2s 500 [5/7]   Ar-APT/Human-Written-Text/Tour-26.txt  (2 KB)
+26.2s 501 [5/7]   Ar-APT/Human-Written-Text/Tour-27.txt  (3 KB)
+26.2s 502 [5/7]   Ar-APT/Human-Written-Text/Tour-28.txt  (3 KB)
+26.2s 503 [5/7]   Ar-APT/Human-Written-Text/Tour-29.txt  (2 KB)
+26.2s 504 [5/7]   Ar-APT/Human-Written-Text/Tour-3.txt  (2 KB)
+26.2s 505 [5/7]   Ar-APT/Human-Written-Text/Tour-30.txt  (3 KB)
+26.2s 506 [5/7]   Ar-APT/Human-Written-Text/Tour-31.txt  (3 KB)
+26.2s 507 [5/7]   Ar-APT/Human-Written-Text/Tour-32.txt  (2 KB)
+26.2s 508 [5/7]   Ar-APT/Human-Written-Text/Tour-33.txt  (2 KB)
+26.2s 509 [5/7]   Ar-APT/Human-Written-Text/Tour-34.txt  (5 KB)
+26.2s 510 [5/7]   Ar-APT/Human-Written-Text/Tour-35.txt  (1 KB)
+26.2s 511 [5/7]   Ar-APT/Human-Written-Text/Tour-36.txt  (3 KB)
+26.2s 512 [5/7]   Ar-APT/Human-Written-Text/Tour-37.txt  (2 KB)
+26.2s 513 [5/7]   Ar-APT/Human-Written-Text/Tour-38.txt  (2 KB)
+26.2s 514 [5/7]   Ar-APT/Human-Written-Text/Tour-39.txt  (4 KB)
+26.2s 515 [5/7]   Ar-APT/Human-Written-Text/Tour-4.txt  (1 KB)
+26.2s 516 [5/7]   Ar-APT/Human-Written-Text/Tour-40.txt  (2 KB)
+26.2s 517 [5/7]   Ar-APT/Human-Written-Text/Tour-41.txt  (2 KB)
+26.2s 518 [5/7]   Ar-APT/Human-Written-Text/Tour-42.txt  (1 KB)
+26.2s 519 [5/7]   Ar-APT/Human-Written-Text/Tour-43.txt  (2 KB)
+26.2s 520 [5/7]   Ar-APT/Human-Written-Text/Tour-44.txt  (1 KB)
+26.2s 521 [5/7]   Ar-APT/Human-Written-Text/Tour-45.txt  (3 KB)
+26.2s 522 [5/7]   Ar-APT/Human-Written-Text/Tour-46.txt  (3 KB)
+26.2s 523 [5/7]   Ar-APT/Human-Written-Text/Tour-47.txt  (3 KB)
+26.2s 524 [5/7]   Ar-APT/Human-Written-Text/Tour-48.txt  (3 KB)
+26.2s 525 [5/7]   Ar-APT/Human-Written-Text/Tour-49.txt  (3 KB)
+26.2s 526 [5/7]   Ar-APT/Human-Written-Text/Tour-5.txt  (3 KB)
+26.2s 527 [5/7]   Ar-APT/Human-Written-Text/Tour-50.txt  (3 KB)
+26.2s 528 [5/7]   Ar-APT/Human-Written-Text/Tour-6.txt  (1 KB)
+26.2s 529 [5/7]   Ar-APT/Human-Written-Text/Tour-7.txt  (2 KB)
+26.2s 530 [5/7]   Ar-APT/Human-Written-Text/Tour-8.txt  (2 KB)
+26.2s 531 [5/7]   Ar-APT/Human-Written-Text/Tour-9.txt  (3 KB)
+26.2s 532 [5/7]   Codes/2 (GPT-3.5 and GPT-4) LLM Models Detection.ipynb  (5 KB)
+26.2s 533 [5/7]   Codes/2 (GPT-3.5 and GPT-4) LLM Models Polishing.ipynb  (11 KB)
+26.2s 534 [5/7]   Codes/8 LLM Models Detection.ipynb  (4 KB)
+26.2s 535 [5/7]   Codes/8 LLM Models Polishing.ipynb  (11 KB)
+26.3s 536 [5/7] 41 loadable data files
+26.4s 537 [6/7] human .txt files: 400
+26.4s 538 [6/7]   loaded 400 unpolished human articles
+26.4s 539 [6/7] polished files: 40
+26.4s 540 [6/7]   DS                 L10  -> 100 rows
+26.5s 541 [6/7]   DS                 L25  -> 100 rows
+26.5s 542 [6/7]   DS                 L50  -> 100 rows
+26.5s 543 [6/7]   DS                 L75  -> 100 rows
+26.6s 544 [6/7]   GPT 4              L10  -> 100 rows
+26.6s 545 [6/7]   GPT 4              L25  -> 100 rows
+26.6s 546 [6/7]   GPT4               L50  -> 100 rows
+26.7s 547 [6/7]   GPT4               L75  -> 100 rows
+26.7s 548 [6/7]   LLAMA              L10  -> 100 rows
+26.7s 549 [6/7]   LLAMA              L25  -> 100 rows
+26.8s 550 [6/7]   LLAMA              L50  -> 100 rows
+26.8s 551 [6/7]   LLAMA              L75  -> 100 rows
+26.8s 552 [6/7]   QWEN M             L10  -> 100 rows
+26.9s 553 [6/7]   QWEN M             L25  -> 100 rows
+26.9s 554 [6/7]   QWEN M             L50  -> 100 rows
+26.9s 555 [6/7]   QWEN M             L75  -> 100 rows
+27.0s 556 [6/7]   claude-4-sonnet    L10  -> 100 rows
+27.0s 557 [6/7]   claude-4-sonnet    L25  -> 100 rows
+27.0s 558 [6/7]   claude-4-sonnet    L50  -> 100 rows
+27.0s 559 [6/7]   claude-4-sonnet    L75  -> 100 rows
+27.0s 560 [6/7]   loaded 1936 polished articles
+27.1s 561 [6/7] AI file (400, 3) cols=['original', 'AI/Human', 'domain']
+27.1s 562 [6/7]   'AI/Human' avg len 2 | sample ['AI', 'AI', 'AI']
+27.1s 563 [6/7]   label values: {'AI': 400}
+27.2s 564 
+27.2s 565 [6/7] Ar-APT prepared: 2736 articles | median 183 words
+27.2s 566 [6/7] by kind: {'human_polished': 1936, 'human_orig': 400, 'ai_generated': 400}
+27.2s 567 [6/7] by label: {0: 2336, 1: 400}
+27.2s 568 [6/7] polished cells (model x level):
+27.2s 569 polish_model     level
+27.2s 570 DS               10.0      99
+27.2s 571 25.0     100
+27.2s 572 50.0      99
+27.2s 573 75.0      99
+27.2s 574 GPT 4            10.0      98
+27.2s 575 25.0      98
+27.2s 576 GPT4             50.0      99
+27.2s 577 75.0      99
+27.2s 578 LLAMA            10.0     100
+27.2s 579 25.0     100
+27.2s 580 50.0      99
+27.2s 581 75.0     100
+27.2s 582 QWEN M           10.0     100
+27.2s 583 25.0      53
+27.2s 584 50.0      99
+27.2s 585 75.0     100
+27.2s 586 claude-4-sonnet  10.0      99
+27.2s 587 25.0      98
+27.2s 588 50.0      98
+27.2s 589 75.0      99
+27.3s 590 [6/7] saved arapt_prepared.parquet
+27.5s 591 [7/7] scaler params loaded for ['burstiness', 'ttr', 'quote_ratio', 'function_word_ratio', 'compressibility']
+27.7s 592 /usr/local/lib/python3.12/dist-packages/sklearn/base.py:380: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.9.0 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+27.7s 593 https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+27.7s 594 warnings.warn(
+27.7s 595 
+27.7s 596 /usr/local/lib/python3.12/dist-packages/sklearn/base.py:380: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.9.0 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+27.7s 597 https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+27.7s 598 warnings.warn(
+27.8s 599 [7/7]   featurised 300/2736 (0s)
+28.2s 600 [7/7]   featurised 600/2736 (1s)
+28.5s 601 [7/7]   featurised 900/2736 (1s)
+28.8s 602 [7/7]   featurised 1200/2736 (1s)
+29.2s 603 [7/7]   featurised 1500/2736 (2s)
+29.6s 604 [7/7]   featurised 1800/2736 (2s)
+29.9s 605 [7/7]   featurised 2100/2736 (2s)
+30.3s 606 [7/7]   featurised 2400/2736 (3s)
+30.7s 607 [7/7]   featurised 2700/2736 (3s)
+30.7s 608 [7/7] Vstat (2736, 5) saved
+30.7s 609 [7/7]   burstiness             mean +0.129
+30.7s 610 [7/7]   ttr                    mean -0.559
+30.7s 611 [7/7]   quote_ratio            mean -0.501
+30.7s 612 [7/7]   function_word_ratio    mean -0.553
+30.7s 613 [7/7]   compressibility        mean +3.219
+30.8s 614 [7/7] feature means BY KIND (isolates domain shift from polishing):
+30.8s 615 burstiness    ttr  quote_ratio  function_word_ratio  compressibility
+30.8s 616 kind
+30.8s 617 ai_generated        -0.580  0.005       -0.710                0.309            2.674
+30.8s 618 human_orig           0.425 -1.407       -0.483               -0.601            2.834
+30.8s 619 human_polished       0.215 -0.501       -0.462               -0.721            3.411
+30.8s 620 burstiness    ttr  quote_ratio  function_word_ratio  compressibility
+30.8s 621 level
+30.8s 622 10.0        0.188 -0.780       -0.509               -0.580            3.249
+30.8s 623 25.0        0.250 -0.678       -0.410               -0.631            3.402
+30.8s 624 50.0        0.173 -0.407       -0.459               -0.785            3.467
+30.8s 625 75.0        0.251 -0.154       -0.466               -0.880            3.524
+58.2s 626 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+58.2s 627 
+58.2s 628 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+59.6s 629 [7/7]   chunked 300/2736 (0s)
+59.9s 630 [7/7]   chunked 600/2736 (1s)
+60.2s 631 [7/7]   chunked 900/2736 (1s)
+60.5s 632 [7/7]   chunked 1200/2736 (1s)
+60.8s 633 [7/7]   chunked 1500/2736 (1s)
+61.1s 634 [7/7]   chunked 1800/2736 (2s)
+61.4s 635 [7/7]   chunked 2100/2736 (2s)
+61.7s 636 [7/7]   chunked 2400/2736 (2s)
+62.1s 637 [7/7]   chunked 2700/2736 (3s)
+64.0s 638 [7/7] chunks (2736, 9, 512) saved | mean chunks/article 1.09
+64.0s 639 
+64.0s 640 [7/7] READY FOR NB17: arapt_prepared.parquet, arapt_vstat.parquet, arapt_chunks_K9.parquet
+64.0s 641 
+64.0s 642 [DONE] save /kaggle/working as a dataset and point NB17 at it
+69.2s 643 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+69.2s 644 cells[i][c] = re.sub('\\\\\|', '|', cell)
+69.4s 645 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+69.4s 646 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+70.2s 647 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+70.6s 648 [NbConvertApp] Writing 121238 bytes to __notebook__.ipynb
+73.8s 649 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+74.9s 650 [NbConvertApp] Writing 487402 bytes to __results__.html
