@@ -1,0 +1,71 @@
+10.7s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.7s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.7s 3 0.00s - to python to disable frozen modules.
+10.7s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.6s 7 0.00s - to python to disable frozen modules.
+11.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.4s 9 [1/6] configuration read
+14.7s 10 [2/6] seed 42: 820 rows
+14.7s 11 [2/6] nb19_seed1_scores.parquet: 820 rows, seed 1
+14.7s 12 [2/6] nb19_seed2_scores.parquet: 820 rows, seed 2
+14.7s 13 [2/6] combined: 2460 rows | seeds [np.int64(1), np.int64(2), np.int64(42)]
+14.8s 14 [3/6] validity read from the NB16 file
+14.8s 15 [3/6] valid rows per seed:
+14.8s 16 seed
+14.8s 17 1     748
+14.8s 18 2     748
+14.8s 19 42    748
+14.8s 20 [3/6] kept 2244 rows after the gate
+14.8s 21 [4/6] per-seed rates, hybrid against neural
+14.8s 22 seed  n_polish  n_humanize  FPR_hyb  FPR_neu  TPR_hyb  TPR_neu  ctrl_FPR_hyb  ctrl_FPR_neu  gap_FPR  gap_TPR
+14.8s 23 1       344         404     9.01    13.66    95.05    99.01          0.00          0.29    -4.65    -3.96
+14.8s 24 2       344         404    13.95    13.37    98.02    99.26          0.29          0.58     0.58    -1.24
+14.8s 25 42       344         404     9.88    13.37    94.55    97.28          0.58          0.29    -3.49    -2.73
+14.8s 26 
+14.8s 27 [4/6] gap on the false-alarm axis: mean -2.52 sd 2.75 range [-4.65, +0.58]
+14.8s 28 [4/6] gap on the evasion axis:     mean -2.64 sd 1.36 range [-3.96, -1.24]
+14.9s 29 [5/6] seed 1 · polishing (FPR)           gap  -4.65  95% CI [ -7.27,  -2.03]  significant yes
+14.9s 30 [5/6] seed 1 · humanizing (TPR)          gap  -3.96  95% CI [ -6.19,  -1.98]  significant yes
+14.9s 31 [5/6] seed 1 · control, untransformed    gap  -0.29  95% CI [ -0.88,  +0.00]  significant no
+14.9s 32 [5/6] seed 2 · polishing (FPR)           gap  +0.58  95% CI [ -2.03,  +3.20]  significant no
+14.9s 33 [5/6] seed 2 · humanizing (TPR)          gap  -1.24  95% CI [ -2.48,  -0.25]  significant yes
+14.9s 34 [5/6] seed 2 · control, untransformed    gap  -0.29  95% CI [ -0.87,  +0.00]  significant no
+14.9s 35 [5/6] seed 42 · polishing (FPR)          gap  -3.49  95% CI [ -6.10,  -1.16]  significant yes
+15.0s 36 [5/6] seed 42 · humanizing (TPR)         gap  -2.72  95% CI [ -4.46,  -1.24]  significant yes
+15.0s 37 [5/6] seed 42 · control, untransformed   gap  +0.29  95% CI [ +0.00,  +0.87]  significant no
+15.0s 38 
+15.0s 39 [5/6] all seeds pooled · polishing       gap  -2.52  95% CI [ -3.97,  -1.07]  significant yes
+15.0s 40 [5/6] all seeds pooled · humanizing      gap  -2.64  95% CI [ -3.63,  -1.73]  significant yes
+15.1s 41 [5/6] all seeds pooled · control         gap  -0.10  95% CI [ -0.48,  +0.19]  significant no
+15.1s 42 [6/6] wrote nb20_per_seed_rates.parquet, nb20_bootstrap.parquet, nb20_all_seed_scores.parquet
+15.1s 43 
+15.1s 44 [6/6] READ THIS AS FOLLOWS
+15.1s 45 [6/6]   the false-alarm gap keeps its sign across every seed: False
+15.1s 46 [6/6]   the evasion gap keeps its sign across every seed:     True
+15.1s 47 [6/6]   per-seed effects significant: 5 of 6
+15.1s 48 [6/6]   spread between seeds, false alarm 5.23 points, evasion 2.72 points
+15.1s 49 [6/6]   if the between-seed spread is of the same order as the effect itself,
+15.1s 50 [6/6]   the thesis must report the effect as seed-dependent rather than established.
+15.1s 51 scope    n   gap    lo    hi significant
+15.1s 52 seed 1 · polishing (FPR)  344 -4.65 -7.27 -2.03         yes
+15.1s 53 seed 1 · humanizing (TPR)  404 -3.96 -6.19 -1.98         yes
+15.1s 54 seed 1 · control, untransformed  344 -0.29 -0.88  0.00          no
+15.1s 55 seed 2 · polishing (FPR)  344  0.58 -2.03  3.20          no
+15.1s 56 seed 2 · humanizing (TPR)  404 -1.24 -2.48 -0.25         yes
+15.1s 57 seed 2 · control, untransformed  344 -0.29 -0.87  0.00          no
+15.1s 58 seed 42 · polishing (FPR)  344 -3.49 -6.10 -1.16         yes
+15.1s 59 seed 42 · humanizing (TPR)  404 -2.72 -4.46 -1.24         yes
+15.1s 60 seed 42 · control, untransformed  344  0.29  0.00  0.87          no
+15.1s 61 all seeds pooled · polishing 1032 -2.52 -3.97 -1.07         yes
+15.1s 62 all seeds pooled · humanizing 1212 -2.64 -3.63 -1.73         yes
+15.1s 63 all seeds pooled · control 1032 -0.10 -0.48  0.19          no
+18.6s 64 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+18.6s 65 cells[i][c] = re.sub('\\\\\|', '|', cell)
+18.9s 66 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+18.9s 67 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+19.7s 68 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+20.1s 69 [NbConvertApp] Writing 18122 bytes to __notebook__.ipynb
+23.2s 70 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+24.4s 71 [NbConvertApp] Writing 322548 bytes to __results__.html

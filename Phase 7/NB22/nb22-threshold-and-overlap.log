@@ -1,0 +1,144 @@
+13.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+13.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+13.5s 3 0.00s - to python to disable frozen modules.
+13.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+14.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+14.6s 7 0.00s - to python to disable frozen modules.
+14.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+18.5s 9 [1/7] stress rows 2244 | per seed {1: 748, 2: 748, 42: 748}
+18.6s 10 [1/7] Ar-APT rows 8208 | anchor (untransformed human) 1200 | per seed {1: 400, 2: 400, 42: 400}
+18.6s 11 [1/7] seeds present in both files: [1, 2, 42]
+19.6s 12 [2/7] operating points on the Ar-APT human anchor
+19.6s 13 seed  anchor_n  FPR_hyb_at_05  FPR_neu_at_05  thr_hyb@1  thr_neu@1  thr_hyb@5  thr_neu@5  thr_hyb@10  thr_neu@10
+19.6s 14 1       400          12.25          21.50     0.9860     0.9988     0.8795     0.9925      0.6352      0.9647
+19.6s 15 2       400          23.25          17.75     0.9985     0.9982     0.9928     0.9803      0.9730      0.8868
+19.6s 16 42       400          12.00          19.25     0.9978     0.9970     0.9513     0.9849      0.6058      0.9085
+19.6s 17 
+19.6s 18 [2/7] threshold spread across seeds at a 1% false-alarm target: hybrid 0.0125   neural 0.0018
+19.6s 19 [2/7] threshold spread across seeds at a 5% false-alarm target: hybrid 0.1133   neural 0.0122
+19.6s 20 [2/7] threshold spread across seeds at a 10% false-alarm target: hybrid 0.3672   neural 0.0779
+19.6s 21 [2/7] a wider hybrid spread means fusion makes the decision boundary less stable across runs.
+19.8s 22 [3/7] neural threshold matched to the hybrid on the Ar-APT human anchor
+19.8s 23 seed  anchor_target  thr_neural  anchor_neu_at_thr
+19.8s 24 1          12.25      0.9148              12.25
+19.8s 25 2          23.25      0.2540              23.25
+19.8s 26 42          12.00      0.8635              12.00
+19.8s 27 
+19.8s 28 seed  gap_stress_FPR_05  gap_stress_FPR_matched  gap_stress_TPR_05  gap_stress_TPR_matched  gap_arapt_POL_05  gap_arapt_POL_matched  gap_arapt_AI_05  gap_arapt_AI_matched
+19.8s 29 1              -4.65                   -0.29              -3.96                   -1.48            -14.52                  -2.90             -1.5                  5.00
+19.8s 30 2               0.58                   -1.46              -1.24                   -1.73              6.46                   0.52              4.5                  0.50
+19.8s 31 42              -3.49                    0.29              -2.73                    0.24            -11.83                  -3.00             -9.5                 -0.25
+19.9s 32 [4/7] seed 1 · stress polish · threshold 0.5           gap   -4.65  95% CI [  -7.27,   -2.03]  significant yes
+19.9s 33 [4/7] seed 1 · stress polish · matched threshold       gap   -0.29  95% CI [  -2.04,   +1.74]  significant no
+19.9s 34 [4/7] seed 1 · stress humanize · threshold 0.5         gap   -3.96  95% CI [  -6.19,   -1.98]  significant yes
+19.9s 35 [4/7] seed 1 · stress humanize · matched threshold     gap   -1.49  95% CI [  -3.22,   +0.25]  significant no
+20.0s 36 [4/7] seed 1 · Ar-APT polished · threshold 0.5         gap  -14.51  95% CI [ -16.06,  -12.91]  significant yes
+20.1s 37 [4/7] seed 1 · Ar-APT polished · matched threshold     gap   -2.89  95% CI [  -4.34,   -1.50]  significant yes
+20.1s 38 [4/7] seed 1 · Ar-APT machine · threshold 0.5          gap   -1.50  95% CI [  -4.25,   +1.00]  significant no
+20.1s 39 [4/7] seed 1 · Ar-APT machine · matched threshold      gap   +5.00  95% CI [  +2.00,   +7.75]  significant yes
+20.1s 40 
+20.1s 41 [4/7] seed 2 · stress polish · threshold 0.5           gap   +0.58  95% CI [  -2.03,   +3.20]  significant no
+20.1s 42 [4/7] seed 2 · stress polish · matched threshold       gap   -1.45  95% CI [  -4.36,   +1.45]  significant no
+20.1s 43 [4/7] seed 2 · stress humanize · threshold 0.5         gap   -1.24  95% CI [  -2.48,   -0.25]  significant yes
+20.2s 44 [4/7] seed 2 · stress humanize · matched threshold     gap   -1.73  95% CI [  -2.97,   -0.50]  significant yes
+20.2s 45 [4/7] seed 2 · Ar-APT polished · threshold 0.5         gap   +6.46  95% CI [  +4.86,   +7.95]  significant yes
+20.3s 46 [4/7] seed 2 · Ar-APT polished · matched threshold     gap   +0.52  95% CI [  -0.88,   +1.96]  significant no
+20.3s 47 [4/7] seed 2 · Ar-APT machine · threshold 0.5          gap   +4.50  95% CI [  +2.50,   +6.75]  significant yes
+20.3s 48 [4/7] seed 2 · Ar-APT machine · matched threshold      gap   +0.50  95% CI [  -0.75,   +2.00]  significant no
+20.3s 49 
+20.3s 50 [4/7] seed 42 · stress polish · threshold 0.5          gap   -3.49  95% CI [  -6.10,   -1.16]  significant yes
+20.3s 51 [4/7] seed 42 · stress polish · matched threshold      gap   +0.29  95% CI [  -1.45,   +2.04]  significant no
+20.4s 52 [4/7] seed 42 · stress humanize · threshold 0.5        gap   -2.72  95% CI [  -4.46,   -1.24]  significant yes
+20.4s 53 [4/7] seed 42 · stress humanize · matched threshold    gap   +0.25  95% CI [  -1.24,   +1.73]  significant no
+20.4s 54 [4/7] seed 42 · Ar-APT polished · threshold 0.5        gap  -11.83  95% CI [ -13.43,  -10.33]  significant yes
+20.5s 55 [4/7] seed 42 · Ar-APT polished · matched threshold    gap   -3.00  95% CI [  -4.24,   -1.76]  significant yes
+20.5s 56 [4/7] seed 42 · Ar-APT machine · threshold 0.5         gap   -9.50  95% CI [ -12.50,   -6.75]  significant yes
+20.5s 57 [4/7] seed 42 · Ar-APT machine · matched threshold     gap   -0.25  95% CI [  -2.75,   +2.25]  significant no
+20.5s 58 
+20.6s 59 [5/7] disagreements per seed and task
+20.6s 60 task  humanize  polish
+20.6s 61 seed
+20.6s 62 1           18      22
+20.6s 63 2            5      20
+20.6s 64 42          11      18
+20.6s 65 
+20.6s 66 [5/7] polish: union 41 | in all three seeds 4 | Jaccard(all) 0.098
+20.6s 67 [5/7]   seeds 1 and 2: shared  10 | Jaccard 0.312
+20.6s 68 [5/7]   seeds 1 and 42: shared   7 | Jaccard 0.212
+20.6s 69 [5/7]   seeds 2 and 42: shared   6 | Jaccard 0.188
+20.6s 70 
+20.6s 71 [5/7] humanize: union 24 | in all three seeds 1 | Jaccard(all) 0.042
+20.6s 72 [5/7]   seeds 1 and 2: shared   4 | Jaccard 0.211
+20.6s 73 [5/7]   seeds 1 and 42: shared   6 | Jaccard 0.261
+20.6s 74 [5/7]   seeds 2 and 42: shared   1 | Jaccard 0.067
+20.7s 75 [6/7] gap by rewriting model and seed (hybrid minus neural)
+20.7s 76 seed                  1     2      42
+20.7s 77 task     model
+20.7s 78 humanize claude   -15.19 -6.33 -11.39
+20.7s 79 deepseek  -4.94  0.00  -2.47
+20.7s 80 gemini     0.00  0.00   0.00
+20.7s 81 gpt        0.00  0.00   0.00
+20.7s 82 qwen       0.00  0.00   0.00
+20.7s 83 polish   claude    -3.70 -2.47  -3.70
+20.7s 84 deepseek  -7.59  1.27  -6.33
+20.7s 85 gemini    -5.48  4.11  -5.48
+20.7s 86 gpt        0.00 -3.33   3.33
+20.7s 87 qwen      -3.70  1.23  -1.23
+20.7s 88 
+20.7s 89 [6/7] stability across seeds, per rewriting model
+20.7s 90 mean   std    min   max  sign_held
+20.7s 91 task     model
+20.7s 92 humanize claude   -10.97  4.45 -15.19 -6.33       True
+20.7s 93 deepseek  -2.47  2.47  -4.94  0.00      False
+20.7s 94 gemini     0.00  0.00   0.00  0.00      False
+20.7s 95 gpt        0.00  0.00   0.00  0.00      False
+20.7s 96 qwen       0.00  0.00   0.00  0.00      False
+20.7s 97 polish   claude    -3.29  0.71  -3.70 -2.47       True
+20.7s 98 deepseek  -4.22  4.79  -7.59  1.27      False
+20.7s 99 gemini    -2.28  5.54  -5.48  4.11      False
+20.7s 100 gpt        0.00  3.33  -3.33  3.33      False
+20.7s 101 qwen      -1.23  2.47  -3.70  1.23      False
+20.8s 102 [7/7] wrote nb22_threshold_drift, nb22_threshold_matched, nb22_threshold_bootstrap, nb22_disagreements
+20.8s 103 
+20.8s 104 [7/7] READ THIS AS FOLLOWS
+20.8s 105 [7/7]   stress_FPR  mean gap at 0.5  -2.52 -> matched  -0.49 | seeds where it at least halves: 2 of 3 | sign held at 0.5 False
+20.8s 106 [7/7]   stress_TPR  mean gap at 0.5  -2.64 -> matched  -0.99 | seeds where it at least halves: 2 of 3 | sign held at 0.5 True
+20.8s 107 [7/7]   arapt_POL   mean gap at 0.5  -6.63 -> matched  -1.79 | seeds where it at least halves: 3 of 3 | sign held at 0.5 False
+20.8s 108 [7/7]   arapt_AI    mean gap at 0.5  -2.17 -> matched  +1.75 | seeds where it at least halves: 2 of 3 | sign held at 0.5 False
+20.8s 109 [7/7]   a gap that shrinks toward zero once the operating points are matched is calibration;
+20.8s 110 [7/7]   a gap that survives is a difference in the decision rule itself.
+20.8s 111 
+20.8s 112 scope    n    gap     lo     hi significant
+20.8s 113 seed 1 · stress polish · threshold 0.5  344  -4.65  -7.27  -2.03         yes
+20.8s 114 seed 1 · stress polish · matched threshold  344  -0.29  -2.04   1.74          no
+20.8s 115 seed 1 · stress humanize · threshold 0.5  404  -3.96  -6.19  -1.98         yes
+20.8s 116 seed 1 · stress humanize · matched threshold  404  -1.49  -3.22   0.25          no
+20.8s 117 seed 1 · Ar-APT polished · threshold 0.5 1936 -14.51 -16.06 -12.91         yes
+20.8s 118 seed 1 · Ar-APT polished · matched threshold 1936  -2.89  -4.34  -1.50         yes
+20.8s 119 seed 1 · Ar-APT machine · threshold 0.5  400  -1.50  -4.25   1.00          no
+20.8s 120 seed 1 · Ar-APT machine · matched threshold  400   5.00   2.00   7.75         yes
+20.8s 121 seed 2 · stress polish · threshold 0.5  344   0.58  -2.03   3.20          no
+20.8s 122 seed 2 · stress polish · matched threshold  344  -1.45  -4.36   1.45          no
+20.8s 123 seed 2 · stress humanize · threshold 0.5  404  -1.24  -2.48  -0.25         yes
+20.8s 124 seed 2 · stress humanize · matched threshold  404  -1.73  -2.97  -0.50         yes
+20.8s 125 seed 2 · Ar-APT polished · threshold 0.5 1936   6.46   4.86   7.95         yes
+20.8s 126 seed 2 · Ar-APT polished · matched threshold 1936   0.52  -0.88   1.96          no
+20.8s 127 seed 2 · Ar-APT machine · threshold 0.5  400   4.50   2.50   6.75         yes
+20.8s 128 seed 2 · Ar-APT machine · matched threshold  400   0.50  -0.75   2.00          no
+20.8s 129 seed 42 · stress polish · threshold 0.5  344  -3.49  -6.10  -1.16         yes
+20.8s 130 seed 42 · stress polish · matched threshold  344   0.29  -1.45   2.04          no
+20.8s 131 seed 42 · stress humanize · threshold 0.5  404  -2.72  -4.46  -1.24         yes
+20.8s 132 seed 42 · stress humanize · matched threshold  404   0.25  -1.24   1.73          no
+20.8s 133 seed 42 · Ar-APT polished · threshold 0.5 1936 -11.83 -13.43 -10.33         yes
+20.8s 134 seed 42 · Ar-APT polished · matched threshold 1936  -3.00  -4.24  -1.76         yes
+20.8s 135 seed 42 · Ar-APT machine · threshold 0.5  400  -9.50 -12.50  -6.75         yes
+20.8s 136 seed 42 · Ar-APT machine · matched threshold  400  -0.25  -2.75   2.25          no
+25.3s 137 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+25.3s 138 cells[i][c] = re.sub('\\\\\|', '|', cell)
+25.6s 139 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+25.6s 140 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+26.6s 141 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+27.0s 142 [NbConvertApp] Writing 30071 bytes to __notebook__.ipynb
+30.6s 143 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+32.1s 144 [NbConvertApp] Writing 351522 bytes to __results__.html

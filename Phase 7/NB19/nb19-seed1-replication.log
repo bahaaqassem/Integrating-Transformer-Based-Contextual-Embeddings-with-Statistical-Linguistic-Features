@@ -1,0 +1,235 @@
+7.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.2s 3 0.00s - to python to disable frozen modules.
+7.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.8s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.8s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.8s 7 0.00s - to python to disable frozen modules.
+7.8s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+15.6s 9 [1/9] seed 1 | device cuda | smoke False
+15.6s 10 [1/9] writing to /kaggle/working/nb19_seed1_scores.parquet
+16.8s 11 [2/9] dataset 7101 | human 3500 | AI 3601
+16.8s 12 [2/9]   train: 5363
+16.8s 13 [2/9]   val: 645
+16.8s 14 [2/9]   test: 1093
+16.9s 15 [2/9] generations 820 | tasks {'humanize': 410, 'polish': 410}
+16.9s 16 [2/9] models {'gemini': 164, 'deepseek': 164, 'qwen': 164, 'claude': 164, 'gpt': 164}
+16.9s 17 [3/9] feature functions ready: ['burstiness', 'ttr', 'quote_ratio', 'function_word_ratio', 'compressibility']
+16.9s 18 [3/9] function-word list carries 50 items
+17.0s 19 [4/9] scaler.pkl   order=['targeted_ppl', 'burstiness', 'ttr', 'entity_density', 'discourse_coherence']
+17.0s 20 [4/9] scaler11.pkl order=['quote_ratio', 'quote_variety', 'coord_sub_ratio', 'function_word_ratio', 'pos_entropy', 'passive_ratio', 'clause_depth', 'compressibility', 'char_ngram_repetition', 'zipf_deviation', 'sent_opener_diversity']
+17.0s 21 [4/9]   burstiness             mean=-0.4529 scale=0.1591 median=-0.4827
+17.0s 22 [4/9]   ttr                    mean=+0.8726 scale=0.0252 median=+0.8739
+17.0s 23 [4/9]   quote_ratio            mean=+0.1244 scale=0.1634 median=+0.0637
+17.0s 24 [4/9]   function_word_ratio    mean=+0.1853 scale=0.0251 median=+0.1864
+17.0s 25 [4/9]   compressibility        mean=+0.3351 scale=0.0236 median=+0.3372
+17.0s 26 [4/9] scaling routine ready
+17.6s 27 [5/9] OK  burstiness             max|diff|=0.000000 corr=1.000000
+17.6s 28 [5/9] OK  ttr                    max|diff|=0.000000 corr=1.000000
+17.6s 29 [5/9] OK  quote_ratio            max|diff|=0.000000 corr=1.000000
+17.6s 30 [5/9] OK  function_word_ratio    max|diff|=0.000000 corr=1.000000
+17.6s 31 [5/9] OK  compressibility        max|diff|=0.000000 corr=1.000000
+17.6s 32 [5/9] feature implementation verified
+41.9s 33 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+41.9s 34 
+41.9s 35 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+42.7s 36 [6/9] cache keys found: ['ch', 'nch']
+43.4s 37 [6/9] training chunks loaded from cache (7101, 9, 512)
+43.4s 38 [6/9] chunk array (7101, 9, 512) verified against the dataset
+44.9s 39 [4/9]   corpus features 300/7101 (1s)
+46.5s 40 [4/9]   corpus features 600/7101 (3s)
+48.0s 41 [4/9]   corpus features 900/7101 (5s)
+49.4s 42 [4/9]   corpus features 1200/7101 (6s)
+51.0s 43 [4/9]   corpus features 1500/7101 (8s)
+52.4s 44 [4/9]   corpus features 1800/7101 (9s)
+53.9s 45 [4/9]   corpus features 2100/7101 (11s)
+55.3s 46 [4/9]   corpus features 2400/7101 (12s)
+56.8s 47 [4/9]   corpus features 2700/7101 (13s)
+58.3s 48 [4/9]   corpus features 3000/7101 (15s)
+59.7s 49 [4/9]   corpus features 3300/7101 (16s)
+61.2s 50 [4/9]   corpus features 3600/7101 (18s)
+62.7s 51 [4/9]   corpus features 3900/7101 (19s)
+64.2s 52 [4/9]   corpus features 4200/7101 (21s)
+65.7s 53 [4/9]   corpus features 4500/7101 (22s)
+67.2s 54 [4/9]   corpus features 4800/7101 (24s)
+68.7s 55 [4/9]   corpus features 5100/7101 (25s)
+70.1s 56 [4/9]   corpus features 5400/7101 (27s)
+71.7s 57 [4/9]   corpus features 5700/7101 (28s)
+73.3s 58 [4/9]   corpus features 6000/7101 (30s)
+74.8s 59 [4/9]   corpus features 6300/7101 (31s)
+76.4s 60 [4/9]   corpus features 6600/7101 (33s)
+78.0s 61 [4/9]   corpus features 6900/7101 (35s)
+79.0s 62 [6/9] corpus feature matrix (7101, 5)
+80.1s 63 [4/9]   base features 300/820 (1s)
+81.4s 64 [4/9]   base features 600/820 (2s)
+83.4s 65 [4/9]   gen features 300/820 (1s)
+84.4s 66 [4/9]   gen features 600/820 (2s)
+86.3s 67 [6/9]   base chunked 500/820 (1s)
+88.0s 68 [6/9]   gen chunked 500/820 (1s)
+88.7s 69 [6/9] stress matrices | base (820, 9, 512) | gen (820, 9, 512)
+89.0s 70 [7/9] train rows 5363 | test rows 1093
+89.0s 71 [7/9] model, training and prediction routines ready
+98.8s 72 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+98.8s 73 Key                                        | Status     |  |
+98.8s 74 -------------------------------------------+------------+--+-
+98.8s 75 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+98.8s 76 cls.predictions.bias                       | UNEXPECTED |  |
+98.8s 77 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+98.8s 78 cls.predictions.decoder.bias               | UNEXPECTED |  |
+98.8s 79 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+98.8s 80 cls.seq_relationship.bias                  | UNEXPECTED |  |
+98.8s 81 cls.predictions.decoder.weight             | UNEXPECTED |  |
+98.8s 82 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+98.8s 83 cls.seq_relationship.weight                | UNEXPECTED |  |
+98.8s 84 bert.embeddings.position_ids               | UNEXPECTED |  |
+98.8s 85 
+98.8s 86 Notes:
+98.8s 87 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+98.8s 88 
+98.8s 89 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+98.8s 90 Key                                        | Status     |  |
+98.8s 91 -------------------------------------------+------------+--+-
+98.8s 92 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+98.8s 93 cls.predictions.bias                       | UNEXPECTED |  |
+98.8s 94 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+98.8s 95 cls.predictions.decoder.bias               | UNEXPECTED |  |
+98.8s 96 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+98.8s 97 cls.seq_relationship.bias                  | UNEXPECTED |  |
+98.8s 98 cls.predictions.decoder.weight             | UNEXPECTED |  |
+98.8s 99 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+98.8s 100 cls.seq_relationship.weight                | UNEXPECTED |  |
+98.8s 101 bert.embeddings.position_ids               | UNEXPECTED |  |
+98.8s 102 
+98.8s 103 Notes:
+98.8s 104 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+315.7s 105 [7/9]   standardizer 800 articles
+550.7s 106 [7/9]   standardizer 1600 articles
+785.2s 107 [7/9]   standardizer 2400 articles
+1019.7s 108 [7/9]   standardizer 3200 articles
+1254.2s 109 [7/9]   standardizer 4000 articles
+1489.3s 110 [7/9]   standardizer 4800 articles
+1657.2s 111 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1657.2s 112 
+1657.2s 113 `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+1853.0s 114 [7/9] hybrid seed1 ep0 step 20/501 loss 0.0881 (196s)
+1853.2s 115 /tmp/ipykernel_23/2391663366.py:87: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+1853.2s 116 Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+1853.2s 117 f"loss {float(loss)*GRAD_ACCUM:.4f} ({time.time()-t0:.0f}s)", flush=True)
+1853.2s 118 
+1853.2s 119 /tmp/ipykernel_23/2391663366.py:87: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+1853.2s 120 Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+1853.2s 121 f"loss {float(loss)*GRAD_ACCUM:.4f} ({time.time()-t0:.0f}s)", flush=True)
+2048.4s 122 [7/9] hybrid seed1 ep0 step 40/501 loss 0.1400 (391s)
+2243.0s 123 [7/9] hybrid seed1 ep0 step 60/501 loss 0.0014 (586s)
+2438.2s 124 [7/9] hybrid seed1 ep0 step 80/501 loss 0.2144 (781s)
+2633.6s 125 [7/9] hybrid seed1 ep0 step 100/501 loss 0.6052 (976s)
+2827.3s 126 [7/9] hybrid seed1 ep0 step 120/501 loss 0.0162 (1170s)
+3022.2s 127 [7/9] hybrid seed1 ep0 step 140/501 loss 0.0016 (1365s)
+3217.6s 128 [7/9] hybrid seed1 ep0 step 160/501 loss 0.0013 (1560s)
+3291.0s 129 [7/9] hybrid seed1 epoch 0 done (1634s)
+3418.2s 130 [7/9] hybrid seed1 ep1 step 180/501 loss 0.0052 (1761s)
+3612.7s 131 [7/9] hybrid seed1 ep1 step 200/501 loss 0.0012 (1955s)
+3807.4s 132 [7/9] hybrid seed1 ep1 step 220/501 loss 0.0008 (2150s)
+4002.2s 133 [7/9] hybrid seed1 ep1 step 240/501 loss 0.0007 (2345s)
+4196.6s 134 [7/9] hybrid seed1 ep1 step 260/501 loss 0.0017 (2539s)
+4391.5s 135 [7/9] hybrid seed1 ep1 step 280/501 loss 0.0005 (2734s)
+4585.2s 136 [7/9] hybrid seed1 ep1 step 300/501 loss 0.0005 (2928s)
+4779.3s 137 [7/9] hybrid seed1 ep1 step 320/501 loss 0.0004 (3122s)
+4920.6s 138 [7/9] hybrid seed1 epoch 1 done (3263s)
+4979.0s 139 [7/9] hybrid seed1 ep2 step 340/501 loss 0.0004 (3322s)
+5173.3s 140 [7/9] hybrid seed1 ep2 step 360/501 loss 0.0004 (3516s)
+5367.6s 141 [7/9] hybrid seed1 ep2 step 380/501 loss 0.0004 (3710s)
+5562.6s 142 [7/9] hybrid seed1 ep2 step 400/501 loss 0.0007 (3905s)
+5757.5s 143 [7/9] hybrid seed1 ep2 step 420/501 loss 0.0004 (4100s)
+5952.5s 144 [7/9] hybrid seed1 ep2 step 440/501 loss 0.0004 (4295s)
+6146.9s 145 [7/9] hybrid seed1 ep2 step 460/501 loss 0.0003 (4490s)
+6341.5s 146 [7/9] hybrid seed1 ep2 step 480/501 loss 0.0004 (4684s)
+6535.8s 147 [7/9] hybrid seed1 ep2 step 500/501 loss 0.0005 (4879s)
+6550.6s 148 [7/9] hybrid seed1 epoch 2 done (4893s)
+6551.5s 149 [7/9] hybrid seed1 trained in 81.6 min
+6635.4s 150 [8/9] hybrid seed1 STANDARD SPLIT  MacroF1 100.00  Acc 100.00  AUC 100.00
+6760.5s 151 [8/9] hybrid seed1 scored 820 originals and 820 transformed articles
+6761.9s 152 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+6761.9s 153 Key                                        | Status     |  |
+6761.9s 154 -------------------------------------------+------------+--+-
+6761.9s 155 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+6761.9s 156 cls.predictions.bias                       | UNEXPECTED |  |
+6761.9s 157 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+6761.9s 158 cls.predictions.decoder.bias               | UNEXPECTED |  |
+6761.9s 159 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+6761.9s 160 cls.seq_relationship.bias                  | UNEXPECTED |  |
+6761.9s 161 cls.predictions.decoder.weight             | UNEXPECTED |  |
+6761.9s 162 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+6761.9s 163 cls.seq_relationship.weight                | UNEXPECTED |  |
+6761.9s 164 bert.embeddings.position_ids               | UNEXPECTED |  |
+6761.9s 165 
+6761.9s 166 Notes:
+6761.9s 167 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+6761.9s 168 
+6761.9s 169 BertModel LOAD REPORT from: CAMeL-Lab/bert-base-arabic-camelbert-msa
+6761.9s 170 Key                                        | Status     |  |
+6761.9s 171 -------------------------------------------+------------+--+-
+6761.9s 172 cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+6761.9s 173 cls.predictions.bias                       | UNEXPECTED |  |
+6761.9s 174 cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+6761.9s 175 cls.predictions.decoder.bias               | UNEXPECTED |  |
+6761.9s 176 cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+6761.9s 177 cls.seq_relationship.bias                  | UNEXPECTED |  |
+6761.9s 178 cls.predictions.decoder.weight             | UNEXPECTED |  |
+6761.9s 179 cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+6761.9s 180 cls.seq_relationship.weight                | UNEXPECTED |  |
+6761.9s 181 bert.embeddings.position_ids               | UNEXPECTED |  |
+6761.9s 182 
+6761.9s 183 Notes:
+6761.9s 184 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+6994.1s 185 [7/9]   standardizer 800 articles
+7229.5s 186 [7/9]   standardizer 1600 articles
+7464.3s 187 [7/9]   standardizer 2400 articles
+7699.4s 188 [7/9]   standardizer 3200 articles
+7934.3s 189 [7/9]   standardizer 4000 articles
+8169.0s 190 [7/9]   standardizer 4800 articles
+8532.6s 191 [7/9] neural seed1 ep0 step 20/501 loss 0.2956 (196s)
+8727.1s 192 [7/9] neural seed1 ep0 step 40/501 loss 0.0020 (391s)
+8920.9s 193 [7/9] neural seed1 ep0 step 60/501 loss 0.0015 (584s)
+9116.1s 194 [7/9] neural seed1 ep0 step 80/501 loss 0.0011 (780s)
+9311.2s 195 [7/9] neural seed1 ep0 step 100/501 loss 0.0027 (975s)
+9505.2s 196 [7/9] neural seed1 ep0 step 120/501 loss 0.0012 (1169s)
+9700.2s 197 [7/9] neural seed1 ep0 step 140/501 loss 0.0007 (1364s)
+9894.9s 198 [7/9] neural seed1 ep0 step 160/501 loss 0.0006 (1558s)
+9968.6s 199 [7/9] neural seed1 epoch 0 done (1632s)
+10095.8s 200 [7/9] neural seed1 ep1 step 180/501 loss 0.0019 (1759s)
+10291.3s 201 [7/9] neural seed1 ep1 step 200/501 loss 0.0008 (1955s)
+10486.1s 202 [7/9] neural seed1 ep1 step 220/501 loss 0.0008 (2150s)
+10680.7s 203 [7/9] neural seed1 ep1 step 240/501 loss 0.0006 (2344s)
+10875.2s 204 [7/9] neural seed1 ep1 step 260/501 loss 0.0004 (2539s)
+11070.0s 205 [7/9] neural seed1 ep1 step 280/501 loss 0.0087 (2733s)
+11263.4s 206 [7/9] neural seed1 ep1 step 300/501 loss 0.0004 (2927s)
+11456.2s 207 [7/9] neural seed1 ep1 step 320/501 loss 0.0004 (3120s)
+11597.6s 208 [7/9] neural seed1 epoch 1 done (3261s)
+11656.4s 209 [7/9] neural seed1 ep2 step 340/501 loss 0.0007 (3320s)
+11851.3s 210 [7/9] neural seed1 ep2 step 360/501 loss 0.0004 (3515s)
+12046.3s 211 [7/9] neural seed1 ep2 step 380/501 loss 0.0006 (3710s)
+12240.8s 212 [7/9] neural seed1 ep2 step 400/501 loss 0.0003 (3904s)
+12434.7s 213 [7/9] neural seed1 ep2 step 420/501 loss 0.0004 (4098s)
+12627.6s 214 [7/9] neural seed1 ep2 step 440/501 loss 0.0008 (4291s)
+12822.2s 215 [7/9] neural seed1 ep2 step 460/501 loss 0.0003 (4486s)
+13016.4s 216 [7/9] neural seed1 ep2 step 480/501 loss 0.0004 (4680s)
+13210.8s 217 [7/9] neural seed1 ep2 step 500/501 loss 0.0003 (4874s)
+13225.5s 218 [7/9] neural seed1 epoch 2 done (4889s)
+13226.4s 219 [7/9] neural seed1 trained in 81.5 min
+13309.7s 220 [8/9] neural seed1 STANDARD SPLIT  MacroF1 99.82  Acc 99.82  AUC 100.00
+13434.4s 221 [8/9] neural seed1 scored 820 originals and 820 transformed articles
+13434.5s 222 [9/9] wrote /kaggle/working/nb19_seed1_scores.parquet | rows 820
+13434.5s 223 [9/9] quick read, before the validity gate is applied in NB20:
+13434.5s 224 [9/9]   polish   n=410  FPR hybrid 8.05  neural 12.20
+13434.5s 225 [9/9]   humanize n=410  TPR hybrid 95.12  neural 98.78
+13434.5s 226 [9/9]   control  polish base FPR hybrid 0.00  neural 0.49
+13434.5s 227 [9/9] done. Change SEED and Save Version again for the next seed.
+13440.2s 228 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+13440.2s 229 cells[i][c] = re.sub('\\\\\|', '|', cell)
+13440.3s 230 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+13440.3s 231 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+13441.0s 232 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+13441.4s 233 [NbConvertApp] Writing 136853 bytes to __notebook__.ipynb
+13443.9s 234 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+13444.9s 235 [NbConvertApp] Writing 491170 bytes to __results__.html
