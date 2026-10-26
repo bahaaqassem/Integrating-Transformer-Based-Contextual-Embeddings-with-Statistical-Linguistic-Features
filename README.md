@@ -244,7 +244,7 @@ re-measured. Gaps below are hybrid minus neural, in percentage points.
 Four of the five axes reverse sign between seeds. Matching the neural threshold to
 the hybrid on the 400 untransformed Ar-APT human articles reduces ten significant
 differences out of twelve to four, and nine of the twelve shrink by at least half.
-The threshold the hybrid model needs for a fixed false-alarm rate moves across seeds
+The threshold the hybrid model needs for a fixed false-positive rate moves across seeds
 by 4.7 to 9.3 times the movement of the neural threshold.
 
 The one effect that keeps its sign in all three seeds is the cost the hybrid model
@@ -258,7 +258,7 @@ seeds and 4 are common to all three, a Jaccard overlap of 0.098.
 that produced them and are not stable across training runs. Statistical fusion does
 not change what the detector can separate; it shifts the decision boundary and makes
 the position of that boundary less stable. A deployment should prefer the
-neural-only model and obtain the false-alarm rate it needs from the operating point
+neural-only model and obtain the false-positive rate it needs from the operating point
 rather than from added features.
 
 ---
@@ -306,7 +306,7 @@ Every cached file, the notebook that writes it, and the notebooks that read it.
 | Table 5.6 standard test split | NB10, NB14 |
 | Table 5.7 LOGO results | NB11 |
 | Table 5.8 agreement across the six folds | NB12 |
-| Tables 5.9 to 5.12 stress test and low-false-alarm operating points | NB15, NB16 |
+| Tables 5.9 to 5.12 stress test and low-false-positive operating points | NB15, NB16 |
 | Tables 5.13 to 5.15 Ar-APT control, polished subsets, feature means | NB16, NB17 |
 | **Table 5.16 the two effects under three seeds** | **NB19, NB20, NB21** |
 | **Table 5.17 default against matched operating point** | **NB22** |
