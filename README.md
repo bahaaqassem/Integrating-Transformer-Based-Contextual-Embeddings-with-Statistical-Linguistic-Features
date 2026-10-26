@@ -236,7 +236,7 @@ re-measured. Gaps below are hybrid minus neural, in percentage points.
 | Axis | Seed 42 | Seed 1 | Seed 2 | Sign held |
 |---|---|---|---|---|
 | Polished human text, study dataset | −3.49 | −4.65 | +0.58 | no |
-| Adversarially rewritten machine text | −2.73 | −3.96 | −1.24 | yes |
+| Adversarially rewritten machine text | −2.72 | −3.96 | −1.24 | yes |
 | Untransformed human text, Ar-APT | −7.25 | −9.25 | +5.50 | no |
 | Untransformed machine text, Ar-APT | −9.50 | −1.50 | +4.50 | no |
 | Polished human text, Ar-APT | −11.83 | −14.51 | +6.46 | no |
