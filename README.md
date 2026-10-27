@@ -233,7 +233,7 @@ retyped function-word list, and a checkpoint missing from the input list.
 Both models were retrained from scratch under two further seeds and everything was
 re-measured. Gaps below are hybrid minus neural, in percentage points.
 
-| Axis | Seed 42 | Seed 1 | Seed 2 | Sign held |
+| Condition | Seed 42 | Seed 1 | Seed 2 | Sign held |
 |---|---|---|---|---|
 | Polished human text, study dataset | −3.49 | −4.65 | +0.58 | no |
 | Adversarially rewritten machine text | −2.72 | −3.96 | −1.24 | yes |
